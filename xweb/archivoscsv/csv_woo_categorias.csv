@@ -1,0 +1,25 @@
+Category ID;Active (0/1);Name *;Parent category;Root category (0/1);Description;Meta title;Meta keywords;Meta description;URL rewritten;Image URL
+; 1; Ordenadores; 0; ; ; ; ; ; ;
+; 1; Torres; Ordenadores; 0; ; ; ; ; ; ;
+; 1; Portátiles; 0; ; ; ; ; ; ;
+; 1; Sobremesas SFF; Ordenadores; 0; ; ; ; ; ; ;
+; 1; Sobremesas USDT; Ordenadores; 0; ; ; ; ; ; ;
+; 1; Sobremesas Tiny; Ordenadores; 0; ; ; ; ; ; ;
+; 1; Portátiles Core2duo; Portátiles; 0; ; ; ; ; ; ;
+; 1; Portátiles I3; Portátiles; 0; ; ; ; ; ; ;
+; 1; Portátiles I5; Portátiles; 0; ; ; ; ; ; ;
+; 1; Portátiles I7; Portátiles; 0; ; ; ; ; ; ;
+; 1; Portátiles AMD; Portátiles; 0; ; ; ; ; ; ;
+; 1; Portátiles Premium; Portátiles; 0; ; ; ; ; ; ;
+; 1; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 17"; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 19"; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 22"; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 23"; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 24"; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores Varios; Monitores; 0; ; ; ; ; ; ;
+; 1; Monitores 20"; Monitores; 0; ; ; ; ; ; ;
+; 1; Apple; 0; ; ; ; ; ; ;
+; 1; Apple; Apple; 0; ; ; ; ; ; ;
+; 1; Otros; 0; ; ; ; ; ; ;
+; 1; Cargadores de Portátiles; Otros; 0; ; ; ; ; ; ;

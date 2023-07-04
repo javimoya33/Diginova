@@ -1,0 +1,11 @@
+<?php
+$myHost='127.0.0.1';
+$myPort='3306';
+$myDatabase='diginova';
+$myUser='user_xweb4_1';
+$myPass='OEkyZ1dBRWk0OHF2ZGxiczQ2NitjUT09';
+$myPassCodificado=true;
+$myEmpresa='001';
+$myOnline=false;
+$myAdicional=false;
+?>
