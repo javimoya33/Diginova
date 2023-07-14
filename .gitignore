@@ -1,0 +1,6 @@
+# Ignorar archivos y directorios específicos
+Controllers/
+apiRedsys.php
+micuenta.blade.php
+misdocumentos.blade.php
+misdocumentos2.blade.php
