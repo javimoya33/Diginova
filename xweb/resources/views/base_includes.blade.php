@@ -145,6 +145,8 @@
 <script src="{{URL::asset('public/js/jquery.accordion.js')}}"></script>
 <script src="{{URL::asset('public/js/FileSaver.js')}}"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function() {
     cookiesOnLoad();

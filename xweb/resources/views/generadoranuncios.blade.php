@@ -121,6 +121,9 @@
 									</div>
 								</div>
 							</div>
+							<div id="div_oferta_valida">
+								<span id="span_oferta_valida" class="span_oferta_valida"></span>
+							</div>
 						</div>
 						<div id="msj_aviso_resolucion" style="background: #ffe2c9; color: rgb(183 137 0); font-size: 12pt; display: none; margin: 10px 21px; padding: 10px; line-height: 21px; text-align: left;">
 							La resolución de la imagen del artículo es demasiado baja. Es recomendable que sustituya la imagen por otra de mayor resolución (Mínimo 500px de ancho o 500px de alto).			
@@ -1404,7 +1407,7 @@
 						</tr>
 						<tr>
 							<td colspan="4" style="width: 100%">
-								<table id="table_datos_generador_anuncios" style="width: 100%; border-bottom: 1px #000 solid">
+								<table id="table_datos_generador_anuncios">
 									<tr>
 										<td style="width: 15%; padding-bottom: 0px;">
 											<div class="div_caract_generador_anuncios">
@@ -1491,6 +1494,28 @@
 										</td>
 									</tr>
 								</table>
+								<table style="width: 100%; border-bottom: 1px #000 solid;">
+									<tr>
+										<td style="width: 15%">
+											<div class="div_caract_generador_anuncios">
+												<input type="checkbox" id="check_oferta_valida" oninput="mostrarOfertaValida()" name="check_oferta_valida" class="input_otros_datos" />
+												<div class="div_otros_datos">Oferta</div>
+											</div>
+										</td>
+										<td style="width: 45%">
+											<input type="text" id="input_text_oferta" oninput="escribirTextOferta()" name="input_text_oferta" value="Oferta válida hasta el " style="width: 100%; margin-right: 10px;" />
+										</td>
+										<td style="width: 15%">
+											<div class="div_caract_generador_anuncios" style="float: right">
+												<input type="checkbox" id="check_fecha_oferta_valida" oninput="mostrarOfertaValida()" name="check_fecha_oferta_valida" class="input_otros_datos" />
+												<div class="div_otros_datos">Fecha</div>
+											</div>
+										</td>
+										<td colspan="2" style="width: 25%">
+											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta(true)" name="input_dato_oferta" value="12/10/2023" style="width: 98%; float: right; margin-right: 0px;">
+										</td>
+									</tr>
+								</table>	
 							</td>
 						</tr>
 						<tr>
