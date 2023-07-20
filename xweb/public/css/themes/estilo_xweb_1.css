@@ -7218,3 +7218,21 @@ input:checked + .slider:before {
     background-color: #5cb811;
 }
 
+.width-table-anuncios {
+    width: 100%;
+}
+
+.border-table-anuncios {
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+.btn_articulo_lote {
+    padding: 2px 6px; 
+    margin-top: 2px;
+    float: left;
+}
+
+.i_btn_lote {
+    font-size: 15pt !important;
+    width: 100% !important;
+}

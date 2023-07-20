@@ -2046,6 +2046,9 @@ function pulsarArticuloParaAnuncio(nombreArticulo, precio, imagen)
     cambiarPrecioAnuncio(2, precio2, true);
     cambiarPrecioAnuncio(3, precio3, true);
 
+    $('#input_nombre_lote_articulo_1').val(nombreArticulo);
+    $('#input_nombre_abrev_lote_articulo_1').val(obtNombreAbreviadoArt(nombreArticulo));
+
     if ($('.precio2_control').css('display') != 'none')
     {
         $('#input_text_precio_anuncio').val('Precio para 1 ud');
@@ -2063,6 +2066,16 @@ function pulsarArticuloParaAnuncio(nombreArticulo, precio, imagen)
     {
         cambiosEnFirefox(2000);
     }
+}
+
+function obtNombreAbreviadoArt(nombreArticulo)
+{
+    var palabras = nombreArticulo.split(' ');
+
+    var tipoArt = palabras[0];
+    var marcaArt = palabras[1];
+
+    return tipoArt + ' ' + marcaArt;
 }
 
 function obtNombreArtParaAnuncio(nombreArticulo, limiteCaracteres)
@@ -3731,6 +3744,41 @@ function escribirTextPantalla(check, input, span, div)
             $('#' + div).append('<span id="' + span + '" class="span_texto_pantalla" style="font-size: ' + fontSize + '; color: ' + colorB + '">' + txtInputPantalla + '</span>');
         }
     }, 2000);
+}
+
+function anadirArticuloALote()
+{
+    var numeroFilas = $('.tr_lote_producto').length;
+
+    if (numeroFilas < 5)
+    {
+        numeroFilas = numeroFilas + 1;
+
+        var nuevaFila = '<tr class="tr_lote_producto">' + 
+                            '<td style="width: 48%;" style="padding-right: 10px;">' + 
+                                '<input type="text" id="input_nombre_lote_articulo_' + numeroFilas + '" name="input_precio_lote" oninput="editarNombreLote()" style="width: 70%; margin-right: 10px;" value="" />' + 
+                                '<div class="div_otros_datos" style="float: right; padding-top: 8px;">Abrev.</div>' + 
+                            '</td>' + 
+                            '<td style="width: 35%;">' + 
+                                '<input type="text" id="input_nombre_abrev_lote_articulo_' + numeroFilas + '" name="input_precio_lote" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />' + 
+                            '</td>' + 
+                            '<td style="width: 17%">' + 
+                                '<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">' + 
+                                    '<button onclick="eliminarArticuloALote()" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-times i_btn_generador_formulario i_btn_lote"></i>' + 
+                                    '</button>' + 
+                                    '<button onclick="subirArticuloALote()" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote"></i>' + 
+                                    '</button>' + 
+                                    '<button onclick="bajarArticuloALote()" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote"></i>' + 
+                                    '</button>' + 
+                                '</div>' + 
+                            '</td>' + 
+                        '</tr>';
+
+        $('#table_lote_articulos').append(nuevaFila);
+    }
 }
 
 function moverElementoAnuncio(elemento, vertical, sumar)

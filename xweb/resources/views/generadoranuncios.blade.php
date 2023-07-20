@@ -278,7 +278,7 @@
 			</tr>
 			<tr>
 				<td style="padding: 20px; padding-top: 0px;">
-					<table class="table_formulario_generador_anuncios" style="border-bottom: 1px #000 solid;">
+					<table class="table_formulario_generador_anuncios">
 						<tr>
 
 							<td class="td_generador_formulario_celda">
@@ -1284,7 +1284,7 @@
 						</tr>
 					</table>
 					
-					<table class="table_formulario_generador_anuncios" style="margin-top: 20px; border-bottom: 1px #000 solid;">
+					<table class="table_formulario_generador_anuncios width-table-anuncios border-table-anuncios" style="margin-top: 20px;">
 						<tr>
 							<td style="width: 15%">
 								<i class="fa fa-laptop" style="margin-top: 4px;"></i>
@@ -1467,7 +1467,7 @@
 						</tr>
 					</table>
 
-					<table id="table_orientacion_anuncio" class="table_formulario_generador_anuncios" style="margin-top: 20px;">
+					<table id="table_orientacion_anuncio" class="table_formulario_generador_anuncios width border-table-anuncios" style="margin-top: 20px;">
 						<tr>
 							<td class="td_titulo_caract_principal">
 								<div>Orientación: </div>
@@ -1596,19 +1596,19 @@
 
 					<table class="table_formulario_generador_anuncios" style="margin-top: 20px;">
 						<tr>
-							<td colspan="4" style="width: 100%; border-top: 1px solid #000;">
+							<td colspan="4" class="width-table-anuncios border-table-anuncios">
 								<i class="fa fa-bars"></i>
 								<div style="margin-top: -2px;">Características</div>
 							</td>
 						</tr>
 						<tr>
-							<td colspan="4" style="width: 100%">
+							<td colspan="4" class="width-table-anuncios">
 								<table id="table_caract_generador_anuncios" style="width: 100%;">
 								</table>
 							</td>
 						</tr>
 						<tr>
-							<td colspan="4" style="width: 100%; border-top: 1px solid #000;">
+							<td colspan="4" class="width-table-anuncios border-table-anuncios">
 								<i class="fa fa-tasks"></i>
 								<div style="margin-top: -2px;">Otros datos</div>
 							</td>
@@ -1702,10 +1702,10 @@
 										</td>
 									</tr>
 								</table>
-								<table style="width: 100%; border-bottom: 1px #000 solid;">
+								<table class="width-table-anuncios">
 									<tr>
 										<td style="width: 15%">
-											<div class="div_caract_generador_anuncios">
+											<div class="div_caract_generador_anuncios" style="display: flex;">
 												<input type="checkbox" id="check_oferta_valida" oninput="mostrarOfertaValida()" name="check_oferta_valida" class="input_otros_datos" />
 												<div class="div_otros_datos">Oferta</div>
 											</div>
@@ -1724,6 +1724,59 @@
 										</td>
 									</tr>
 								</table>	
+							</td>
+						</tr>
+						<tr style="display: none">
+							<td colspan="4" class="width-table-anuncios border-table-anuncios">
+								<i class="fa fa-archive"></i>
+								<div style="margin-top: -2px;">Lote de artículos</div>
+							</td>
+						</tr>
+						<tr style="display: none">
+							<td colspan="4" style="width: 100%">
+								<table id="table_lote_articulos" class="width-table-anuncios">
+									<tr>
+										<td style="width: 48%;">
+											<div class="div_caract_generador_anuncios" style="display: block">
+												<input type="checkbox" id="check_lote_articulos" name="check_lote_articulos" oninput="mostrarLoteArticulos()" class="input_otros_datos" />
+												<div class="div_otros_datos">Lote de artículos</div>
+												<div class="div_otros_datos" style="float: right">Precio</div>
+											</div>
+										</td>
+										<td style="width: 35%;">
+											<input type="text" id="input_precio_lote" name="input_precio_lote" oninput="editarPrecioLote()" style="width: 100%; margin-right: 10px;" value="" />
+										</td>
+										<td style="width: 17%">
+											<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">
+												<button id="btn_anadir_articulo_lote" onclick="anadirArticuloALote()" class="btnArticuloLote">
+													<i class="fa fa-plus i_btn_generador_formulario" style="font-size: 15pt"></i>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="tr_lote_producto">
+										<td style="width: 48%;" style="padding-right: 10px;">
+											<input type="text" id="input_nombre_lote_articulo_1" name="input_precio_lote" oninput="editarNombreLote()" style="width: 70%; margin-right: 10px;" value="" />
+											<div class="div_otros_datos" style="float: right; padding-top: 8px;">Abrev.</div>
+										</td>
+										<td style="width: 35%;">
+											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_precio_lote" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />
+										</td>
+										<td style="width: 17%">
+											<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">
+												<button onclick="eliminarArticuloALote()" class="btn_articulo_lote">
+													<i class="fa fa-times i_btn_generador_formulario i_btn_lote"></i>
+												</button>
+												<button onclick="subirArticuloALote()" class="btn_articulo_lote">
+													<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote"></i>
+												</button>
+												<button onclick="bajarArticuloALote()" class="btn_articulo_lote">
+													<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote"></i>
+												</button>
+											</div>
+										</td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 						<tr>
