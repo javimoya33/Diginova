@@ -1,0 +1,523 @@
+*/
+/*PARA MODIFICAR LAS HOJAS DE ESTILOS EN WINDOWS SE RECOMIENDA USAR LA APLICACIï¿½N TOPSTYLE LITE www.bradsoft.com*/
+/*PARA MODIFICAR LAS HOJAS DE ESTILOS EN LINUX SE RECOMIENDA USAR LA APLICACIï¿½N CSSED*/
+/*punto antes de titulo es class, pueden haber varias en la pagina*/
+/*almohadilla antes de titulo es id, es un elemento unico de la pagina*/
+body {
+	font-size: 16px;
+}
+
+.fondoblanco,.content-wrapper{
+	background-color: white;
+}
+
+
+
+
+
+
+/*   MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS   */
+/*   estas configuraciones anularán las preestablecidas en la plantilla                                */
+/*   MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS   */
+
+/*
+.sidebar-menu .menu-superior,.sidebar-menu .menu-superior>a{
+	background-color: blue;
+	color:white;
+}
+.sidebar-menu .menu-superior:hover,.sidebar-menu:hover .menu-superior:hover>a:hover{
+	background-color: red;
+	color:yellow;
+}
+.sidebar-menu .menu-especial,.sidebar-menu .menu-especial>a{
+	background-color: blue;
+	color:white;
+}
+.sidebar-menu .menu-especial:hover,.sidebar-menu:hover .menu-especial:hover>a:hover{
+	background-color: red;
+	color:yellow;
+}
+.sidebar-menu .menu-adicional,.sidebar-menu .menu-adicional>a{
+	background-color: blue;
+	color:white;
+}
+.sidebar-menu .menu-adicional:hover,.sidebar-menu:hover .menu-adicional:hover>a:hover{
+	background-color: red;
+	color:yellow;
+}
+
+.sidebar-menu .menu-familias,.sidebar-menu .menu-familias>a{
+	background-color: purple;
+	color:white;
+}
+.sidebar-menu .menu-familias:hover,.sidebar-menu:hover .menu-familias:hover>a:hover{
+	background-color: purple;
+	color:yellow;
+}
+*/
+
+/*   FIN MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS MENUS     */
+
+
+
+
+
+
+.menu_especial{
+
+}
+.menu_adicional{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+  }
+  
+ .cookiesms {
+	/*color: black;*/
+	background-color: white;
+	border-color: black;
+	border-top-width: 2px;
+	z-index: 999999998;
+	display: none;
+}
+/* Fin del CSS para cookies */
+.centrado{
+	text-align: center;
+}
+.scrollup {
+	width: 40px;
+	height: 40px;
+	opacity: 0.3;
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	display: none;
+	text-indent: -9999px;
+	z-index: 9999;
+	background: url('../images/icon_top.png') no-repeat;
+}
+
+
+
+
+.bringToFront {
+	z-index: 999999998;
+}
+/* CSS para menu vertical de familias */
+.list-group.panel>.list-group-item {
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+
+.list-group-submenu {
+	margin-left: 20px;
+}
+/* fin CSS para menu vertical de familias */
+.descripBloqueArt {
+}
+.descripBloqueArt a {
+	color:#0066c0;
+}
+
+.puntero {
+	cursor: pointer;
+}
+
+.curDefault {
+	cursor: default;
+}
+
+.imgresponsive {
+	width: 100%;
+}
+
+#textoEncabezado {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.boxSeparador {
+	margin-bottom: 7px;
+}
+
+.boxGlobal {
+	height: 298px;
+	height: auto;
+	background-color: white;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	border-color: gainsboro;
+	border-width: 1px;
+	border-style: solid;
+	/*padding-left: 0px;*/
+	margin:0 auto;
+}
+.boxGlobal_lista {
+	background-color: white;
+	/*background-color: gainsboro;*/
+	overflow: hidden;
+	margin-bottom: 8px;
+	text-align: left;
+	border-color: gainsboro;
+	border-width: 1px;
+	border-style: solid;
+	padding-left: 0px;
+}
+.boxGlobal:hover {
+	background-color:aliceblue;
+}
+
+.boxFoto {
+	height: 100%;
+	max-height: 147px;
+	max-height: 275px;
+	height: 275px;
+	background-color: transparent;
+	overflow: hidden;
+}
+.boxFoto_lista {
+	background-color: transparent;
+	overflow: hidden;
+	padding: 0px;
+}
+@media screen and (max-width: 600px) {
+    .boxFoto {
+		height: 175px;
+    }
+}
+  
+.boxTitulo {
+	padding:0px;
+	padding-left:12px;
+	padding-right:12px;
+	margin-top: 4px;
+	vertical-align: bottom;
+	height: 70px;
+	overflow: hidden;
+	/*background-color: fuchsia;*/
+}
+.boxTitulo_lista {
+	padding:0px;
+	padding-left:12px;
+	padding-right:12px;
+	overflow: hidden;
+}
+
+.boxPropiedades {
+	/*padding: 0px;*/
+	margin-top: 10px;
+	vertical-align: bottom;
+	height: 60px;
+	height: 35px;
+	overflow: hidden;
+	/*font-size: +10px;*/
+}
+
+.boxPrecioArticulo {
+	margin-top: 2px;
+	z-index: 9998;
+	text-align: left;
+	color: darkred;
+	font-weight: bold;
+	font-size: x-large;
+	/*margin: 0px -15px 0px -15px;*/
+	width:auto;
+}
+
+.boxSeccionGrupo {
+	background-color: #275CCE;
+	height: 230px;
+	border-bottom: 4px solid white;
+	border-right: 4px solid white;
+}
+
+.boxSeccionFoto img {
+	background-color: transparent;
+	height: 150px;
+	margin-top: 20px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: white;
+	text-align: center;
+	width: auto;
+	height: auto;
+	max-height: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.boxSeccionTexto {
+	background-color: transparent;
+	vertical-align: bottom;
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	overflow: hidden;
+	padding: 2px;
+	color: white;
+	font-weight: bold;
+}
+
+.botonGrupo {
+	float: right;
+	top: 0px;
+	right: 0px;
+	position: relative;
+	z-index: 9999;
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	text-align: center;
+	color: white;
+	/*filter: alpha(opacity = 60); IE*/
+	/*-moz-opacity: 0.6; Mozilla*/
+	/*opacity: 0.6; CSS3*/
+	/*background-color: rgba(39,92,204, .5);*/
+}
+
+#notificacionesGenerales {
+	display: none; /*Oculta el contenedor*/
+	padding: 5px; /*Espaciado interno*/
+	width: 40%; /*Ancho del contenedor*/
+	text-align: center; /*Alineaciï¿½n del texto*/
+	background-color: green; /*Color de fondo*/
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	color: white; /*Color de fondo*/
+	font-weight: bold;
+	position: fixed; /* or absolute */
+	top: 50%;
+	left: 30%;
+	box-shadow: 0 0 5px #555; /*Sombras CSS3*/
+	z-index: 100;
+	z-index: 999999999;
+}
+
+.propiedadSeleccionada {
+	background-color: #F2F5A9;
+}
+
+.articuloFoto {
+	margin-bottom: 15px;
+	float: left;
+}
+
+.articuloFoto img {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	text-align: center;
+}
+
+.articuloPrecio {
+	/*
+	line-height: 50%;
+	background-color: red;
+	border-color: white;
+	border-style: solid;
+	border-width: 5px;
+	color: white;
+	padding: 10px;
+	*/
+	text-align: left;
+	font-weight: bold;
+	font-size: xx-large;
+	color: darkred;
+}
+
+.articuloCaracteristicas {
+	margin-bottom: 15px;
+	padding: 0 -15px;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	height: 35px;
+}
+
+.articuloCesta {
+	float: left;
+	height: auto;
+	color: red;
+}
+
+.articuloCestaDescuentos {
+	float: left;
+	height: auto;
+	color: red;
+	border-color: red;
+	border-style: solid;
+	border-width: 1px;
+	padding: 10px;
+}
+
+.articuloCaracteristicas img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 100%;
+	float: left;
+	width: auto;
+}
+
+.articuloDatos {
+	display: block;
+	margin-top: 20px;
+}
+
+.articuloDatos h4 {
+	color: red;
+	cursor: pointer;
+	border-bottom: 1px;
+	border-bottom-color: lightblue;
+	border-bottom-style: solid;
+}
+
+.articuloMouseOverCapa {
+	height: 140px;
+	margin-bottom: 10px;
+}
+
+.articuloMouseOver {
+	max-width: 100%;
+	max-height: 100%;
+	border-color: #6ab5ff;
+	border-style: solid;
+	border-width: 5px;
+}
+
+.articuloMouseOver:hover {
+	border-color: navy;
+}
+
+.formaPagoEnvio {
+	float: left;
+	height: auto;
+	cursor: pointer;
+	display: block;
+}
+
+.formaPagoEnvio .formaPagoEnvioSelected {
+	color: #333;
+	font-family: 'montserratbold';
+}
+
+.datosDireccionesEnvio {
+	border-color: white;
+	float: left;
+	background-color: BlanchedAlmond;
+	border-style: solid;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.formaPagoEnvio:hover {
+	color: gray;
+}
+
+.formaPagoEnvio span {
+	font-size: 10pt;
+}
+
+.miCuenta {
+	background-color: lightyellow;
+	margin: 10px;
+}
+
+.textoRojo {
+	color: red;
+}
+
+.textoVerde {
+	color: green;
+}
+
+.anchoMaximo {
+	width: 100%;
+	min-width: auto;
+	text-align: left;
+}
+
+.margenInferior {
+	margin-bottom: 5px;
+}
+.flotarDerecha {
+	float: right;
+	vertical-align: middle;
+}
+.autoWidth{
+	width: auto;
+}
+
+#pieWeb{
+	background-color: lightgray;
+}
+
+.loader{
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.floatWP{
+	position:fixed;
+	width:40px;
+	height:40px;
+	bottom:10px;
+	right:10px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:23px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-floatWP{
+	margin-top:9px;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

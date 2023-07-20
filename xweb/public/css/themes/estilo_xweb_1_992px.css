@@ -1,0 +1,2938 @@
+
+#cabecera_web {
+    display: none;
+}
+
+#cabecera_movil {
+    display: block;
+}
+
+.cabMovil {
+    background-color: #333;
+}
+
+.categoriaCabMovil {
+    background-image: url(/xweb/public/images/cabr3.png);
+    background-size: 250% 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    min-height: 1175px;
+}
+
+.div_main_header {
+    width: 100%;
+    display: inline;
+}
+
+.digiHead1 {
+    width: 100%;
+}
+
+.digiHeader {
+    display: none;
+}
+
+.digiHeaderFila1 {
+    padding: 8px 10px 8px 5px !important;
+    background-color: transparent;
+    border-bottom: 0.5px #b5b5b5 solid;
+    height: 53px;
+}
+
+.fCelda5 {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 4px;
+}
+
+.fCelda6 {
+    min-height: 200px;
+}
+
+.navbar {
+    min-height: 0px;
+}
+
+.div_txt_categoria_mv {
+    font-size: 15pt;
+}
+
+#img_menu_movil {
+    width: 22px;
+    height: 22px;
+}
+
+#login_menu_movil {
+    width: 30px;
+    height: 29px;
+}
+
+.user_menu_movil {
+    background-image: url(/xweb/public/images/circle.png);
+    background-repeat: no-repeat;
+    background-size: 31px;
+    width: 31px;
+    height: 31px;
+    margin-top: -1px;
+}
+
+.user_menu_movil div {
+    font-size: 13pt;
+    text-align: center;
+    padding-top: 3px;
+    color: white;
+}
+
+.dH1C1 {
+    width: 128px;
+    display: none;
+}
+
+.dH1C1 img {
+    width: 120px;
+    height: auto;
+}
+
+.dHF1_2 {
+    min-width: 360px !important;
+    font-size: 8pt;
+}
+
+.dHF1_4 a {
+    font-size: 8pt !important;
+}
+
+.dH1C2 {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 1px #b5b5b5 solid;
+}
+
+.dH1C2 #textobusq {
+    font-size: 11pt;
+    padding: 3px 5px;
+}
+
+#jssor_1 {
+    transform: scale(1.2);
+    top: 28px !important;
+}
+
+a#linkmenulogin {
+    font-size: 8pt;
+}
+
+.digiHead1 {
+    padding-top: 0px;
+    padding-left: 12px;
+}
+
+#buscador {
+    width: 100% !important;
+    padding-bottom: 0px !important;
+}
+
+.dHIco img {
+    width: 25px;
+    height: auto;
+}
+
+.dH1Link {
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 18px;
+}
+
+.hMicesta {
+    font-size: 10pt;
+}
+
+#mega-menu-4 {
+    margin-top: -18px;
+    display: contents;
+}
+
+#mega-menu-4 li:last-child {
+    display: none;
+}
+
+.menu-container .manu {
+    width: 100% !important;
+    margin-top: -12px;
+    padding: 0px 12px;
+    display: none;
+}
+
+.menu-container .manu ul li {
+    max-width: 141px;
+}
+
+.menu-container .manu ul li a {
+    font-size: 10pt;
+}
+
+.menuCatNomC {
+    padding-right: 8px;
+}
+
+.menuCatNomC img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.aMenuCatNomC2 {
+    font-family: montserratextrabold;
+}
+
+a.aMenuCatNomC2:hover {
+    border-bottom: 4px solid #fff;
+}
+
+.homeTitu2A {
+    width: 350px !important;
+}
+
+.ffCol-first {
+    padding: 15px 10px;
+    width: 360px !important;
+}
+
+.ffCol-second {
+    float: right;
+    height: 66px;
+    width: auto !important;
+}
+
+.ffCol {
+    padding: 15px 0px !important;
+    padding-left: 10px !important;
+    padding-top: 20px !important;
+    width: 33%;
+}
+
+.ffCol1 {
+    height: 32px;
+    padding: 0;
+    padding-right: 2px;
+    width: auto !important;
+    text-align: right;
+}
+
+.ffCol1 img {
+    width: auto;
+}
+
+.homeElement {
+    width: 100%;
+}
+
+.homeElement img {
+    width: 100%;
+}
+
+.homeContArts {
+    width: 100%;
+    min-height: 390px;
+    display: flex;
+}
+
+.celdaArtFav {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 20% !important;
+    height: 475px !important;
+    margin: 20px;
+    margin-bottom: 50px;
+    border-bottom: none;
+}
+
+.celdaArtFavOfe {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 20% !important;
+    height: 511px !important;
+    margin: 20px;
+    margin-bottom: 50px;
+    float: left;
+    overflow: hidden;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+.celdaFav {
+    padding: 15px 0px 5px 0px;
+}
+
+
+
+.celdaFot {
+    width: 160px;
+}
+
+.celdaFot img {
+    max-height: 120px !important;
+    max-width: 120px !important;
+}
+
+.celdaPrecio {
+    width: 100% !important;
+}
+
+.celdaCantStock {
+    width: 100% !important;
+}
+
+.celdaCant {
+    width: 50%;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.celdaTabCant {
+    margin: 0 auto;
+}
+
+.celdaStock {
+    display: none;
+    width: 50%;
+}
+
+.pien {
+    width: 100%;
+    padding-top: 0px;
+}
+
+.pienCont {
+    width: 100%;
+    display: block !important;
+}
+
+.pienCont2 {
+    padding: 0;
+}
+
+.pient_nav {
+    width: 100%;
+    display: inline-block;
+}
+
+.pient_nav_default::before {
+    content: "";
+    position: relative;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 35px;
+    margin-right: 10px;
+    background: url(/xweb/public/images/mas.png) center center no-repeat;
+    background-size: 16px;
+    transition: transform 0.3s ease 0s;
+}
+
+.pient_nav_change::before {
+    content: "";
+    position: relative;
+    display: block;
+    float: right;
+    width: 20px;
+    height: 35px;
+    margin-right: 10px;
+    background: url(/xweb/public/images/mas.png) center center no-repeat;
+    background-size: 16px;
+    transition: transform 0.3s ease 0s;
+    transform: rotate(45deg);
+}
+
+.pient_nav > .pietable {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.pient_nav > .pietable2 {
+    width: 80%;
+}
+
+.tdpietable22 {
+    padding-left: 0px !important;
+}
+
+.pietable2td2 {
+    padding: 0px !important;
+}
+
+.pient_nav > .tablecalidad {
+    display: none;
+}
+
+.fCelda51 {
+    width: auto !important;
+    display: table-cell;
+    padding-right: 5px;
+}
+
+.pien12 {
+    display: none !important;
+    width: 612px;
+}
+
+.homeTitu {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.dHF1_2 {
+    min-width: 20px !important;
+    font-size: 6pt;
+    padding-top: 3px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dH1C2 {
+    width: 100%;
+    padding: 7px;
+    background-color: transparent;
+    border-bottom: 1px #b5b5b5 solid;
+}
+
+.dH1C2 #textobusqMovil {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    vertical-align: middle;
+    padding: 11px 5px;
+    font-size: 12pt;
+    font-family: montserratextralight;
+    background-image: url(../../images/hlupa.png);
+    background-repeat: no-repeat;
+    background-position: 796px 15px;
+}
+
+.dH1C2 #textobusqMovil {
+    border-bottom: 1px solid #ccc;
+    font-size: 10pt;
+    background-position: 99% 4px;
+    background-size: 15px;
+    padding: 0px;
+    height: 25px;
+}
+
+#textobusqMovil::-webkit-input-placeholder { color: #fff !important; }
+#textobusqMovil::-moz-placeholder { color: #fff !important; }
+#textobusqMovil:-ms-input-placeholder { color: #fff !important; }
+#textobusqMovil:-moz-placeholder { color: #fff !important; }
+
+#img_menu_movil {
+    width: 30px;
+    height: 30px;
+}
+
+.tHofe1 img {
+    width: auto;
+    height: 28px;
+}
+
+.dHF1_outOf a {
+    font-size: 10pt;
+}
+
+.dH1C3 {
+    width: 220px;
+    margin-top: -8px;
+    display: flex;
+    justify-content: right;
+}
+
+.dH1LinkCell2 {
+    width: 105px;
+}
+
+.dH1Link a {
+    color: #fff;
+    font-size: 9pt;
+}
+
+.dHIco {
+    width: 42px;
+    padding-bottom: 0px;
+}
+
+.dHIco img {
+    width: 25px;
+    height: auto;
+}
+
+.cabCestaNum {
+    left: 22px;
+    top: 7px;
+    font-size: 12pt;
+}
+
+.dH1Link {
+    width: 60px;
+    padding-left: 0px;
+    padding-bottom: 6px;
+    padding-top: 2px;
+    float: left;
+    font-size: 5pt;
+    color: #fff;
+}
+
+.digiHeader {
+    display: none;
+}
+
+#suggestionsBusqMv {
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+}
+
+.busqNoRes {
+    height: 80px;
+    background: white;
+    box-shadow: 0px 13px 15px -10px #000000;
+}
+
+.buscador_desplegable {
+    z-index: 9999;
+    width: 100%;
+}
+
+.busqcerrar {
+    width: 100%;
+    margin-top: 0px;
+    padding-right: 10px;
+}
+
+.busqArticulos {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.div_cabecera_menu {
+    position: absolute;
+    z-index: 999;
+    top: 97px;
+    width: 345px;
+    padding: 0px 3px;
+    background-color: #333;
+}
+
+.div_cabecera_login {
+    top: 53px;
+}
+
+.micuentaContenido {
+    border-top: none;
+    margin-top: 0px;
+}
+
+.miCTitu {
+    width: 100%;
+    padding: 10px 0 5px 10px;
+    font-size: 10pt;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.miCTab {
+    padding: 5px 0px;
+}
+
+.miCCel1 {
+    width: 18px;
+}
+
+.miCCel2 {
+    width: 132px;
+}
+
+.miCCel2 a {
+    color: white !important;
+    font-size: 9pt;
+}
+
+.micuentaContenido {
+    border-top: none;
+    margin-top: 0px;
+}
+
+.menuCatNomC {
+    width: 40px;
+    text-align: center;
+    padding-top: 0px;
+    padding-right: 3px;
+}
+
+.menuCatNomC2 {
+    font-size: 10pt;
+}
+
+.menuCatNomC2 a {
+    color: #fff;
+}
+
+#desplegableLogin {
+    display: block;
+    z-index: 1000;
+    background-color: transparent;
+    color: white;
+    position: relative;
+}
+
+.loginContenido {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    border-top: none;
+    margin-top: 0px;
+}
+
+.imgLoading {
+    top: 20px;
+}
+
+#div_central_portada {
+    display: none;
+}
+
+#div_central_portada_mv {
+    display: block;
+    margin-top: 70px;
+}
+
+.divNextMenu img {
+    width: 20px;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+.ulMenuSubCategoriaMv {
+    padding: 15px 10px 10px 42px;
+}
+
+.liMenuSubCategoriaMv {
+    padding: 5px 0px;
+    font-size: 10pt;
+    color: #ededed;
+}
+
+.liMenuSubCategoriaMv a {
+    color: #ededed;
+}
+
+.liMenuSubCategoriaMv a:visited {
+    color: #ededed;
+}
+
+.cc-banner.cc-bottom {
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+.cc-window.cc-banner {
+    width: 90%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.cc-revoke, .cc-window {
+    font-size: 14px;
+}
+
+.cc-link {
+    float: none !important;
+}
+
+.cc-banner .cc-message {
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+/* ******* CATEGORIAS ******* */
+
+.catContGruposO {
+    width: 100%;
+}
+
+.catContGruposO1 {
+    width: 100%;
+}
+
+.categoria .catCol1 {
+    display: none;
+    width: 100%;
+    min-height: max-content;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.categoria .catCol2 {
+    padding: 0 0px 25px 0px;
+    width: 100%;
+}
+
+.catCol1Div {
+    width: 100%;
+    min-height: 0px;
+    height: 0px;
+    padding-bottom: 0px;
+}
+
+.catCol2Div {
+    display: none;
+}
+
+.categoriaO {
+    display: block;
+}
+
+.catCol0Mv {
+    display: flex;
+    justify-content: space-between;
+}
+
+#mytabsFilts {
+    width: 60%;
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    padding-bottom: 35px;
+}
+
+.catFilt {
+    display: block;
+}
+
+.contArtsOfertas {
+    display: flex;
+    overflow-x: auto;
+    width: 100vw;
+}
+
+.fondoblanco, .content-wrapper {
+    height: auto !important;
+    min-height: 350px !important;
+}
+
+#filtradosCat {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contArtsOcasion {
+    height: auto !important;
+    min-height: min-content;
+    margin-bottom: 0px !important;
+}
+
+.categoriaO {
+    height: auto;
+}
+
+#xw_boxcentral {
+    min-height: inherit !important;
+}
+
+.piencol2 {
+    display: none !important;
+}
+
+.pien3 {
+    display: none !important;
+}
+
+.pientd {
+    padding: 20px;
+}
+
+.img_banner_categorias {
+    margin: 0px !important;
+    max-width: 100% !important;
+    padding: 0px 7px;
+}
+
+.catContGrupos1 {
+    width: 100%;
+    padding: 0px 7px;
+}
+
+.catGrupo {
+    width: 100%;
+    padding: 0px 7px;
+}
+
+.catGrupoC1 {
+    font-size: 10pt;
+}
+
+.catSubt {
+    padding: 50px 7px 20px 7px !important;
+    font-size: 13pt;
+}
+
+.catSubtBord {
+    padding-top: 0px;
+}
+
+.homeElementConsumibles {
+    width: 100%;
+}
+
+.grCab {
+    width: 100%;
+}
+
+.grCab1 {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.grCab12 {
+    font-size: 20pt;
+    padding: 10px 0 10px 0;
+}
+
+.grCab2 {
+    display: none;
+}
+
+.celdaArt a {
+    font-weight: 100;
+}
+
+.pien a {
+    padding: 2px 0px;
+    color: white;
+}
+
+.pien42 p {
+    font-size: 9pt;
+    letter-spacing: 0px;
+}
+
+.famVermas {
+    display: none;
+}
+
+.filtrosActivos {
+    padding: 0px;
+}
+
+
+
+
+
+
+
+
+/* ******* MI CUENTA ******** */
+
+#xw_boxcontacto {
+    width: 100% !important;
+}
+
+.xw_boxcontacto {
+    width: 100% !important;
+}
+
+#xw_boxcontacto > div { 
+    width: 100% !important;
+}
+
+.informTit {
+    width: 100% !important;
+}
+
+.micuentaMenu {
+    width: 100%;
+}
+
+.micuentaOpc {
+    width: 98%;
+}
+
+.micuentaOpc table {
+    height: 100%;
+}
+
+.micuentaOpc table td:last-child {
+    width: 100px !important;
+}
+
+.micuentaOpc table td img {
+    width: 45px;
+    height: 45px;
+}
+
+.divpresupu {
+    font-size: 11pt !important;
+    padding-left: 0px;
+}
+
+#tableRecibos > h4 > div {
+    width: 100%;
+}
+
+.tdocumentos {
+    width: 100% !important;
+    display: inline-table;
+}
+
+.tdocumentos td {
+    font-size: 7pt;
+    padding: 5px;
+}
+
+.tdocumentos td a {
+    white-space: nowrap;
+}
+
+.tdocumentos tr:first-child td {
+    padding: 10px 4px;
+}
+
+.overflow-x {
+    overflow-x: auto;
+}
+
+.informTit {
+    padding: 11px !important;
+}
+
+.div_mensaje_modelo347 {
+    font-size: 10pt;
+}
+
+.tsolicitudes {
+    width: 100% !important;
+    font-size: 8pt;
+}
+
+.tsolicitudes td {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    text-align: center;
+}
+
+.tsolicitudes td:first-child {
+    text-align: center;
+}
+
+.titulo_tr {
+    font-size: 15pt;
+    padding: 0px;
+    margin: 7px 0px !important;
+}
+
+.tcontacto2 {
+    width: 100% !important;
+    margin: 11px !important;
+    display: block;
+}
+
+.tcontacto2 tr td:first-child {
+    font-size: 10pt;
+    width: auto;
+    padding-left: 0px;
+    min-width: 100px;
+}
+
+.tcontacto2 td {
+    padding: 0px 0px 10px 10px;
+}
+
+.tcontacto2 td input[type="text"], .tcontacto2 td input[type="password"], .tcontacto2 td input[type="email"] {
+    width: 100%;
+}
+
+.btnSolicitarMayor {
+    padding: 8px 16px !important;
+    margin-top: 10px !important;
+    margin-left: 0px !important;
+    position: relative !important;
+    float: right;
+}
+
+.btnAtras {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    float: left;
+}
+
+.btnAgregarDireccion {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    margin-right: 11px;
+}
+
+.font_datos_fiscales {
+    font-size: 10pt;
+}
+
+#formDatos {
+    width: 100%;
+    display: flex;
+}
+
+.lista_direcciones {
+    padding: 5px 11px;
+}
+
+.cajaregistro input[type="text"], select {
+    margin: 5px;
+}
+
+#select_direcciones {
+    max-width: 100%;
+}
+
+.pfacturas2 {
+    margin-top: 10px !important;
+}
+
+.formRegistro select {
+    width: 100%;
+    max-width: 100%;
+    margin: 0px !important;
+}
+
+.divpresupu {
+    font-size: 13pt;
+}
+
+.div_direccion_editar {
+    margin-bottom: 10px;
+}
+
+.div_direccion_editar > h3 > div {
+    width: 100% !important;
+}
+
+.row {
+    margin: 0px;
+}
+
+.connectedSortable {
+    padding: 0px 7px;
+}
+
+.col-xs-12 {
+    padding: 0px;
+}
+
+#tableFacturas > h3 > div {
+    width: 100% !important;
+}
+
+.catCol0DivMv {
+    background-color: #ededed !important;
+    width: 100px;
+    padding: 10px 0px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: 1px #dddddd solid;
+    font-size: 12pt;
+    font-family: montserratbold;
+}
+
+.catCol0DivMv:hover {
+    background-color: #dfdfdf;
+}
+
+.catCeldaOrden {
+    width: 180px;
+    padding-left: 0px;
+}
+
+.catOrdenar {
+    width: 192px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.catMarcasTit {
+    font-size: 9pt;
+    padding-bottom: 4px;
+    margin-left: 0px;
+    margin-top: 8px;
+}
+
+.catCriteriosOrden {
+    padding-left: 0px;
+}
+
+.catOrd {
+    padding: 5px 0px;
+}
+
+#catOrd1 {
+    display: none;
+}
+
+
+
+
+
+
+
+/* ******* DEVOLUCIONES ******** */
+
+.devoluciones {
+    width: 100%;
+    display: block;
+    padding: 0px 7px;
+    padding-top: 0px;
+}
+
+.rmaContGeneral {
+    width: 100% !important;
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.rmaTituloSeccion {
+    width: 100% !important;
+    padding: 10px 0px !important;
+}
+
+.rmaTituloDevoluciones {
+    display: none !important;
+}
+
+.rmaTituloDevoluciones2 {
+    display: block !important;
+}
+
+.rmaSolT {
+    width: 100%;
+    display: block;
+}
+
+.rmaSolC {
+    display: block;
+    width: 100% !important;
+    padding: 7px 0px !important;
+}
+
+.rmaSolC1 {
+    margin: 5px auto !important;
+    width: 100%;
+}
+
+.rmaSolC12 {
+    padding: 30px 0 !important;
+}
+
+.rmaSolC2 {
+    display: inline-flex;
+    width: 100%;
+    margin: 10px auto 25px auto !important;
+}
+
+.rmaSol1C2 {
+    width: 100% !important;
+}
+
+.rmaSol2C2 {
+    width: 100% !important;
+}
+
+.rmaSol2C2 .rmaSolCelda {
+    width: 30% !important;
+    display: inline-block;
+    float: left;
+    white-space: normal;
+}
+
+.rmaSolNum {
+    padding-left: 5px !important;
+}
+
+.rmaSolFila {
+    display: inline-block;
+    width: 100% !important;
+}
+
+.rmaSolFila1 {
+    width: 100% !important;
+}
+
+.rmaSolTabla2 .rmaSolFila1 {
+    width: 100% !important;
+}
+
+.rmaSolCelda {
+    width: 25% !important;
+    float: left;
+    display: block;
+}
+
+.rmaSolEstado {
+    width: 18% !important;
+}
+
+.rmaSolObsePC {
+    display: none !important;
+}
+
+.rmaSolObseMV {
+    display: inline-block !important;
+}
+
+.rmaSolElim {
+    width: 12.5% !important;
+}
+
+.rmaSolElim img {
+    max-width: 36px;
+}
+
+.rmaSolCelda2 {
+    font-size: 8pt;
+    text-align: left !important;
+    min-width: min-content !important;
+    word-break: break-word;
+}
+
+.rmaSolFila > .rmaColumnNumSerie {
+    width: 40% !important;
+}
+
+.rmaSolTabla2 {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.rmaSolFila2 {
+    float: left;
+    width: 100% !important;
+}
+
+.devolucionesPol {
+    display: inline-grid;
+}
+
+.devolucionesPolTD1 {
+    display: grid;
+    width: 100%;
+    padding-right: 0px;
+}
+
+.devolucionesPolTD2 {
+    display: grid;
+    width: 100%;
+}
+
+.devolucionesPolTD3 {
+    display: grid;
+    width: 100%;
+}
+
+.devolucionesPolTD4 {
+    display: grid;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.devolucionesPolTD1 img {
+    width: 100%;
+}
+
+.devolucionesPolTD2 img {
+    width: 100%;
+}
+
+.devolucionesPolTD3 img {
+    width: 100%;
+}
+
+.devolucionesPolTD4 img {
+    width: 100%;
+}
+
+.devolucionesPolTD3_2 {
+    font-size: 9pt;
+}
+
+.devolucionesT {
+    padding: 0px;
+}
+
+.devoluciones1 {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.devoluciones1 > .devolArticulosT {
+    padding: 7px;
+}
+
+.devoluciones2 {
+    float: left;
+    padding: 7px 0px;
+    width: 100%;
+}
+
+.devolucionesEnvTDF img {
+    transform: rotate(90deg);
+}
+
+.devolCab1 {
+    width: 100%;
+    padding: 5px 0px;
+    display: block;
+}
+
+.w3-bar .w3-bar-item {
+    width: 50%;
+    min-height: 135px;
+    padding: 8px 10px;
+}
+
+.devolArticulosT {
+    width: 100%;
+    padding: 0px;
+}
+
+.devolArticulosT > div:first-child {
+    margin-left: 0px !important;
+    padding: 20px 7px !important;
+    width: 100% !important;
+}
+
+.devolCab2 {
+    width: 100%;
+    margin: 0px !important;
+    padding: 7px;
+}
+
+.devolCab2_2 {
+    padding-left: 0px;
+}
+
+.devolCab2_3 {
+    vertical-align: bottom;
+    padding: 0px 0px 0px 10px;
+}
+
+.devolbuscar {
+    width: 100%;
+}
+
+.devolArticulosTR {
+    width: 100%;
+    padding: 15px 7px 15px 7px;
+}
+
+.devolArticulosTD {
+    padding: 5px;
+    font-size: 8pt;
+    float: left;
+}
+
+.devolArticulosTDImg {
+    padding-left: 0px;
+    width: 25%;
+    display: block;
+}
+
+.devolArticulosTDImg img {
+    width: 100%;
+    max-height: 80px;
+}
+
+.devoArtCodsTD {
+    font-size: 8pt;
+}
+
+.devolArticulosTDImg {
+    width: 25% !important;
+}
+
+.devolArticulosTDDesc {
+    width: 75% !important;
+    padding-right: 0px;
+}
+
+.devolArticulosTDOpc1 {
+    width: 50%;
+    padding: 7px 0px;
+}
+
+.devolArticulosTDOpc2 {
+    width: 50%;
+    padding: 7px 0px;
+}
+
+.devolButton {
+    width: 100%;
+    font-size: 9pt;
+    margin: 0px auto 10px auto;
+    float: left;
+}
+
+.devolArticulosTDOpcSel {
+    width: 100%;
+}
+
+.devolSelAveria {
+    width: 100%;
+    margin: 5px 0px;
+    margin-left: 0px !important;
+    max-width: 100%;
+}
+
+.devolArticulosObs2 {
+    width: 50%; 
+    padding: 7px;
+}
+
+.devolArticulosObs2 > span {
+    width: 100% !important;
+    margin: 0px !important;
+}
+
+.rmarepararoabonar2 {
+    width: 50%;
+}
+
+.rmarepararoabonar2_2 {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.devolObs {
+    width: 95%;
+}
+
+.rmaC2 {
+    width: 100%;
+    padding-left: 0px;
+}
+
+.devolRmaEnvio div:first-child {
+    width: 100% !important;
+}
+
+.devolRmaEnvioTD {
+    float: left;
+    padding: 10px;
+}
+
+.devoArtCodsT div {
+    width: 50% !important;
+}
+
+.devolArticulosObs > .devolArticulosObs1 {
+    width: 50% !important;
+    padding: 7px !important;
+}
+
+.devolArticulosObs1 {
+    font-size: 10pt !important;
+    padding: 0px !important; 
+}
+
+.devolArticulosObs2 > .devolObs {
+    width: 100%;
+}
+
+.devolArticulosTR > .devolArticulosTDOpcSel {
+    padding: 7px 0px;
+}
+
+.devolArticulosTDOpcSel input {
+    float: right;
+}
+
+.contactoImg {
+    display: none;
+}
+
+.registroTxt {
+    width: 100%;
+    padding: 0px 7px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-top: 10px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    font-size: 11pt;
+    font-family: montserratlight;
+}
+
+.registroContTabs {
+    width: 100%;
+}
+
+.tRegistro {
+    width: 100%;
+}
+
+.registroT1 {
+    width: 100%;
+    display: block;
+}
+
+.registroT2 {
+    width: 100%;
+    display: block;
+    padding: 7px;
+    padding-top: 50px;
+}
+
+.tContacto input[type="text"], .tContacto input[type="password"], .tContacto input[type="email"], .tContacto select {
+    padding: 5px 0;
+    padding-bottom: 5px;
+    width: 96%;
+    height: 25px;
+    margin: 5px auto;
+}
+
+.tContacto td {
+    width: 100%;
+    float: left;
+    padding: 10px 0 !important;
+}
+
+.tContacto textarea {
+    width: 100%;
+    padding: 0px;
+}
+
+.tRegistro2 td {
+    padding: 0px;
+}
+
+.tRegObserv td {
+    padding: 7px 0px;
+}
+
+.enviadatos {
+    margin-right: auto;
+    float: none;
+}
+
+.cajaregistro input[type="text"], select {
+    max-width: 100%;
+}
+
+.cajaregistro input[type="text"], select {
+    max-width: 95%;
+    height: 35px !important;
+    margin-left: 0px !important;
+    margin-bottom: 20px;
+}
+
+.recogCont {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.recogTit {
+    padding-left: 7px;
+}
+
+.recogTit {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.recogTit1 {
+    font-size: 11pt !important;
+}
+
+.recogFormTR {
+    width: 100% !important;
+    padding: 20px 7px 7px;
+    margin: 0px;
+}
+
+#direccion_tipo {
+    margin-left: 0px !important;
+    margin-right: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.recogFormTR1 {
+    width: 100%;
+    margin: 0px;
+}
+
+.recogFormTDPreInfo {
+    display: none;
+}
+
+.recogFormTDInfo {
+    background-position: 2px 10px;
+}
+
+.recogFormTDInfo .recogFormTDInfo1 {
+    font-size: 9pt;
+    margin-left: 40px;
+}
+
+.recogFormTDInfo .recogFormTDInfo2 {
+    font-size: 9pt;
+}
+
+.recogFormTD:first-child {
+    padding-left: 0px;
+}
+
+.recogFormTD {
+    padding-left: 10px;
+}
+
+.recogFormTD > .recogFormTD {
+    padding-left: 0px;
+}
+
+.recogFormTD input[type="text"] {
+    width: 100% !important;
+}
+
+.recogFormTD select {
+    margin-left: 0px !important;
+    width: 100% !important;
+    height: 46px !important;
+    margin-bottom: 5px;
+}
+
+.recogSubmit {
+    background-image: url(/xweb/public/images/recogbtn2mv.png) !important;
+    background-size: auto 46px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 5px;
+    margin-left: 0px;
+    padding: 0;
+    width: 100%;
+}
+
+.recogTransFondo {
+    background-image: none;
+}
+
+#xw_boxcentral > .devoluciones {
+    width: 100%;
+    display: block;
+}
+
+.recogFormTRHoraRecog div:first-child {
+    width: 48% !important;
+}
+
+.recogFormTRHoraRecog div:last-child {
+    width: 52% !important;
+    padding-left: 0px;
+}
+
+.recogFormTR1 .recogFormTD {
+    width: 100% !important;
+    display: block;
+    float: left;
+}
+
+.recogMsg {
+    padding: 0px 7px;
+}
+
+.recogTransportista a {
+    padding: 0px 7px !important;
+}
+
+.recogMsgTr {
+    width: 100%;
+    padding: 0px 7px;
+}
+
+
+
+
+
+/* ******* ARTÍCULO ****** */
+.digiFicha {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.digiDivFicha {
+    width: 100% !important;
+    padding: 0px 7px !important;
+    margin: 0 !important;
+}
+
+.fCelda1 {
+    width: 100%;
+    height: auto !important;
+    min-height: auto;
+}
+
+.fCelda2 {
+    width: 100%;
+    height: 30px !important;
+}
+
+.fCelda3 {
+    width: 100%;
+    padding: 5px 0px 0px 0px;
+    margin-top: 0px !important;
+    min-height: auto !important;
+}
+
+.digiDivFicha > .fCelda5 {
+    height: auto;
+}
+
+.fCelda6 {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.fCelda7 {
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.fCelda8 {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.trPuntosControl td:first-child {
+    display: none;
+}
+
+.trPuntosControl td:last-child {
+    display: block;
+}
+
+.fContImg {
+    padding: 0px !important;
+}
+
+.fC2Tab1 {
+    width: 100%;
+    padding: 0px;
+}
+
+.fC2Tab2 {
+    display: none;
+}
+
+.trInfoArticulo > td {
+    width: 100%;
+    float: left;
+}
+
+.imagenlanzada img {
+    max-width: 50% !important;
+}
+
+.fC2Tab11 {
+    width: 26px;
+}
+
+.fC2Tab12 {
+    padding-left: 5px;
+}
+
+.fDes {
+    width: 100%;
+    min-width: 100%;
+    font-size: 13pt;
+}
+
+.fDes2 {
+    font-size: 10pt;
+    line-height: 22px;
+    padding: 5px 0;
+    padding-bottom: 0px;
+}
+
+.fDes3 {
+    padding-bottom: 5px;
+}
+
+.cestaAviso1 {
+    display: none;
+}
+
+.fCant {
+    width: 50%;
+    float: right;
+    padding-top: 5px;
+}
+
+.fStock {
+    text-align: left;
+    font-size: 13pt;
+    width: 100%;
+}
+
+.eligeGradoCesta {
+    width: 100% !important;
+    font-size: 13pt !important;
+    margin-top: 40px;
+    margin-bottom: 10px !important;
+}
+
+.table_ampliaciones {
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-bottom: 5px;
+}
+
+.table_ampliaciones tbody {
+    display: block;
+}
+
+.table_ampliaciones tr {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.table_ampliaciones tr:first-child td {
+    width: 50% !important;
+}
+
+.table_ampliaciones tr:last-child td {
+    width: 100% !important;
+}
+
+.table_ampliaciones_mv {
+    display: block !important;
+}
+
+.td_art_pc {
+    display: none !important;
+}
+
+.td_art_mv {
+    display: inline-table !important;
+    width: 100%;
+}
+
+.td_precios_ampl div {
+    width: 100%;
+    font-size: 18pt;
+    text-align: left;
+}
+
+.div_tipo_articulo {
+    width: 100%;
+}
+
+.fCantStock {
+    margin-bottom: 20px;
+}
+
+.fCantTxt {
+    float: left;
+    width: auto;
+}
+
+.fTabCant {
+    padding-left: 20px;
+}
+
+.fPrecios {
+    width: 100%;
+    font-size: 22pt;
+    float: left;
+    text-align: left;
+}
+
+.fPrecios span {
+    float: left;
+    width: 100%;
+}
+
+.fPrecioAdd {
+    width: 100%;
+}
+
+.fAdd {
+    width: 100%;
+}
+
+.fBotonAddDisabled {
+    width: 100%;
+    border-radius: 8px;
+}
+
+a.fBotonAdd {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.fVentajas {
+    width: 100%;
+}
+
+.fLineaDivisoria {
+    float: left;
+}
+
+.fVentajas > .ffCol {
+    width: 23% !important;
+}
+
+.ffCol2_1 {
+    font-size: 9pt;
+}
+
+.ftit {
+    font-size: 15pt;
+}
+
+.divArticuloRelacionados .celdaArt {
+    margin: 20px 10px 40px 10px;
+}
+
+.divArticuloRelacionados > .celdaArt {
+    width: 22% !important;
+    height: 436px !important;
+}
+
+.divRadioGrados {
+    min-width: 0px;
+}
+
+.divAnadirFixed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 0px 10px;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgb(201 201 201 / 80%);
+}
+
+#ampl_ssd {
+    margin-top: 15px;
+    margin-left: 0px !important;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+}
+
+
+
+
+
+
+/* ******* CESTA ******* */
+
+.table_cesta_pc {
+    display: none;
+}
+
+.table_cesta_mv {
+    display: table !important;
+    border-collapse: separate;
+}
+
+#cestapagina1 {
+    width: 100%;
+    padding: 30px 7px;
+}
+
+.cestaTabla {
+    width: 100%;
+}
+
+.cestaart {
+    margin: 10px 0px;
+}
+
+.cestaTabla td.cestaart1 {
+    width: 33%;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.cestaTabla td.cestaart2 {
+    width: 66%;
+    text-align: left;
+    padding: 5px;
+    padding-top: 20px;
+}
+
+.cestaTabla td.cestaart3 {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.cestaTabla td.cestaart3 div {
+    font-family: montserrat;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    padding: 0px 5px;
+}
+
+.cestaart3Cant {
+    display: flex;
+    width: fit-content !important;
+    padding: 10px 0px;
+}
+
+.cestaart3CantUd {
+    font-weight: bold;
+    padding: 0px 8px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.cestaart1 img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.cestaTabla td.cestaart3 .cestaart3TotalLinea {
+    color: #e50b3e;
+    font-family: montserratextrabolditalic;
+    font-size: 16pt;
+    text-align: left;
+    padding: 5px;
+}
+
+.cestaTabla td.cestaart4 {
+    padding: 20px 0px;
+}
+
+.ficha_cantidad .ficha_cantidad1 {
+    width: auto;
+    float: left;
+}
+
+.ficha_eliminar_art {
+    width: auto;
+    float: left;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.cestaartPrim td {
+    border-top: 1px solid #b5b5b5;
+}
+
+.cestaartUlt td {
+    padding: 0px !important;
+}
+
+.cestaamplPrim td {
+    border-top: 1px solid #eaeaea;
+}
+
+.cestaamplUlt td {
+    padding-bottom: 20px;
+}
+
+.cestaContTotalesTD {
+    width: 100%;
+    height: auto;
+}
+
+.cestaContTotales1 {
+    padding: 10px 0px 0px 0px;
+}
+
+a.cesta_vaciar {
+    margin: 5px 0px !important;
+    border-radius: 3px;
+    border: 1px solid #b5b5b5;
+    width: 100%;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-image: none;
+    padding-left: 0px;
+}
+
+a.cesta_vaciar img {
+    width: 18px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.table_cesta_mv tr td:first-child {
+    border-left: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr td:last-child {
+    border-right: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:first-child td {
+    border-top: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:last-child td {
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+    border-top: 1px solid #b5b5b5;
+    border-left: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+    border-top: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:last-child td:first-child {
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom: 1px solid #b5b5b5;
+    border-left: 1px solid #b5b5b5;
+}
+
+.table_cesta_mv tr:last-child td:last-child {
+    border-top: none;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+}
+
+.totalesT {
+    width: 100%;
+    float: right;
+}
+
+.totalesTD1 {
+    width: 50% !important;
+}
+
+.totalesTD2 {
+    width: 50% !important;
+}
+
+.totalesTT {
+    padding: 13px 0px 0px 14px;
+}
+
+.totalesTT2 {
+    font-family: 'montserratextrabolditalic';
+    font-size: 16.5pt;
+}
+
+.finCompraT {
+    width: 100% !important;
+}
+
+.a_atras_mis_docu {
+    border: 1px #b5b5b5 solid;
+    border-radius: 10px;
+    display: block;
+    width: max-content;
+    padding: 14px;
+    float: left;
+    margin-right: 10px;
+}
+
+.a_atras_mis_docu img {
+    width: 20px;
+    display: block;
+}
+
+.cesta_titulo1 {
+    width: 100%;
+    line-height: 48px;
+}
+
+.cesta_titulo1::first-letter {
+  text-transform: uppercase;
+}
+
+.divSeccionCestaMv {
+    width: 100% !important;
+    float: left;
+    padding: 25px 0;
+    border-top: 1px solid #EBECED;
+    border-right: none !important;
+}
+
+.cestaContTotales {
+    padding: 0px 0;
+    margin-top: 0px !important;
+}
+
+.cestaContTot {
+    width: 100% !important;
+    display: block !important;
+}
+
+.cestaContTotSecc {
+    width: 100% !important;
+}
+
+.contFpago {
+    padding-left: 0px;
+    margin-top: 0px !important;
+    padding-right: 0px !important;
+}
+
+.contFpago > div {
+    width: 100% !important;
+}
+
+.contFpago > table {
+    width: 100% !important; 
+}
+
+#contAgenciaTransporte {
+    margin-top: 75px;
+}
+
+.formaPagoEnvio {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0px !important;
+}
+
+.cestaTextos {
+    width: 100%;
+}
+
+.cestaContTot > div {
+    width: 100%;
+}
+
+.cestaContTot > div > .celdaAniadir {
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 10px !important;
+    background-size: 100% !important;
+    border-radius: 3px !important;
+    padding: 10px;
+}
+
+#cConsulta {
+    width: 100% !important;
+}
+
+.celdaAniadir a {
+    padding: 7px;
+}
+
+.div_ampliable {
+    position: absolute;
+    right: 0;
+}
+
+
+
+.sepwidth3 {
+    border-bottom: 0px solid #fff;
+    padding-bottom: 0px;
+}
+
+.cestaContTotales2 {
+    max-width: 250px;
+    float: right;
+    padding: 20px 0px;
+}
+
+#cestapagina1 {
+    padding: 0px 0px;
+}
+
+.cesta_vacia {
+    width: 100%;
+    padding: 0px;
+    padding-top: 0px;
+}
+
+.ces_vacia1 {
+    font-size: 14pt;
+    text-align: left;
+}
+
+.ces_vacia2 {
+    width: 100%;
+    padding: 0px;
+}
+
+.ces_vacia3 div:first-child {
+    padding-bottom: 0px;
+}
+
+.ces_vaciaTd {
+    width: 100%;
+    float: left;
+    display: block;
+    padding: 0px;
+    padding-bottom: 10px !important;
+}
+
+.cesV2 {
+    font-size: 14pt;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.cesV2Table {
+    padding-bottom: 20px;
+    height: auto !important;
+}
+
+#agencia_observaciones {
+    margin-top: 50px !important;
+}
+
+#agencia_observaciones div {
+    border: 4px solid red !important;
+    font-size: 12pt !important;
+    width: 100% !important;
+}
+
+#acepto {
+    transform: scale(1.3);
+    margin: 4px 4px 4px 4px;
+    position: relative;
+    top: 3px;
+}
+
+#acepto:after {
+    border-bottom: none;
+    border-top: none;
+}
+
+
+
+
+
+/* ******* TICKETS ******* */
+.faqMsgT {
+    width: 100%;
+    padding: 0px 7px;
+}
+
+.faqMsgTD {
+    display: block;
+    font-size: 10.5pt;
+}
+
+.faqMsgTD2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.faqMsgT a.faqLink {
+    font-size: 12pt;
+}
+
+.faqTitulo {
+    width: 100%;
+    padding: 0px 7px;
+    margin: 0 auto 15px auto;
+    font-size: 20pt;
+}
+
+.divBuscadorConsulta {
+    width: 100% !important;
+    display: table;
+    margin: 0px auto;
+    padding: 0px 7px;
+}
+
+.button_tipo_consultas {
+    font-size: 12px;
+    padding: 6px 10px;
+    text-decoration: none;
+    width: 30%;
+    margin: 10px 4px 20px 4px;
+}
+
+.rmaSolT {
+    width: 100% !important;
+    display: block;
+    margin-left: 0px !important;
+}
+
+.rmaSolT tbody {
+    border-collapse: collapse;
+    width: 100%;
+    display: table;
+}
+
+.titulo_preguntas {
+    width: 100% !important;
+    margin: 40px 0px 10px !important;
+    padding: 7px 0px;
+}
+
+.div_faq {
+    padding-left: 15px;
+    margin-left: 0px;
+}
+
+.div_resp {
+    padding: 5px 5px 10px 15px;
+    margin-left: 0px;
+}
+
+.div_resp img {
+    width: 95%;
+}
+
+#input_buscador_consultas {
+    margin: 0px;
+    width: 100%;
+    background: url(../../../xweb/public/images/lupa.png) no-repeat scroll 10px 6px;
+    background-size: 15px;
+}
+
+.rmaContSolicitudes {
+    padding: 0px 7px;
+}
+
+.rmaContSolicitudes > div {
+    width: 100% !important;
+}
+
+.div_tickets_productos {
+    width: 100% !important;
+    display: block;
+    padding: 0px 7px;
+}
+
+.td_pc_faq {
+    display: none !important;
+}
+
+.td_mv_faq {
+    display: block;
+    padding: 0px 5px;
+}
+
+.div_msj_pc {
+    display: none;
+}
+
+.div_msj_mv {
+    display: block;
+}
+
+.table_tickets_abiertos .div_faq {
+    font-size: 8pt !important;
+}
+
+.anadirDireccionUsuario-content {
+    width: 100%;
+    padding: 5px;
+}
+
+.div_direccion_editar {
+    width: 100% !important;
+}
+
+.div_direccion_editar > h3 > div {
+    width: 100%;
+}
+
+.table_tickets_abiertos {
+    width: 100%;
+}
+
+.txtarea_ticket_comentario::placeholder {
+    font-size: 9pt;
+}
+
+.img_articulo_faq {
+    width: 100% !important;
+    margin: 8px 0px;
+}
+
+.div_faq ul {
+    padding-inline-start: 15px;
+}
+
+#div_preguntas_frecuentes > div > div {
+    width: 100% !important;
+}
+
+.tr_faq {
+    padding: 6px 0px;
+}
+
+.div_msj_pc {
+    display: none;
+}
+
+.div_msj_mv {
+    display: block;
+}
+
+.th_msj_uno {
+    width: 8% !important;
+}
+
+.th_msj_tres {
+    width: 20% !important;
+}
+
+.th_msj_cuatro {
+    width: 12% !important;
+}
+
+.th_msj_cinco {
+    width: 60% !important;
+}
+
+.td_msj_uno {
+    width: 8% !important;
+}
+
+.td_msj_tres {
+    width: 20% !important;
+}
+
+.td_msj_cuatro {
+    width: 12% !important;
+}
+
+.td_msj_cinco {
+    width: 60% !important;
+}
+
+.thead_fecha_mensaje {
+    font-size: 9.5pt;
+}
+
+.td_fecha_mensaje {
+    padding: 0px;
+}
+
+.td_faq_uno {
+    width: 11% !important;
+}
+
+.td_faq_dos {
+    width: 54% !important;
+}
+
+.td_faq_tres {
+    width: 35% !important;
+}
+
+.td_consulta_msj_uno {
+    width: 20%;
+}
+
+.td_consulta_msj_dos {
+    width: 20%;
+}
+
+.td_consulta_msj_tres {
+    width: 20%;
+}
+
+.td_consulta_msj_cuatro {
+    width: 40%;
+}
+
+.td_consulta_msj_tres img {
+    padding: 4px 0px !important;
+}
+
+.td_comentario_mensaje {
+    font-size: 9pt;
+    padding: 0px;
+}
+
+.img_faq {
+    margin-left: 0px !important;
+    margin-top: 6px !important;
+    width: 100% !important;
+}
+
+.img_mensaje_grande {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close_img_mensaje {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #0b2e48;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    border: 2px #fff solid;
+}
+
+.button_subir_foto {
+    margin-top: 11px !important;
+}
+
+.div_tipo_consulta {
+    display: none;
+}
+
+.td_info_consulta {
+    width: 70%;
+    float: left;
+}
+
+.td_faq_flecha {
+    width: 10% !important;
+    float: left;
+}
+
+.img_arrow {
+    margin: 7px 0px;
+}
+
+.div_productos_mensajes {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    padding: 7px;
+    margin-bottom: 0px !important;
+}
+
+.img_articulo_ticket {
+    max-width: 100%;
+    max-height: max-content;
+    padding: 2px;
+}
+
+.table_productos_mensajes {
+    padding: 0px 7px;
+    width: 60%;
+}
+
+.table_productos_mensajes tr {
+    display: flex;
+}
+
+.info_productos_mensajes {
+    width: 100%;
+}
+
+.a_consultas_rma {
+    padding: 12px 5px;
+    font-size: 9pt;
+    margin-right: 0px;
+}
+
+.envio_productos_mensajes {
+    margin-top: 0px !important;
+    margin-right: 0px;
+    padding: 2px 2px;
+    width: 25%;
+    float: right;
+}
+
+.a_volver_centro_soporte {
+    padding: 8px 15px;
+    font-size: 9pt;
+    margin-top: 0px;
+}
+
+.span_pregunta_consulta {
+    margin-top: 0px;
+    font-size: 11pt;
+}
+
+.div_devoluciones_msj > .span_pregunta_consulta:last-child {
+    font-size: 9pt !important;
+}
+
+#xw_boxcentral {
+    padding-top: 0px;
+    margin: 0px !important;
+}
+
+.div_devoluciones_msj {
+    margin-top: 0px;
+    padding: 6px 7px;
+    height: auto;
+}
+
+.nom_productos_mensajes {
+    font-size: 9pt;
+    white-space: normal;
+}
+
+.info_productos_mensajes {
+    font-size: 9pt;
+}
+
+.img_productos_mensajes {
+    height: auto;
+    width: 14%;
+}
+
+#form_rma_tickets {
+    margin: 0px;
+}
+
+.td_volver_consultas_rma {
+    width: 26% !important;
+    padding: 0px 7px;
+}
+
+.volver_consultas_rma {
+    padding: 10px 22px;
+    width: auto;
+    margin: 0px;
+    display: flex;
+}
+
+.div_consulta_producto_msj > .img_productos_mensajes {
+    width: 26%;
+}
+
+.div_consulta_producto_msj > .table_productos_mensajes {
+    width: 74%;
+}
+
+.div_parent_consulta_mensajes_msj {
+    display: block !important;
+}
+
+.div_consulta_mensajes_msj > .table_productos_mensajes {
+    width: 100%;
+    padding: 0px;
+}
+
+.td_msj_uno {
+    width: 8% !important;
+}
+
+.td_msj_tres {
+    width: 20% !important;
+}
+
+.td_msj_cuatro {
+    width: 12% !important;
+    padding: 0px;
+    font-size: 9pt;
+}
+
+.td_msj_cinco {
+    width: 60% !important;
+}
+
+.table_averia_tickets {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0px;
+}
+
+.table_averia_tickets tbody {
+    width: 100%;
+}
+
+.select_producto_ticket {
+    max-width: 100%;
+    margin: 0px !important;
+}
+
+.td_nuevo_msj_ticket_select {
+    width: 100%;
+    padding: 7px;
+}
+
+.td_nuevo_msj_ticket_txtarea {
+    width: 100% !important;
+    float: left;
+    padding: 7px;
+}
+
+.td_nuevo_msj_ticket_btn {
+    width: auto !important;
+    float: left;
+    padding: 7px;
+    padding-top: 0px;
+}
+
+.textarea_enviar_mensaje {
+    width: 100% !important;
+}
+
+.tr_nuevo_msj_ticket > td > .button_subir_foto {
+    width: 100%;
+    margin: 0px !important;
+}
+
+.tr_nuevo_msj_ticket > td > .input_enviar_comentario {
+    margin: 0px !important;
+    float: left;
+}
+
+
+
+/* ****** CALIDAD Y MEDIO AMBIENTE ****** */
+
+
+.informativa {
+    width: 100%;
+    padding: 15px 7px;
+}
+
+.informativaT {
+    display: none;
+}
+
+.informativaTxt {
+    text-align: justify;
+}
+
+.informativaTMv {
+    display: block;
+}
+
+.informativaT1Tit {
+    padding: 0 0px;
+    width: 50% !important;
+}
+
+.informativaT1 {
+    padding: 0 0px;
+    width: 50%;
+}
+
+.informativaTTextMv {
+    padding: 0px 0px 30px 0px;
+}
+
+.informTit {
+    font-size: 18pt;
+    padding: 10px 7px !important;
+    display: inline-block;
+}
+
+.informativa > .informTit {
+    padding: 10px 0px !important;
+}
+
+.informativa > img {
+    width: 100%;
+}
+
+.informativaTitulo {
+    font-size: 13pt;
+}
+
+.informativaCont {
+    width: 100%;
+    font-size: 12px;
+}
+
+.informativaTxt1 {
+    font-size: 9pt;
+    width: 100%;
+    text-align: justify;
+}
+
+.totalesTT1 {
+    float: left;
+}
+
+.totalesTT2 {
+    float: right;
+}
+
+.quienessomos img {
+    width: 100%;
+}
+
+.tituloh1 {
+    font-family: "montserratlight";
+    padding: 7px;
+}
+
+.quienessomos {
+    margin-top: 0px;
+}
+
+
+
+
+
+/* ****** MIS DOCUMENTOS ****** */
+
+.btn_finalizar_pago {
+    display: block;
+    text-align: center;
+    background-color: #e50b3e;
+    background-image: none;
+    color: white;
+    padding: 8px 0;
+    font-family: montserratlightitalic;
+    font-size: 13pt !important;
+    cursor: pointer;
+    float: right;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.finCompraTd {
+    width: 100%;
+}
+
+
+
+/* ******* MODO PVP ******* */
+.title_pvp {
+    font-size: 15pt !important; 
+    cursor: pointer;
+    color: #fff !important;
+}
+
+.tools_pvp {
+    width: 27px !important;
+}
+
+
+
+
+
+
+
+
+
+

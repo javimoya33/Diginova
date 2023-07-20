@@ -1,0 +1,672 @@
+
+.content {
+    min-height: 1175px;
+}
+
+#appx {
+    position: relative !important;
+}
+
+.digiHeaderFila1 {
+    height: 47px;
+    padding: 9px 6px 3px 6px !important;
+    border-bottom: 0.5px #b5b5b5 solid;
+}
+
+.div_main_header {
+    width: 100%;
+    display: inline;
+}
+
+.div_txt_categoria_mv {
+    font-size: 15pt;
+}
+
+#img_menu_movil {
+    width: 25px;
+    height: 25px;
+}
+
+#login_menu_movil {
+    width: 27px;
+    height: 25px;
+}
+
+.tHofe1 img {
+    width: 138px;
+    height: auto;
+    max-height: 21px !important;
+}
+
+.dHF1_2 {
+    min-width: 30px !important;
+    font-size: 6pt;
+    padding-top: 2px;
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+.dH1C2 #textobusqMovil {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    vertical-align: middle;
+    padding: 11px 5px;
+    font-size: 12pt;
+    font-family: montserratextralight;
+    background-image: url(../../images/hlupa.png);
+    background-repeat: no-repeat;
+    background-position: 796px 15px;
+}
+
+.dH1C2 #textobusqMovil {    
+    border-bottom: 1px solid #ccc;
+    font-size: 10pt;
+    background-position: 99% 4px;
+    background-size: 15px;
+    padding: 0px;
+    height: 25px;
+}
+
+#jssor_1 {
+    top: 30px !important;
+}
+
+#textobusqMovil::-webkit-input-placeholder { color: #fff !important; }
+#textobusqMovil::-moz-placeholder { color: #fff !important; }
+#textobusqMovil:-ms-input-placeholder { color: #fff !important; }
+#textobusqMovil:-moz-placeholder { color: #fff !important; }
+
+#buscador {
+    display: inline-block;
+    width: 100% !important;
+    padding-bottom: 1px;
+}
+
+.user_menu_movil {
+    background-size: 26px;
+    width: 26px;
+    height: 26px;
+}
+
+.user_menu_movil div {
+    font-size: 13pt;
+    padding-top: 2px;
+}
+
+.digiHead1 {
+    display: none;
+}
+
+.menu-container .manu {
+    display: none;
+}
+
+.digiHeader {
+    height: 135px;
+}
+
+.fCelda5 {
+    height: auto;
+    display: block;
+}
+
+.ffCol {
+    padding: 1px 0px !important;
+    width: 148px !important;
+}
+
+.ffCol-first {
+    width: 310px !important;
+    height: 49px;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+}
+
+.ffCol-second {
+    height: 50px;
+}
+
+.ffCol1 {
+    height: 46px;
+}
+
+.homeOrdenadores a {
+    height: 25px;
+    padding: 0px;
+    font-size: 14pt;
+}
+
+.homeTitu {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.homeTitu2 {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 12pt;
+    height: 36px;
+}
+
+.homeElement {
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.homeContArts {
+    width: 100%;
+    min-height: 310px;
+    justify-content: space-between;
+}
+
+.celdaArtFav {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 27% !important;
+    height: 346px !important;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.celdaArtFavOfe {
+    width: 27% !important;
+    height: 382px !important;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.celdaFot {
+    width: 100%;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.celdaFot table {
+    max-height: 75px;
+    min-height: 75px;
+    max-width: 75px;
+}
+
+.celdaFot table img {
+    max-height: 130px !important;
+    max-width: 130px !important;
+}
+
+.celdaDesc {
+    font-size: 10pt;
+    line-height: 16px;
+    height: 50px !important;
+    padding: 0px;
+}
+
+.celdaPrecio {
+    width: 100% !important;
+    font-size: 21pt;
+    margin-top: 0px;
+}
+
+.celdaCantStock {
+    width: 100% !important;
+}
+
+.celdaCant {
+    width: 90px;
+    font-size: 10pt;
+    padding-left: 0px;
+}
+
+.celdaTabCant {
+    width: 40px;
+    padding-top: 3px;
+}
+
+.celdaTabCant div {
+    width: 10px;
+}
+
+.celdaTabCant img {
+    width: 21px;
+}
+
+.celdaTabCant input[type="text"] {
+    width: 20px;
+    font-size: 11pt;
+}
+
+.celdaStock {
+    width: 90px;
+    padding-right: 0px;
+    font-size: 10pt;
+}
+
+.celdaStock div {
+    padding-top: 6px;
+}
+
+.celdaAniadir {
+    font-size: 12pt;
+    padding: 8px 0px;
+    margin-top: 12px;
+}
+
+.img_banner_index {
+    width: 100%;
+}
+
+.div_desde {
+    margin: 0px;
+    width: 31px;
+    font-size: 6pt;
+    margin-top: -14px;
+    height: 14px;
+}
+
+.primerArtFila {
+    display: none;
+}
+
+.celdaFavT {
+    width: 20px;
+    height: auto;
+}
+
+.celdaFav {
+    padding: 0px;
+    visibility: visible;
+}
+
+.idiomaTeclado {
+    margin-top: -2px;
+}
+
+.celdaBandera img {
+    width: 15px;
+}
+
+.celdaFavT img {
+    width: 22px !important;
+    height: auto;
+}
+
+.pienCont {
+    padding: 14px 7px;
+}
+
+.pien {
+    padding-top: 0px;
+}
+
+.pien12 {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+
+.pien22_mv {
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px #969696 solid;
+}
+
+.pient2 {
+    font-size: 15pt;
+}
+
+.pient {
+    padding: 8px 0px;
+    padding-right: 50px;
+    border-top: 1px #969696 solid;
+}
+
+.pien42 > .pient:first-child {
+    border-top: none;
+}
+
+.pien a {
+    font-size: 10pt;
+    float: left;
+    margin-right: 10px;
+}
+
+.pietable tr {
+    height: 15px;
+}
+
+.pientd {
+    display: inline-block;
+    padding: 0 0 0 0px;
+    border-right: none;
+}
+
+.trpietable2 td img {
+    padding: 5px 0px;
+    width: auto !important;
+    height: 45px;
+}
+
+.piencol2 {
+    width: 338px;
+    float: left;
+    padding-top: 20px;
+}
+
+.pietable3 {
+    margin-top: 0px !important;
+}
+
+.pien3 {
+    width: 50%;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pien4 {
+    width: 100%;
+}
+
+.pien42 {
+    padding-top: 0px !important;
+}
+
+.tablecalidad {
+    margin-bottom: 10px;
+}
+
+.dH1C3 {
+    width: auto;
+    margin-top: -8px;
+}
+
+.dH1LinkCell2 {
+    width: 82px;
+}
+
+.dH1Link a {
+    color: #fff;
+    font-size: 7pt;
+}
+
+.dHIco {
+    width: 38px;
+}
+
+.dHIco img {
+    width: 21px;
+    height: auto;
+}
+
+.cabCestaNum {
+    left: 18px;
+    top: 3px;
+    font-size: 10pt;
+}
+
+.dH1Link {
+    width: 42px;
+    padding-left: 0px;
+    padding-bottom: 6px;
+    padding-top: 2px;
+    float: left;
+    font-size: 5pt;
+    color: #fff;
+}
+
+.cabCestaTotal {
+    font-size: 6pt;
+}
+
+#importeCesta {
+    font-size: 7pt;
+}
+
+.div_cabecera_menu {
+    position: absolute;
+    z-index: 999;
+    width: 324px;
+    top: 86px;
+    padding: 0px 3px;
+    background-color: #333;
+}
+
+.div_cabecera_login {
+    top: 48px;
+}
+
+.menuCatNomC {
+    width: 40px;
+    text-align: center;
+    padding-top: 0px;
+    padding-right: 3px;
+}
+
+.menuCatNomC img {
+    height: 18px;
+    width: auto;
+}
+
+.menuCatNomC2 {
+    font-size: 10pt;
+}
+
+.menuCatNomC2 a {
+    color: #fff;
+}
+
+.logTitu {
+    width: 100%;
+    padding: 10px 0 5px 10px;
+    font-size: 10pt;
+    font-family: montserratextrabolditalic;
+}
+
+.logFormu {
+    padding: 0px 10px;
+    display: grid;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.logFormu input[type="password"] {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.logFormu input[type="text"], .logFormu input[type="password"] {
+    float: left;
+    width: 117px;
+}
+
+a.logRecu {
+    width: 100%;
+    text-align: left;
+    float: right;
+    line-height: 10px;
+    font-size: 7pt !important;
+    margin-top: 10px;
+}
+
+.logFormu input[type="submit"] {
+    width: 50%;
+    height: 32px;
+    margin-top: 12px;
+    float: left;
+}
+
+a.logRegistro {
+    width: 50%;
+    height: 32px;
+    margin-top: 12px;
+    padding: 8px 0 !important;
+    float: right;
+}
+
+.miCTitu {
+    width: 100%;
+    padding: 10px 0 5px 10px;
+    font-size: 10pt;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.miCTab {
+    padding: 5px 10px;
+}
+
+.miCCel1 {
+    width: 18px;
+}
+
+.miCCel1 img {
+    width: 16px;
+}
+
+.miCCel2 {
+    width: 132px;
+}
+
+.miCCel2 a {
+    color: white !important;
+    font-size: 9pt;
+}
+
+.miCTab:first-child {
+    padding: 12px 0px 15px 0px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.miCTab:last-child {
+    padding-bottom: 10px;
+}
+
+.micuentaContenido {
+    border-top: none;
+    margin-top: 0px;
+}
+
+.buscador_desplegable {
+    z-index: 9999;
+    width: 100%;
+}
+
+#suggestionsBusqMv {
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 100%;
+}
+
+.celdaArtFavBusq {
+    height: 415px !important;
+    margin-bottom: 55px !important;
+}
+
+.busqcerrar {
+    width: 100%;
+    margin-top: 0px;
+    padding-right: 10px;
+}
+
+.busqcerrar .busqcerrarX {
+    font-size: 16pt;
+}
+
+.busqArticulos {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.imgLoading {
+    top: 15px;
+}
+
+.rmaSolC2 {
+    width: 765px;
+}
+
+.divArticuloRelacionados > .celdaArt {
+    height: 368px !important;
+}
+
+.div_radio_grados {
+    margin-right: 0px;
+}
+
+.td_precios_ampl div {
+    float: right;
+}
+
+
+/* ******* MODO PVP ******* */
+.title_pvp {
+    font-size: 13pt !important; 
+    cursor: pointer;
+    color: #fff !important;
+}
+
+.tools_pvp {
+    width: 23px !important;
+}
+
+.ivaPresu {
+    display: none;
+}
+
+.dH1LinkCell2Presu {
+    width: 100px !important;
+}
+
+.dH1LinkPresu {
+    width: 60px !important;
+}
+
+.flex-wrap-movil {
+    flex-wrap: wrap;
+}
+
+.titulo-pvp {
+    font-size: 22pt;
+}
+
+.titulo-pasos-pvp {
+    font-size: 16pt;
+    text-align: left;
+}
+
+.div-subtitulo-paso-pvp {
+    font-size: 12pt;
+    margin-top: 0px !important;
+}
+
+.div-content-tipo-art {
+    display: flow-root;
+}
+
+.div-tipo-art-pvp {
+    width: 50%;
+    float: left;
+}
+
+.span-tipo-art-pvp {
+    font-size: 10.5pt;
+}
+
+.margen-tipo-art-pvp {
+    font-size: 12pt;
+}
+
+
+
+
+
+
+
+
+
