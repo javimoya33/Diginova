@@ -7236,3 +7236,29 @@ input:checked + .slider:before {
     font-size: 15pt !important;
     width: 100% !important;
 }
+
+.tr_lote_articulo td:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 0px;
+}
+
+.div_busq_lote {
+    width: 275px;
+    height: 30px;
+    float: left;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px 0px 0px 0px !important;
+    cursor: pointer;
+}
+
+.div_control_lote {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    padding-left: 10px;
+}

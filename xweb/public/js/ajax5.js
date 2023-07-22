@@ -2048,6 +2048,7 @@ function pulsarArticuloParaAnuncio(nombreArticulo, precio, imagen)
 
     $('#input_nombre_lote_articulo_1').val(nombreArticulo);
     $('#input_nombre_abrev_lote_articulo_1').val(obtNombreAbreviadoArt(nombreArticulo));
+    calcularPrecioLote();
 
     if ($('.precio2_control').css('display') != 'none')
     {
@@ -3748,37 +3749,235 @@ function escribirTextPantalla(check, input, span, div)
 
 function anadirArticuloALote()
 {
-    var numeroFilas = $('.tr_lote_producto').length;
+    var numeroFilas = $('.tr_lote_articulo').length;
 
     if (numeroFilas < 5)
     {
         numeroFilas = numeroFilas + 1;
 
-        var nuevaFila = '<tr class="tr_lote_producto">' + 
-                            '<td style="width: 48%;" style="padding-right: 10px;">' + 
-                                '<input type="text" id="input_nombre_lote_articulo_' + numeroFilas + '" name="input_precio_lote" oninput="editarNombreLote()" style="width: 70%; margin-right: 10px;" value="" />' + 
-                                '<div class="div_otros_datos" style="float: right; padding-top: 8px;">Abrev.</div>' + 
+        var nuevaFila = '<tr class="tr_lote_articulo">' + 
+                            '<td>' + 
+                                '<div>' + 
+                                    '<input type="text" id="input_nombre_lote_articulo_' + numeroFilas + '" name="input_nombre_lote" placeholder="Artículo para el lote" oninput="editarNombreLote(this)" style="width: 275px; margin-right: 10px;" value="" />' + 
+                                '</div>' + 
+                                '<div class="div_otros_datos" style="float: right; padding-top: 5px;">Abrev.</div>' + 
                             '</td>' + 
-                            '<td style="width: 35%;">' + 
-                                '<input type="text" id="input_nombre_abrev_lote_articulo_' + numeroFilas + '" name="input_precio_lote" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />' + 
+                            '<td style="width: 35%; vertical-align: top;">' + 
+                                '<input type="text" id="input_nombre_abrev_lote_articulo_' + numeroFilas + '" name="input_nombre_abrev_lote_articulo" oninput="editarAbrevNombreLote()" style="width: 100%; margin-right: 10px;" value="" />' + 
+                                '<input type="hidden" id="input_precio_art_lote_' + numeroFilas + '" class="input_precio_art_lote" value="" />' + 
                             '</td>' + 
-                            '<td style="width: 17%">' + 
-                                '<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">' + 
-                                    '<button onclick="eliminarArticuloALote()" class="btn_articulo_lote">' + 
-                                        '<i class="fa fa-times i_btn_generador_formulario i_btn_lote"></i>' + 
+                            '<td style="width: 17%; vertical-align: top;">' + 
+                                '<div class="div_control_lote">' + 
+                                    '<button id="btn_eliminar_art_lote_' + numeroFilas + '" name="btn_eliminar_art_lote" onclick="eliminarArticuloALote(this)" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-times i_btn_generador_formulario i_btn_lote" style="color: #dc3545"></i>' + 
                                     '</button>' + 
-                                    '<button onclick="subirArticuloALote()" class="btn_articulo_lote">' + 
-                                        '<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote"></i>' + 
+                                    '<button id="btn_subir_art_lote_' + numeroFilas + '" name="btn_subir_art_lote" onclick="subirArticuloALote(this)" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote" style="color: #17a2b8"></i>' + 
                                     '</button>' + 
-                                    '<button onclick="bajarArticuloALote()" class="btn_articulo_lote">' + 
-                                        '<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote"></i>' + 
+                                    '<button id="btn_bajar_art_lote_' + numeroFilas + '" name="btn_bajar_art_lote" onclick="bajarArticuloALote(this)" class="btn_articulo_lote">' + 
+                                        '<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote" style="color: #17a2b8"></i>' + 
                                     '</button>' + 
                                 '</div>' + 
                             '</td>' + 
                         '</tr>';
 
         $('#table_lote_articulos').append(nuevaFila);
+
+        deshabilitarBotonesPosicionLote();
     }
+}
+
+function editarNombreLote(elemento)
+{
+    var tarifa = $('#tarifa_usuario').val();
+    var criterioBusq = $(elemento).val();
+
+    setTimeout(function()
+    {
+        if (criterioBusq == $(elemento).val())
+        {
+            var divPadre = $(elemento).parent();
+            divPadre.children('div').remove();
+
+            if (criterioBusq.length > 3)
+            {
+                $.ajax({
+                    url: '/xweb/buscararticulosanuncio/' + $(elemento).val(),
+                    type: 'get',
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+
+                        var arrArtEncontrados = response;
+
+                        for (var i = 0; i < 3; i++) 
+                        {
+                            (function(i) 
+                            {
+                                var nombreArt = arrArtEncontrados[i].ADESCR;
+                                var nombreAbrev = nombreArt;
+                                var precio = 0;
+
+                                if (nombreAbrev.length > 25)
+                                {
+                                    nombreAbrev = nombreAbrev.substring(0, 22) + '...';
+                                }
+
+                                if (tarifa == 1)
+                                {
+                                    precio = arrArtEncontrados[i].APVP1;
+                                }
+                                else if (tarifa == 2)
+                                {
+                                    precio = arrArtEncontrados[i].APVP2;
+                                }
+                                else if (tarifa == 3)
+                                {
+                                    precio = arrArtEncontrados[i].APVP3;
+                                }
+                                else if (tarifa == 4)
+                                {
+                                    precio = arrArtEncontrados[i].APVP4;
+                                }
+                                else if (tarifa == 5)
+                                {
+                                    precio = arrArtEncontrados[i].ARESNUM5;
+                                }
+                                else if (tarifa == 6)
+                                {
+                                    precio = arrArtEncontrados[i].ARESNUM6;
+                                }
+
+                                $(elemento).parent().append('<div class="div_busq_lote" onclick="seleccionarBusqLote(this, ' + precio + ')">' + nombreAbrev + '</div>');
+                            }(i));
+                        }
+                    }
+                });
+            }
+        }
+    }, 2000);
+}
+
+function seleccionarBusqLote(elemento, precio)
+{
+    var divPadre = $(elemento).parent();
+    var inputNombreLoteArt = divPadre.children('input');
+
+    inputNombreLoteArt.val($(elemento).text());
+
+    var idInputNombreLoteArt = inputNombreLoteArt.attr('id');
+    var numId = idInputNombreLoteArt.charAt(idInputNombreLoteArt.length - 1);
+
+    $('#input_nombre_abrev_lote_articulo_' + numId).val(obtNombreAbreviadoArt(inputNombreLoteArt.val()));
+    $('#input_precio_art_lote_' + numId).val(precio);
+
+    divPadre.children('div').remove();
+
+    calcularPrecioLote();
+}
+
+function calcularPrecioLote()
+{
+    setTimeout(function()
+    {
+        var precioTotal = 0;
+        var precioArtPrincipal = $('#precio_articulo_seleccionado').text();
+
+        precioTotal = precioArtPrincipal;
+
+        $('.input_precio_art_lote').each(function()
+        {
+            precioTotal = parseFloat(precioTotal) + parseFloat($(this).val());
+        });
+
+        $('#input_precio_lote').val(precioTotal);
+    }, 2000);
+}
+
+function eliminarArticuloALote(elemento)
+{
+    var trAEliminar = $(elemento).closest('tr');
+    trAEliminar.remove();
+
+    renombrarIdsInputLote('input_nombre_lote_articulo_', 'input_nombre_lote', 'input');
+    renombrarIdsInputLote('input_nombre_abrev_lote_articulo_', 'input_nombre_abrev_lote_articulo', 'input');
+    renombrarIdsInputLote('btn_eliminar_art_lote_', 'btn_eliminar_art_lote', 'button');
+    renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
+    renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
+    deshabilitarBotonesPosicionLote();
+}
+
+function renombrarIdsInputLote(idInput, nameInput, tipoElem)
+{
+    var elements = $(tipoElem + '[name="' + nameInput + '"]');
+
+    elements.each(function(index)
+    {
+        var newId = idInput + (index + 1);
+        console.log(newId)
+        $(this).attr('id', newId);
+    });
+
+    console.log('*********************');
+}
+
+function deshabilitarBotonesPosicionLote()
+{
+    var inputElements = $('input[name="input_nombre_lote"]');
+
+    inputElements.each(function(index)
+    {
+        $('#btn_subir_art_lote_' + (index + 1)).removeAttr('disabled');
+        $('#btn_bajar_art_lote_' + (index + 1)).removeAttr('disabled');
+
+        if (index === 1)
+        {
+            $('#btn_subir_art_lote_' + (index + 1)).prop('disabled', true);
+        }
+
+        if (index === inputElements.length - 1)
+        {
+            $('#btn_bajar_art_lote_' + (index + 1)).prop('disabled', true);
+        }
+    });
+}
+
+function subirArticuloALote(elemento)
+{
+    var filaActual = $(elemento).closest('tr');
+    var filaPrevia = filaActual.prev('tr');
+
+    // Si hay una fila anterior
+    if (filaPrevia.length)
+    {
+        filaActual.insertBefore(filaPrevia);
+    }
+
+    renombrarIdsInputLote('input_nombre_lote_articulo_', 'input_nombre_lote', 'input');
+    renombrarIdsInputLote('input_nombre_abrev_lote_articulo_', 'input_nombre_abrev_lote_articulo', 'input');
+    renombrarIdsInputLote('btn_eliminar_art_lote_', 'btn_eliminar_art_lote', 'button');
+    renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
+    renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
+    deshabilitarBotonesPosicionLote();
+}
+
+function bajarArticuloALote(elemento)
+{
+    var filaActual = $(elemento).closest('tr');
+    var filaSiguiente = filaActual.next('tr');
+
+    // Si hay una fila siguiente
+    if (filaSiguiente.length)
+    {
+        filaActual.insertAfter(filaSiguiente);
+    }
+
+    renombrarIdsInputLote('input_nombre_lote_articulo_', 'input_nombre_lote', 'input');
+    renombrarIdsInputLote('input_nombre_abrev_lote_articulo_', 'input_nombre_abrev_lote_articulo', 'input');
+    renombrarIdsInputLote('btn_eliminar_art_lote_', 'btn_eliminar_art_lote', 'button');
+    renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
+    renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
+    deshabilitarBotonesPosicionLote();
 }
 
 function moverElementoAnuncio(elemento, vertical, sumar)

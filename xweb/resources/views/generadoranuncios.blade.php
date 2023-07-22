@@ -13,6 +13,7 @@
 @else
 
 	<input type="hidden" id="num_art_mostrados" name="num_art_mostrados" value="10">
+	<input type="hidden" id="tarifa_usuario" value="<?php echo session('usuario')->uData->ctari; ?>">
 
 	<div id="xw_boxcentral" style="min-height:500px; padding-top: 0px; background-color: #fafafa; background-color: #f3f3f3;">
 		<input type="hidden" id="rotacion_imagen" name="rotacion_imagen" value="0">
@@ -1726,13 +1727,13 @@
 								</table>	
 							</td>
 						</tr>
-						<tr style="display: none">
+						<tr>
 							<td colspan="4" class="width-table-anuncios border-table-anuncios">
 								<i class="fa fa-archive"></i>
 								<div style="margin-top: -2px;">Lote de artículos</div>
 							</td>
 						</tr>
-						<tr style="display: none">
+						<tr>
 							<td colspan="4" style="width: 100%">
 								<table id="table_lote_articulos" class="width-table-anuncios">
 									<tr>
@@ -1747,31 +1748,34 @@
 											<input type="text" id="input_precio_lote" name="input_precio_lote" oninput="editarPrecioLote()" style="width: 100%; margin-right: 10px;" value="" />
 										</td>
 										<td style="width: 17%">
-											<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">
+											<div style="display: flex; justify-content: space-between; padding: 13px 0px 10px 10px;">
 												<button id="btn_anadir_articulo_lote" onclick="anadirArticuloALote()" class="btnArticuloLote">
-													<i class="fa fa-plus i_btn_generador_formulario" style="font-size: 15pt"></i>
+													<i class="fa fa-plus i_btn_generador_formulario" style="font-size: 15pt; color: #28a745"></i>
 												</button>
 											</div>
 										</td>
 									</tr>
-									<tr class="tr_lote_producto">
-										<td style="width: 48%;" style="padding-right: 10px;">
-											<input type="text" id="input_nombre_lote_articulo_1" name="input_precio_lote" oninput="editarNombreLote()" style="width: 70%; margin-right: 10px;" value="" />
+									<tr class="tr_lote_articulo">
+										<td>
+											<div>
+												<input type="text" id="input_nombre_lote_articulo_1" name="input_nombre_lote" oninput="editarNombreLote()" style="width: 275px; margin-right: 10px;" value="" />
+											</div>
 											<div class="div_otros_datos" style="float: right; padding-top: 8px;">Abrev.</div>
 										</td>
 										<td style="width: 35%;">
-											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_precio_lote" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />
+											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_nombre_abrev_lote_articulo" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />
 										</td>
 										<td style="width: 17%">
-											<div style="display: flex; justify-content: space-between; padding: 10px; padding-right: 0px;">
-												<button onclick="eliminarArticuloALote()" class="btn_articulo_lote">
-													<i class="fa fa-times i_btn_generador_formulario i_btn_lote"></i>
+											<div style="display: none; justify-content: space-between; padding: 10px; padding: 0px 0px 0px 10px;">
+												<!-- No eliminar aunque tenga un display: none *** Se hace uso de ello en el jquery -->
+												<button id="btn_eliminar_art_lote_1" name="btn_eliminar_art_lote" onclick="eliminarArticuloALote(this)" class="btn_articulo_lote">
+													<i class="fa fa-times i_btn_generador_formulario i_btn_lote" style="color: #dc3545"></i>
 												</button>
-												<button onclick="subirArticuloALote()" class="btn_articulo_lote">
-													<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote"></i>
+												<button id="btn_subir_art_lote_1" name="btn_subir_art_lote" onclick="subirArticuloALote()" class="btn_articulo_lote">
+													<i class="fa fa-arrow-up i_btn_generador_formulario i_btn_lote" style="color: #17a2b8"></i>
 												</button>
-												<button onclick="bajarArticuloALote()" class="btn_articulo_lote">
-													<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote"></i>
+												<button id="btn_bajar_art_lote_1" name="btn_bajar_art_lote" onclick="bajarArticuloALote()" class="btn_articulo_lote">
+													<i class="fa fa-arrow-down i_btn_generador_formulario i_btn_lote" style="color: #17a2b8"></i>
 												</button>
 											</div>
 										</td>
