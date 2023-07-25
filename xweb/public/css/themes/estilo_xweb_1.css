@@ -7262,3 +7262,43 @@ input:checked + .slider:before {
     padding: 0px;
     padding-left: 10px;
 }
+
+#div_lote_articulos {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#div_lote_articulos div {
+    font-family: montserratbold;
+    font-weight: bold;
+    font-size: 15pt;
+    -webkit-text-stroke: 1px black;
+    color: #ff7500;
+    text-align: left;
+}
+
+#div_lista_lote_articulos ul {
+    list-style: inside;
+    margin-block-start: 0.5em;
+    padding-inline-start: 0px;
+}
+
+#div_lista_lote_articulos ul li {
+    font-family: montserratbold;
+    font-weight: bold;
+    font-size: 14pt;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-align: left;
+    list-style-type: none;
+}
+
+#div_lista_lote_articulos ul li::before {
+  content: "\2022";
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: 0em;
+}

@@ -3747,6 +3747,18 @@ function escribirTextPantalla(check, input, span, div)
     }, 2000);
 }
 
+function mostrarLoteArticulos()
+{
+    if ($('#check_lote_articulos').is(":checked"))
+    {
+        $('#div_lote_articulos').css('display', 'block');
+    }
+    else
+    {
+        $('#div_lote_articulos').css('display', 'none');
+    }
+}
+
 function anadirArticuloALote()
 {
     var numeroFilas = $('.tr_lote_articulo').length;
@@ -3784,6 +3796,8 @@ function anadirArticuloALote()
         $('#table_lote_articulos').append(nuevaFila);
 
         deshabilitarBotonesPosicionLote();
+
+        escribirLoteArticulos();
     }
 }
 
@@ -3874,6 +3888,8 @@ function seleccionarBusqLote(elemento, precio)
     divPadre.children('div').remove();
 
     calcularPrecioLote();
+
+    escribirLoteArticulos();
 }
 
 function calcularPrecioLote()
@@ -3884,10 +3900,12 @@ function calcularPrecioLote()
         var precioArtPrincipal = $('#precio_articulo_seleccionado').text();
 
         precioTotal = precioArtPrincipal;
+        console.log('PrecioPrincipal ' + precioArtPrincipal);
 
         $('.input_precio_art_lote').each(function()
         {
             precioTotal = parseFloat(precioTotal) + parseFloat($(this).val());
+            console.log('PrecioLote ' + precioTotal);
         });
 
         $('#input_precio_lote').val(precioTotal);
@@ -3905,6 +3923,7 @@ function eliminarArticuloALote(elemento)
     renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
     renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
     deshabilitarBotonesPosicionLote();
+    escribirLoteArticulos();
 }
 
 function renombrarIdsInputLote(idInput, nameInput, tipoElem)
@@ -3914,11 +3933,8 @@ function renombrarIdsInputLote(idInput, nameInput, tipoElem)
     elements.each(function(index)
     {
         var newId = idInput + (index + 1);
-        console.log(newId)
         $(this).attr('id', newId);
     });
-
-    console.log('*********************');
 }
 
 function deshabilitarBotonesPosicionLote()
@@ -3959,6 +3975,7 @@ function subirArticuloALote(elemento)
     renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
     renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
     deshabilitarBotonesPosicionLote();
+    escribirLoteArticulos();
 }
 
 function bajarArticuloALote(elemento)
@@ -3978,6 +3995,36 @@ function bajarArticuloALote(elemento)
     renombrarIdsInputLote('btn_subir_art_lote_', 'btn_subir_art_lote', 'button');
     renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
     deshabilitarBotonesPosicionLote();
+    escribirLoteArticulos();
+}
+
+function escribirLoteArticulos()
+{
+    setTimeout(function()
+    {
+        $('#div_lista_lote_articulos ul').empty();
+
+        $('input[name="input_nombre_abrev_lote_articulo"]').each(function(index, element) {
+
+            $('#div_lista_lote_articulos ul').append('<li>' + $(element).val() + '</li>');
+        });
+
+        var precioLote = $('#input_precio_lote').val();
+        $('#precio_articulo_seleccionado').text(precioLote);
+    }, 2000);
+}
+
+function editarPrecioLote()
+{
+    var precioLote = $('#input_precio_lote').val();
+
+    setTimeout(function()
+    {
+        if (precioLote == $('#input_precio_lote').val())
+        {
+            $('#precio_articulo_seleccionado').text(precioLote);
+        }
+    }, 2000);
 }
 
 function moverElementoAnuncio(elemento, vertical, sumar)
@@ -4102,15 +4149,11 @@ function mostrarPrecio(mostrar)
 {
     var numPreciosMostrados = 0;
 
-    console.log('Entraaa1 -> ' + numPreciosMostrados);
-
     $('.div_precio_articulo_seleccionado').each(function()
     {
-        console.log('Entraaa2 -> ' + numPreciosMostrados);
         if ($(this).css('display') == 'table')
         {
             numPreciosMostrados = parseInt(numPreciosMostrados) + parseInt(1);
-            console.log('Entraaa3 -> ' + numPreciosMostrados);
         }
     });
 

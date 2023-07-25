@@ -131,6 +131,12 @@
 							<div id="div_texto_tactil" class="div_texto_pantalla">
 								<span id="span_texto_tactil" class="span_texto_pantalla"></span>
 							</div>
+							<div id="div_lote_articulos" style="display: none">
+								<div>LOTE INCLUYE</div>
+								<div id="div_lista_lote_articulos">
+									<ul></ul>
+								</div>
+							</div>
 						</div>
 						<div id="msj_aviso_resolucion" style="background: #ffe2c9; color: rgb(183 137 0); font-size: 12pt; display: none; margin: 10px 21px; padding: 10px; line-height: 21px; text-align: left;">
 							La resolución de la imagen del artículo es demasiado baja. Es recomendable que sustituya la imagen por otra de mayor resolución (Mínimo 500px de ancho o 500px de alto).			
