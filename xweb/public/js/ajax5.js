@@ -2345,7 +2345,9 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '</tr>');
 
             $('#radio_caract_gb_ram option[value=' + valCaract + ']').attr('selected','selected');
-            $('#radio_caract_ddr_ram option[value=' + ddr + ']').attr('selected','selected');                                            
+            $('#radio_caract_ddr_ram option[value=' + ddr + ']').attr('selected','selected');
+
+            cambiarMemoriaRAMAnuncio();                                           
         }
         else if ((arrCaractArticulo4.indexOf('1TB') > -1) || (arrCaractArticulo4.indexOf('120GB') > -1) || (arrCaractArticulo4.indexOf('128GB') > -1) || (arrCaractArticulo4.indexOf('160GB') > -1) || (arrCaractArticulo4.indexOf('180GB') > -1) || (arrCaractArticulo4.indexOf('240GB') > -1) || (arrCaractArticulo4.indexOf('250GB') > -1) || (arrCaractArticulo4.indexOf('256GB') > -1) || (arrCaractArticulo4.indexOf('320GB') > -1) || (arrCaractArticulo4.indexOf('480GB') > -1) || (arrCaractArticulo4.indexOf('500GB') > -1) || (arrCaractArticulo4.indexOf('512GB') > -1) || (arrCaractArticulo4.indexOf('120') > -1) || (arrCaractArticulo4.indexOf('128') > -1) || (arrCaractArticulo4.indexOf('160') > -1) || (arrCaractArticulo4.indexOf('180') > -1) || (arrCaractArticulo4.indexOf('240') > -1) || (arrCaractArticulo4.indexOf('250') > -1) || (arrCaractArticulo4.indexOf('256') > -1) || (arrCaractArticulo4.indexOf('320') > -1) || (arrCaractArticulo4.indexOf('480') > -1) || (arrCaractArticulo4.indexOf('500') > -1) || (arrCaractArticulo4.indexOf('512') > -1) || (arrCaractArticulo4.indexOf('32GB') > -1))
         {
@@ -2378,6 +2380,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
             valCaract = valCaract.replace("NVME", "");
             valCaract = valCaract.replace("-M.2", "");
             valCaract = valCaract.replace("M.2", "");
+            console.log('ValCaract ' + valCaract);
 
             if (nombreArticulo.indexOf('SSD') > -1)
             {
@@ -2449,6 +2452,8 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
 
             $('#radio_caract_gb_dd option[value=' + valCaract + ']').attr('selected','selected');
             $('#radio_caract_tipo_dd option[value=' + tipoDiscoDuro + ']').attr('selected','selected');
+
+            cambiarDiscoDuroAnuncio();
         }
         else if ((arrCaractArticulo4.indexOf('DVD') > -1) && (arrCaractArticulo4.indexOf('NO-DVD') == -1) && (arrCaractArticulo4.indexOf('NODVD') == -1))
         {
@@ -2476,6 +2481,8 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 versionDVD = 'dvd';
             }
 
+            console.log('VersionDVD ' + versionDVD);
+
             $('#table_caract_generador_anuncios').append(
                 '<tr>' + 
                     '<td style="width: 100%">' + 
@@ -2499,11 +2506,13 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
 
             $('#radio_caract_version_dvd option[value=' + versionDVD + ']').attr('selected','selected');
 
-            $("#radio_caract_version_dvd").change(function()
+            /*$("#radio_caract_version_dvd").change(function()
             {
                 var enlace = '/xweb/public/fotobanners/iconos/' + $('#radio_caract_version_dvd').val() + '.png';
                 $("#img_caract_dvd").attr("src", enlace);
-            });
+            });*/
+
+            cambiarDVDAnuncio();
         }
         else if ((arrCaractArticulo4.indexOf('W7') > -1) || (arrCaractArticulo4.indexOf('W8') > -1) || (arrCaractArticulo4.indexOf('W9') > -1) || (arrCaractArticulo4.indexOf('W10') > -1) || (arrCaractArticulo4.indexOf('CHROME') > -1))
         {
@@ -2587,7 +2596,10 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '</td>' +
                 '</tr>');
 
-            $('#radio_caract_version_so option[value=' + versionSO + ']').attr('selected','selected');                   
+            $('#radio_caract_version_so option[value=' + versionSO + ']').attr('selected','selected');
+            $('#radio_caract_tipo_so option[value=' + tipoSO + ']').attr('selected','selected');
+
+            cambiarSistemaOperativoAnuncio();                
         }
 
         if (i == 3 && esPortatil)
@@ -3704,6 +3716,42 @@ function escribirTextOferta(cambioFecha = false)
             }
         }
 
+    }, 2000);
+}
+
+function mostrarPorUnidad()
+{
+    if ($('#check_por_unidad').is(":checked"))
+    {
+        $('#div_por_unidad').css('display', 'block');
+        escribirTextPorUnidad();
+    }
+    else
+    {
+        $('#div_por_unidad').css('display', 'none');
+    }
+}
+
+function escribirTextPorUnidad()
+{
+    $('#check_por_unidad').prop('checked', true);
+
+    var txtInputPorUnidad = $('#input_por_unidad').val();
+
+    setTimeout(function()
+    {
+        if (txtInputPorUnidad == $('#input_por_unidad').val())
+        {
+            var fontSize = $("#span_oferta_valida").css("font-size");
+
+            if (fontSize === "") 
+            {
+                fontSize = '15pt'; // Establecer un valor por defecto
+            }
+
+            $('#span_por_unidad').remove();
+            $('#div_por_unidad').append('<span id="span_por_unidad" style="font-size: ' + fontSize + '">' + txtInputPorUnidad + '</span>');
+        }
     }, 2000);
 }
 
@@ -6282,14 +6330,9 @@ function cambiarSistemaOperativoAnuncio()
 
 function cambiarDVDAnuncio()
 {
-    var enlace = '/xweb/public/fotobanners/iconos/windows-' + $('#radio_caract_version_so').val() + '-' + $('#radio_caract_tipo_so').val() + '.png';
+    var enlace = '/xweb/public/fotobanners/iconos/' + $('#radio_caract_version_dvd').val() + '.png';
 
-    if ($('#radio_caract_version_so').val() == 'Chrome')
-    {
-        enlace = '/xweb/public/fotobanners/iconos/chrome-os.png';
-    }
-
-    $("#img_caract_so").attr("src", enlace);
+    $("#img_caract_dvd").attr("src", enlace);
 }
 
 

@@ -122,6 +122,9 @@
 									</div>
 								</div>
 							</div>
+							<div id="div_por_unidad">
+								<span id="span_por_unidad" class="span_oferta_valida"></span>
+							</div>
 							<div id="div_oferta_valida">
 								<span id="span_oferta_valida" class="span_oferta_valida"></span>
 							</div>
@@ -893,6 +896,49 @@
 							<td class="td_generador_formulario_celda"></td>
 
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Por unidad: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_arriba_porunidad" onmousedown="moverElementoAnuncio('#div_por_unidad', true, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button_izq_porunidad" onmousedown="moverElementoAnuncio('#div_por_unidad', false, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-cube" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
+										</td>
+										<td>
+											<button id="button_der_porunidad" onmousedown="moverElementoAnuncio('#div_por_unidad', false, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_abajo_porunidad" onmousedown="moverElementoAnuncio('#div_por_unidad', true, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
 								<div class="div_generador_formulario_celda">Pantalla: </div>
 							</td>
 							<td class="td_generador_formulario_celda">
@@ -993,6 +1039,31 @@
 										</td>
 										<td>
 											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_oferta_valida', true, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Por Unidad: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', false, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', true, 1)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
 											</button>
 										</td>
@@ -1728,6 +1799,19 @@
 										</td>
 										<td colspan="2" style="width: 25%">
 											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta(true)" name="input_dato_oferta" value="12/10/2023" style="width: 98%; float: right; margin-right: 0px;">
+										</td>
+									</tr>
+								</table>
+								<table class="width-table-anuncios">
+									<tr>
+										<td style="width: 15%">
+											<div class="div_caract_generador_anuncios" style="display: flex;">
+												<input type="checkbox" id="check_por_unidad" oninput="mostrarPorUnidad()" name="check_por_unidad" class="input_otros_datos" />
+												<div class="div_otros_datos" style="padding-right: 0px">Por unidad</div>
+											</div>
+										</td>
+										<td style="width: 85%">
+											<input type="text" id="input_por_unidad" oninput="escribirTextPorUnidad()" name="input_por_unidad" value="Precios para dos unidades o más" style="width: 100%; margin-right: 10px;" />
 										</td>
 									</tr>
 								</table>	

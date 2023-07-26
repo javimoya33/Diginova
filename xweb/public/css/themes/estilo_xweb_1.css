@@ -4669,6 +4669,18 @@ input[name="direccion_envio"] {
     color: white;
 }
 
+#div_por_unidad {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#span_por_unidad {
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+}
+
 .div_texto_pantalla {
     position: absolute;
 }
