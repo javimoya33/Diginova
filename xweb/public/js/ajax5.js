@@ -2048,6 +2048,9 @@ function pulsarArticuloParaAnuncio(nombreArticulo, precio, imagen)
 
     $('#input_nombre_lote_articulo_1').val(nombreArticulo);
     $('#input_nombre_abrev_lote_articulo_1').val(obtNombreAbreviadoArt(nombreArticulo));
+    $('#input_precio_art_lote_1').val(precio1);
+    $('#input_adescr_art_lote_1').val(imagen);
+
     calcularPrecioLote();
 
     if ($('.precio2_control').css('display') != 'none')
@@ -2204,7 +2207,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '<td style="width: 21%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
                             '<input type="checkbox" id="check_caract_procesador" name="check_caract" checked ' + 
-                            'onchange="mostrarCaractProcesadorAnuncio(this, ' + '\'#div_carac_text_articulo_seleccionado\'' + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            'onchange="mostrarCaractProcesadorAnuncio(this, ' + '\'#div_carac_text_articulo_seleccionado\'' + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2248,7 +2251,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '<tr>' + 
                         '<td style="width: 21%">' + 
                             '<div class="div_caract_generador_anuncios">' + 
-                                '<input type="checkbox" id="check_caract_pantalla" name="check_caract" checked style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                                '<input type="checkbox" id="check_caract_pantalla" name="check_caract" checked style="height: 50px; width: 16px;">' + 
                                 '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                             '</div>' + 
                         '</td>' + 
@@ -2263,7 +2266,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                         '<td style="width: 21%">' + 
                             '<div class="div_caract_generador_anuncios">' + 
                                 '<input type="checkbox" id="check_caract_pulgadas" name="check_caract" onclick="mostrarCaractProcesadorAnuncio(this, ' + '\'#div_carac3_text_articulo_seleccionado\'' + ')" ' + 
-                                'checked style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                                'checked style="height: 50px; width: 16px;">' + 
                                 '<div style="float: left;padding: 18px 8px 0px 9px;">Pulgadas</div>' + 
                             '</div>' + 
                         '</td>' +
@@ -2316,7 +2319,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_ram" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'ram\'' + ', ' + 2 + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            '<input type="checkbox" id="check_caract_ram" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'ram\'' + ', ' + 2 + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2417,7 +2420,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_discoduro" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'discoduro\'' + ', ' + '\'\'' + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            '<input type="checkbox" id="check_caract_discoduro" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'discoduro\'' + ', ' + '\'\'' + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2487,7 +2490,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_dvd" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'dvd\'' + ', ' + 4 + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            '<input type="checkbox" id="check_caract_dvd" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'dvd\'' + ', ' + 4 + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 2px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2572,7 +2575,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_so" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'so\'' + ', ' + 3 + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            '<input type="checkbox" id="check_caract_so" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'so\'' + ', ' + 3 + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 2px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2617,7 +2620,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '<td style="width: 21%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
                             '<input type="checkbox" id="check_caract_pantalla" name="check_caract" checked ' + 
-                            'onchange="mostrarTextoPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'div_texto_pantalla\'' + ')" style="height: 50px; width: 16px; margin-left: 4px;">' + 
+                            'onchange="mostrarTextoPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'div_texto_pantalla\'' + ')" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -3380,27 +3383,27 @@ function cambiarEstiloBotonAnuncio()
     changePanel(fontSize);
 }
 
-function voltearImgAnuncio()
+function voltearImgAnuncio(elemento)
 {
     var voltearImg = $('#voltear_imagen').val();
 
     if (voltearImg == '0')
     {
         $('#voltear_imagen').val('1');
-        rotateImg('#rotacion_imagen', '#img_foto_articulo_seleccionado', false); 
+        rotateImg('#rotacion_imagen', elemento, false); 
     }
     else
     {
         $('#voltear_imagen').val('0');
-        rotateImg('#rotacion_imagen', '#img_foto_articulo_seleccionado', true); 
+        rotateImg('#rotacion_imagen', elemento, true); 
     }
 }
 
-function girarImgAnuncio(giro)
+function girarImgAnuncio(elemento, giro)
 {
     int01 = setInterval(function() 
     { 
-        rotateImg('#rotacion_imagen', '#img_foto_articulo_seleccionado', giro); 
+        rotateImg('#rotacion_imagen', elemento, giro); 
     }, 15);
 }
 
@@ -3667,56 +3670,64 @@ function mostrarTecladoConDiezAnuncio()
     }
 }
 
-function mostrarOfertaValida()
+function mostrarOfertaValida(elemento1, elemento2)
 {
-    if ($('#check_oferta_valida').is(":checked"))
-    {
-        $('#div_oferta_valida').css('display', 'block');
-        escribirTextOferta();
-    }
-    else
+    if (!$(elemento1).prop("checked") && !$(elemento2).prop("checked")) 
     {
         $('#div_oferta_valida').css('display', 'none');
     }
-}
-
-function escribirTextOferta(cambioFecha = false)
-{
-    $('#check_oferta_valida').prop('checked', true);
-
-    if (cambioFecha)
+    else
     {
-        $('#check_fecha_oferta_valida').prop('checked', true);
+        if ($(elemento1).prop("checked"))
+        {
+            $(elemento2).prop('checked', true);
+        }
+
+        $('#div_oferta_valida').css('display', 'block');
     }
 
-    var txtInputOferta = $('#input_text_oferta').val();
-    var fechaInputOferta = $('#input_fecha_oferta').val();
-    fechaInputOferta = dayjs(fechaInputOferta).format('DD-MM-YYYY');
+    escribirTextOferta();
+}
 
-    setTimeout(function()
+function escribirTextOferta()
+{
+    var fontSize = $("#span_oferta_valida").css("font-size");
+
+    if (fontSize === "") 
     {
-        if (txtInputOferta == $('#input_text_oferta').val())
+        fontSize = '16pt'; // Establecer un valor por defecto
+    }
+
+    var txtInputOferta = '';
+    var fechaInputOferta = '';
+
+    if ($('#check_fecha_oferta_valida').is(":checked"))
+    {
+        fechaInputOferta = $('#input_fecha_oferta').val();
+        fechaInputOferta = dayjs(fechaInputOferta).format('DD-MM-YYYY');
+    }
+
+    if ($('#check_oferta_valida').is(":checked"))
+    {
+        txtInputOferta = $('#input_text_oferta').val();
+
+        setTimeout(function()
         {
-            var fontSize = $("#span_oferta_valida").css("font-size");
-
-            if (fontSize === "") 
-            {
-                fontSize = '15pt'; // Establecer un valor por defecto
-            }
-
-            if ($('#check_fecha_oferta_valida').is(":checked"))
+            if (txtInputOferta == $('#input_text_oferta').val())
             {
                 $('#span_oferta_valida').remove();
                 $('#div_oferta_valida').append('<span id="span_oferta_valida" style="font-size: ' + fontSize + '">' + txtInputOferta + ' ' + fechaInputOferta + '</span>');
             }
-            else
-            {
-                $('#span_oferta_valida').remove();
-                $('#div_oferta_valida').append('<span id="span_oferta_valida" style="font-size: ' + fontSize + '">' + txtInputOferta + '</span>');
-            }
-        }
 
-    }, 2000);
+        }, 2000);
+    }
+    else
+    {
+        $('#span_oferta_valida').remove();
+        $('#div_oferta_valida').append('<span id="span_oferta_valida" style="font-size: ' + fontSize + '">' + fechaInputOferta + '</span>');
+    }
+
+    console.log('Valencia ' + txtInputOferta + ' *** ' + fechaInputOferta);
 }
 
 function mostrarPorUnidad()
@@ -3742,7 +3753,7 @@ function escribirTextPorUnidad()
     {
         if (txtInputPorUnidad == $('#input_por_unidad').val())
         {
-            var fontSize = $("#span_oferta_valida").css("font-size");
+            var fontSize = $("#span_por_unidad").css("font-size");
 
             if (fontSize === "") 
             {
@@ -3795,20 +3806,135 @@ function escribirTextPantalla(check, input, span, div)
     }, 2000);
 }
 
-function mostrarLoteArticulos()
+function cambiarFuncionDesplazamientoLote(loteActivado)
 {
+    // Si se ha activado el lote o no se cambiará el elemento al que se desplaze
+    if (loteActivado)
+    {
+        $("#button_arriba_img").attr("onmousedown", "moverElementoAnuncio('#lista_imgs_lote_articulos', true, false)");
+
+        $("#button_izq_img").attr("onmousedown", "moverElementoAnuncio('#lista_imgs_lote_articulos', false, false)");
+
+        $("#button_der_img").attr("onmousedown", "moverElementoAnuncio('#lista_imgs_lote_articulos', false, true)");
+
+        $("#button_abajo_img").attr("onmousedown", "moverElementoAnuncio('#lista_imgs_lote_articulos', true, true)");
+    }
+    else
+    {
+        $("#button_arriba_img").attr("onmousedown", "moverElementoAnuncio('#img_foto_articulo_seleccionado', true, false)");
+
+        $("#button_izq_img").attr("onmousedown", "moverElementoAnuncio('#img_foto_articulo_seleccionado', false, false)");
+
+        $("#button_der_img").attr("onmousedown", "moverElementoAnuncio('#img_foto_articulo_seleccionado', false, true)");
+
+        $("#button_abajo_img").attr("onmousedown", "moverElementoAnuncio('#img_foto_articulo_seleccionado', true, true)");
+    }
+}
+
+function cambiarFuncionTamanioLote(loteActivado)
+{
+    // Si se ha activado el lote o no se cambiará el tamanio de los elementos
+    if (loteActivado)
+    {
+        $("#button_menos_imagen").attr("onmousedown", "cambiarTamanioImagenAnuncio('#lista_imgs_lote_articulos img', false, 1, 0.55)");
+
+        $("#button_mas_imagen").attr("onmousedown", "cambiarTamanioImagenAnuncio('#lista_imgs_lote_articulos img', true, 1, 0.55)");
+
+        $("#button_girar_izq_img").attr("onmousedown", "girarImgAnuncio('#lista_imgs_lote_articulos img', true)");
+
+        $("#button_girar_der_img").attr("onmousedown", "girarImgAnuncio('#lista_imgs_lote_articulos img', false)");
+
+        $("#button_voltear_img").attr("onclick", "voltearImgAnuncio('#lista_imgs_lote_articulos img')");
+    }
+    else
+    {
+        $("#button_menos_imagen").attr("onmousedown", "cambiarTamanioImagenAnuncio('#img_foto_articulo_seleccionado', false, 1, 0.55)");
+
+        $("#button_mas_imagen").attr("onmousedown", "cambiarTamanioImagenAnuncio('#img_foto_articulo_seleccionado', true, 1, 0.55)");
+
+        $("#button_girar_izq_img").attr("onmousedown", "girarImgAnuncio('#img_foto_articulo_seleccionado', true)");
+
+        $("#button_girar_der_img").attr("onmousedown", "girarImgAnuncio('#img_foto_articulo_seleccionado', false)");
+
+        $("#button_voltear_img").attr("onclick", "voltearImgAnuncio('#img_foto_articulo_seleccionado')");
+    }
+}
+
+function mostrarLoteArticulos(filaAbrev = false)
+{
+    if (filaAbrev)
+    {
+        $('#check_lote_articulos').prop('checked', true);
+    }
+
     if ($('#check_lote_articulos').is(":checked"))
     {
         $('#div_lote_articulos').css('display', 'block');
+        $('#lista_imgs_lote_articulos').css('display', 'flex');
+        $('#img_foto_articulo_seleccionado').css('display', 'none');
+
+        $('#div_precio_articulo_seleccionado').css('top', '120px');
+        $('#div_precio_articulo_seleccionado').css('left', '552px');
+
+        $('#lista_imgs_lote_articulos').empty();
+
+        var numArticulosEnLote = 0;
+        $(".input_adescr_art_lote").each(function() {
+
+            numArticulosEnLote = numArticulosEnLote + 1;
+
+            if (numArticulosEnLote > 1)
+            {
+                $('#lista_imgs_lote_articulos').append('<div class="div_sumar_lote">+</div>');
+            }
+
+            $('#lista_imgs_lote_articulos').append('<img src="' + $(this).val() + '" style="width: 150px; height: auto;" />');
+        });
+
+        escribirLoteArticulos();
+
+        disponerElementosLoteArticulos();
+
+        cambiarFuncionDesplazamientoLote(true);
+        cambiarFuncionTamanioLote(true);
     }
     else
     {
         $('#div_lote_articulos').css('display', 'none');
+        $('#lista_imgs_lote_articulos').css('display', 'none');
+        $('#img_foto_articulo_seleccionado').css('display', 'block');
+
+        cambiarFuncionDesplazamientoLote(false);
+        cambiarFuncionTamanioLote(false);
     }
+}
+
+function disponerElementosLoteArticulos()
+{
+    $('#panel_articulo_seleccionado').css('top', '240px');
+    $('#panel_articulo_seleccionado').css('left', '515px');
+
+    apuntarBotonIzqAnuncio();
+
+    if ($('#input_flecha_arr').is(":checked"))
+    {
+        apuntarBotonArrAnuncio();
+    }
+
+    if ($('#input_flecha_aba').is(":checked"))
+    {
+        apuntarBotonAbjAnuncio();
+    }
+
+    $('#precio_articulo_seleccionado').css('font-size', '64pt');
+    $('#euro_articulo_seleccionado').css('font-size', '50pt');
 }
 
 function anadirArticuloALote()
 {
+    $('#check_lote_articulos').prop('checked', true);
+    mostrarLoteArticulos();
+
     var numeroFilas = $('.tr_lote_articulo').length;
 
     if (numeroFilas < 5)
@@ -3823,8 +3949,9 @@ function anadirArticuloALote()
                                 '<div class="div_otros_datos" style="float: right; padding-top: 5px;">Abrev.</div>' + 
                             '</td>' + 
                             '<td style="width: 35%; vertical-align: top;">' + 
-                                '<input type="text" id="input_nombre_abrev_lote_articulo_' + numeroFilas + '" name="input_nombre_abrev_lote_articulo" oninput="editarAbrevNombreLote()" style="width: 100%; margin-right: 10px;" value="" />' + 
+                                '<input type="text" id="input_nombre_abrev_lote_articulo_' + numeroFilas + '" name="input_nombre_abrev_lote_articulo" oninput="mostrarLoteArticulos(true)" style="width: 100%; margin-right: 10px;" value="" />' + 
                                 '<input type="hidden" id="input_precio_art_lote_' + numeroFilas + '" class="input_precio_art_lote" value="" />' + 
+                                '<input type="hidden" id="input_adescr_art_lote_' + numeroFilas + '" class="input_adescr_art_lote" value="" />' + 
                             '</td>' + 
                             '<td style="width: 17%; vertical-align: top;">' + 
                                 '<div class="div_control_lote">' + 
@@ -3846,6 +3973,8 @@ function anadirArticuloALote()
         deshabilitarBotonesPosicionLote();
 
         escribirLoteArticulos();
+
+        disponerElementosLoteArticulos();
     }
 }
 
@@ -3880,11 +4009,6 @@ function editarNombreLote(elemento)
                                 var nombreAbrev = nombreArt;
                                 var precio = 0;
 
-                                if (nombreAbrev.length > 25)
-                                {
-                                    nombreAbrev = nombreAbrev.substring(0, 22) + '...';
-                                }
-
                                 if (tarifa == 1)
                                 {
                                     precio = arrArtEncontrados[i].APVP1;
@@ -3910,17 +4034,44 @@ function editarNombreLote(elemento)
                                     precio = arrArtEncontrados[i].ARESNUM6;
                                 }
 
-                                $(elemento).parent().append('<div class="div_busq_lote" onclick="seleccionarBusqLote(this, ' + precio + ')">' + nombreAbrev + '</div>');
+                                var urlfotoPNG = 'https://diginova.es/xweb/public/articulos/' + arrArtEncontrados[i].urlfoto;
+
+                                $.ajax({
+                                    url: urlfotoPNG,
+                                    type: 'HEAD',
+                                    success: function() {
+                                        // La URL de la imagen existe
+                                        $(elemento).parent().append(
+                                            '<div class="div_busq_lote" onclick="seleccionarBusqLote(this, ' + precio + ', \'' + urlfotoPNG + '\')">' + 
+                                                '<div class="div_img_busq_lote">' + 
+                                                    '<img src="' + urlfotoPNG + '" />' + 
+                                                '</div>' +     
+                                                '<div style="white-space: nowrap; overflow: hidden">' + nombreAbrev + '</div>' + 
+                                            '</div>');
+                                    },
+                                    error: function() {
+                                        // La URL de la imagen no existe
+                                        urlfotoPNG = "/xweb/public/articulos/nofoto.jpg";
+
+                                        $(elemento).parent().append(
+                                            '<div class="div_busq_lote" onclick="seleccionarBusqLote(this, ' + precio + ', \'' + urlfotoPNG + '\')">' + 
+                                                '<div class="div_img_busq_lote">' + 
+                                                    '<img src="/xweb/public/articulos/nofoto.jpg" />' + 
+                                                '</div>' +     
+                                                '<div style="white-space: nowrap; overflow: hidden">' + nombreAbrev + '</div>' + 
+                                            '</div>');
+                                    }
+                                });
                             }(i));
                         }
-                    }
+                    },
                 });
             }
         }
     }, 2000);
 }
 
-function seleccionarBusqLote(elemento, precio)
+function seleccionarBusqLote(elemento, precio, urlfotoPNG)
 {
     var divPadre = $(elemento).parent();
     var inputNombreLoteArt = divPadre.children('input');
@@ -3932,12 +4083,15 @@ function seleccionarBusqLote(elemento, precio)
 
     $('#input_nombre_abrev_lote_articulo_' + numId).val(obtNombreAbreviadoArt(inputNombreLoteArt.val()));
     $('#input_precio_art_lote_' + numId).val(precio);
+    $('#input_adescr_art_lote_' + numId).val(urlfotoPNG);
 
     divPadre.children('div').remove();
 
     calcularPrecioLote();
 
     escribirLoteArticulos();
+
+    mostrarLoteArticulos();
 }
 
 function calcularPrecioLote()
@@ -3945,18 +4099,13 @@ function calcularPrecioLote()
     setTimeout(function()
     {
         var precioTotal = 0;
-        var precioArtPrincipal = $('#precio_articulo_seleccionado').text();
-
-        precioTotal = precioArtPrincipal;
-        console.log('PrecioPrincipal ' + precioArtPrincipal);
 
         $('.input_precio_art_lote').each(function()
         {
             precioTotal = parseFloat(precioTotal) + parseFloat($(this).val());
-            console.log('PrecioLote ' + precioTotal);
         });
 
-        $('#input_precio_lote').val(precioTotal);
+        $('#input_precio_lote').val(precioTotal + '€');
     }, 2000);
 }
 
@@ -3972,6 +4121,7 @@ function eliminarArticuloALote(elemento)
     renombrarIdsInputLote('btn_bajar_art_lote_', 'btn_bajar_art_lote', 'button');
     deshabilitarBotonesPosicionLote();
     escribirLoteArticulos();
+    mostrarLoteArticulos();
 }
 
 function renombrarIdsInputLote(idInput, nameInput, tipoElem)
@@ -4057,22 +4207,48 @@ function escribirLoteArticulos()
             $('#div_lista_lote_articulos ul').append('<li>' + $(element).val() + '</li>');
         });
 
-        var precioLote = $('#input_precio_lote').val();
-        $('#precio_articulo_seleccionado').text(precioLote);
+        if ($('#input_precio_lote').val().trim().indexOf('€') > -1)
+        {
+            $('#euro_articulo_seleccionado').css('display', 'table-cell');
+        }
+        else
+        {
+            $('#euro_articulo_seleccionado').css('display', 'none');
+        }
+
+        cambiarPrecioLote(precioLote);
     }, 2000);
 }
 
 function editarPrecioLote()
 {
+    $('#check_lote_articulos').prop('checked', true);
+    mostrarLoteArticulos();
+
     var precioLote = $('#input_precio_lote').val();
 
     setTimeout(function()
     {
         if (precioLote == $('#input_precio_lote').val())
         {
-            $('#precio_articulo_seleccionado').text(precioLote);
+            cambiarPrecioLote(precioLote);
         }
     }, 2000);
+}
+
+function cambiarPrecioLote(precioLote)
+{
+    if ($('#input_precio_lote').val().trim().indexOf('€') > -1)
+    {
+        $('#euro_articulo_seleccionado').css('display', 'table-cell');
+    }
+    else
+    {
+        $('#euro_articulo_seleccionado').css('display', 'none');
+    }
+
+    precioLote = precioLote.replace('€', '');
+    $('#precio_articulo_seleccionado').text(precioLote);
 }
 
 function moverElementoAnuncio(elemento, vertical, sumar)
@@ -4116,6 +4292,8 @@ function cambiarTamanioImagen(elemento, agrandar, ancho, alto)
         var alto = parseFloat($(elemento).css('height')) - parseFloat(alto);
     }
 
+    $(elemento).css('width', 'auto');
+    $(elemento).css('height', 'auto');
     $(elemento).css('max-width', ancho + 'px');
     $(elemento).css('max-height', alto + 'px');
 }

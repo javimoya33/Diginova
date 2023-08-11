@@ -25,6 +25,13 @@
 						<div id="div_anuncio_generado">
 							<img src="/xweb/public/fotobanners/fondos/bannerf23.png" id="img_fondo_articulo_seleccionado" style="width: 750px; height: 300px;" />
 							<img src="/xweb/public/fotobanners/art_6910do3901gb_1 copia.png" id="img_foto_articulo_seleccionado" />
+							<div id="lista_imgs_lote_articulos">
+								<!-- <img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto">
+								<div>+</div>
+								<img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto">
+								<div>+</div>
+								<img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto"> -->
+							</div>		
 							<img src="/xweb/public/images/teclado_castellano.png" id="img_teclado_castellano" style="display: none">
 							<div id="titulo_articulo_seleccionado">
 								<div id="nombre_articulo_seleccionado">
@@ -116,9 +123,9 @@
 							</div>
 							<div id="panel_articulo_seleccionado">
 								<div id="div_panel_articulo_seleccionado">
-									<div id="div_txt_panel_articulo_seleccionado">HAZTE CON ÉL</div>
-									<div id="div_img_flecha_panel" style="border: 1px solid rgba(2, 91, 126, 0.5);">
-										<i class="fa fa-chevron-left" id="img_flecha_panel"></i>
+									<div id="div_txt_panel_articulo_seleccionado" style="float: left;">HAZTE CON ÉL</div>
+									<div id="div_img_flecha_panel" style="border: 1px solid rgba(2, 91, 126, 0.5); float: right; margin-left: 3px;margin-right: 0px;">
+										<i class="fa fa-chevron-left" id="img_flecha_panel" style="transform: rotate(90deg);"></i>
 									</div>
 								</div>
 							</div>
@@ -135,7 +142,7 @@
 								<span id="span_texto_tactil" class="span_texto_pantalla"></span>
 							</div>
 							<div id="div_lote_articulos" style="display: none">
-								<div>LOTE INCLUYE</div>
+								<div id="div_titulo_lote_articulos">LOTE INCLUYE</div>
 								<div id="div_lista_lote_articulos">
 									<ul></ul>
 								</div>
@@ -158,41 +165,33 @@
 						@foreach($arrArticulos as $arrArticulo)
 
 							<?php
-								// Comprobar si la imagen del archivo con fondo transparente existe
-								$imagenExiste = false; $urlfoto = "/xweb/public/articulos/nofoto.jpg";
+							// Comprobar si la imagen del archivo con fondo transparente existe
+							$imagenExiste = false; $urlfoto = "/xweb/public/articulos/nofoto.jpg";
 
 
 				            // Foto del artículo
-				                $artFoto = "nofoto.jpg";
+			                $artFoto = "nofoto.jpg";
 
-				                if (isset($arrArticulo->urlfoto))
-				                {
-				                    $artFoto = $arrArticulo->urlfoto;				                    
-				                }
+			                if (isset($arrArticulo->urlfoto))
+			                {
+			                    $artFoto = $arrArticulo->urlfoto;				                    
+			                }
 
-				                $urlfoto = "https://diginova.es/xweb/public/articulost/".$artFoto.".png";
+			                $urlfoto = "https://diginova.es/xweb/public/articulost/".$artFoto.".png";
 				                
+
+			                if (!is_array(@getimagesize($urlfoto))) 
+			                {
+			                	$urlfoto = "https://diginova.es/xweb/public/articulos/".$artFoto.".jpg";
 
 				                if (!is_array(@getimagesize($urlfoto))) 
 				                {
-				                	$urlfoto = "https://diginova.es/xweb/public/articulos/".$artFoto.".jpg";
-
-					                if (!is_array(@getimagesize($urlfoto))) 
-					                {
-					                	//echo "<br />TEST ".$urlfoto;
-					                    $artFoto = "nofoto.jpg";
-					                    $urlfoto = "/xweb/public/articulos/".$artFoto;
-					                }
+				                	//echo "<br />TEST ".$urlfoto;
+				                    $artFoto = "nofoto.jpg";
+				                    $urlfoto = "/xweb/public/articulos/".$artFoto;
 				                }
-
-
-
-
-				                
-
-
-
-							?>
+			                }
+			                ?>
 
 							<input type="hidden" id="input_seleccion_articulo_<?php echo $contFacturas ?>" name="input_seleccion_articulo" value="<?php echo strtolower($arrArticulo->ACODAR) ?>">
 							<table id="table_list_articulo_<?php echo strtolower($arrArticulo->ACODAR) ?>" class="table_seleccion_articulo" <?php if ($contFacturas >= 10) { ?> style="display: none" <?php } ?>>
@@ -248,35 +247,35 @@
 
 								<td class="td_generador_formulario_celda">
 									<input type="radio" id="radio_plantilla1" name="radio_plantilla" value="p1" class="input_generador_formulario_celda" onclick="pulsarPlantillaAnuncio1()">
-									<div>Plantilla1</div>
+									<div class="div_plantilla_anuncio">Plantilla1</div>
 								</td>
 
 								<td class="td_generador_espacio_interior"></td>
 
 								<td class="td_generador_formulario_celda">
 									<input type="radio" id="radio_plantilla2" name="radio_plantilla" value="p2" class="input_generador_formulario_celda" onclick="pulsarPlantillaAnuncio2()">
-									<div>Plantilla2</div>
+									<div class="div_plantilla_anuncio">Plantilla2</div>
 								</td>
 
 								<td class="td_generador_espacio_interior"></td>
 
 								<td class="td_generador_formulario_celda">
 									<input type="radio" id="radio_plantilla3" name="radio_plantilla" value="p3" class="input_generador_formulario_celda" onclick="pulsarPlantillaAnuncio3()">
-									<div>Plantilla3</div>
+									<div class="div_plantilla_anuncio">Plantilla3</div>
 								</td>
 
 								<td class="td_generador_espacio_interior"></td>
 
 								<td class="td_generador_formulario_celda">
 									<input type="radio" id="radio_plantilla4" name="radio_plantilla" value="p4" class="input_generador_formulario_celda" onclick="pulsarPlantillaAnuncio4()">
-									<div>Plantilla4</div>
+									<div class="div_plantilla_anuncio">Plantilla4</div>
 								</td>
 
 								<td class="td_generador_espacio_interior"></td>
 
 								<td class="td_generador_formulario_celda">
 									<input type="radio" id="radio_plantilla5" name="radio_plantilla" value="p5" class="input_generador_formulario_celda" onclick="pulsarPlantillaAnuncio5()">
-									<div>Plantilla5</div>
+									<div class="div_plantilla_anuncio">Plantilla5</div>
 								</td>
 
 								<td class="td_generador_espacio_lateral"></td>
@@ -288,7 +287,7 @@
 			</tr>
 			<tr>
 				<td style="padding: 20px; padding-top: 0px;">
-					<table class="table_formulario_generador_anuncios">
+					<table class="table_formulario_generador_anuncios border-table-anuncios table_control_posicion">
 						<tr>
 
 							<td class="td_generador_formulario_celda">
@@ -485,17 +484,17 @@
 									</tr>
 									<tr>
 										<td style="padding-top: 5px; padding-right: 1px;">
-											<button id="button_girar_izq_img" onmousedown="girarImgAnuncio(true)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_girar_izq_img" onmousedown="girarImgAnuncio(true, '#img_foto_articulo_seleccionado')" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-undo i_btn_generador_formulario" style="font-size: 13px;"></i>
 											</button>
 										</td>
 										<td style="padding-top: 5px; padding-right: 1px;">
-											<button id="button_voltear_img" onclick="voltearImgAnuncio()">
+											<button id="button_voltear_img" onclick="voltearImgAnuncio('#img_foto_articulo_seleccionado')">
 												<i class="fa fa-retweet i_btn_generador_formulario" style="font-size: 13px;"></i>
 											</button>
 										</td>
 										<td style="padding-top: 5px; padding-right: 1px;">
-											<button id="button_girar_der_img" onmousedown="girarImgAnuncio(false)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_girar_der_img" onmousedown="girarImgAnuncio(false, '#img_foto_articulo_seleccionado')" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-undo i_btn_generador_formulario" style="font-size: 13px; transform:scaleX(-1);"></i>
 											</button>
 										</td>
@@ -1123,6 +1122,72 @@
 						</tr>
 						<tr>
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Lote de Artículos: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_arriba_pulgadas" onmousedown="moverElementoAnuncio('#div_lote_articulos', true, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button_izq_pulgadas" onmousedown="moverElementoAnuncio('#div_lote_articulos', false, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-cubes" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
+										</td>
+										<td>
+											<button id="button_der_pulgadas" onmousedown="moverElementoAnuncio('#div_lote_articulos', false, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_abajo_pulgadas" onmousedown="moverElementoAnuncio('#div_lote_articulos', true, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Lote de Artículos: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#div_titulo_lote_articulos', false, 1); cambiarTamanioFuente('#div_lista_lote_articulos ul li', false, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#div_titulo_lote_articulos', true, 1); cambiarTamanioFuente('#div_lista_lote_articulos ul li', true, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
 								<div class="div_generador_formulario_celda">Precio: </div>
 							</td>
 							<td class="td_generador_formulario_celda">
@@ -1697,8 +1762,8 @@
 									<tr>
 										<td style="width: 15%; padding-bottom: 0px;">
 											<div class="div_caract_generador_anuncios">
-												<input type="checkbox" id="check_dato_panel" name="check_dato_panel" checked="checked" onchange="mostrarBotonAnuncio()" style="height: 50px; width: 16px; margin-left: 4px;" />
-												<div style="float: left; padding: 11px 8px 0px 9px;">Botón</div>
+												<input type="checkbox" id="check_dato_panel" name="check_dato_panel" checked="checked" onchange="mostrarBotonAnuncio()" style="height: 50px; width: 16px;" />
+												<div style="float: left; padding: 18px 8px 0px 9px;">Botón</div>
 											</div>
 										</td>
 										<td style="width: 85%; padding-bottom: 0px;" colspan="2">
@@ -1712,11 +1777,11 @@
 										</td>
 										<td style="width: 60%; padding: 0px; padding-bottom: 5px;">
 											<form id="radio_flecha_panel">
-												<input type="checkbox" id="input_flecha_izq" onclick="apuntarBotonIzqAnuncio()" name="input_flecha_panel" value="izquierda" checked="checked" />
+												<input type="checkbox" id="input_flecha_izq" onclick="apuntarBotonIzqAnuncio()" name="input_flecha_panel" value="izquierda" />
 												<div>Izquierda</div>
-												<input type="checkbox" id="input_flecha_der" onclick="apuntarBotonDerAnuncio()" name="input_flecha_panel" value="derecha" />
+												<input type="checkbox" id="input_flecha_der" onclick="apuntarBotonDerAnuncio()" name="input_flecha_panel" value="derecha" checked="checked" />
 												<div>Derecha</div>
-												<input type="checkbox" id="input_flecha_arr" onclick="apuntarBotonArrAnuncio()" name="input_flecha_panel" value="arriba" />
+												<input type="checkbox" id="input_flecha_arr" onclick="apuntarBotonArrAnuncio()" name="input_flecha_panel" value="arriba" checked="checked" />
 												<div>Arriba</div>
 												<input type="checkbox" id="input_flecha_aba" onclick="apuntarBotonAbjAnuncio()" name="input_flecha_panel" value="abajo"  />
 												<div>Abajo</div>
@@ -1784,7 +1849,7 @@
 									<tr>
 										<td style="width: 15%">
 											<div class="div_caract_generador_anuncios" style="display: flex;">
-												<input type="checkbox" id="check_oferta_valida" oninput="mostrarOfertaValida()" name="check_oferta_valida" class="input_otros_datos" />
+												<input type="checkbox" id="check_oferta_valida" oninput="mostrarOfertaValida(this, '#check_fecha_oferta_valida')" name="check_oferta_valida" class="input_otros_datos" />
 												<div class="div_otros_datos">Oferta</div>
 											</div>
 										</td>
@@ -1793,12 +1858,12 @@
 										</td>
 										<td style="width: 15%">
 											<div class="div_caract_generador_anuncios" style="float: right">
-												<input type="checkbox" id="check_fecha_oferta_valida" oninput="mostrarOfertaValida()" name="check_fecha_oferta_valida" class="input_otros_datos" />
+												<input type="checkbox" id="check_fecha_oferta_valida" oninput="mostrarOfertaValida(this, '#check_oferta_valida')" name="check_fecha_oferta_valida" class="input_otros_datos" />
 												<div class="div_otros_datos">Fecha</div>
 											</div>
 										</td>
 										<td colspan="2" style="width: 25%">
-											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta(true)" name="input_dato_oferta" value="12/10/2023" style="width: 98%; float: right; margin-right: 0px;">
+											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta()" name="input_dato_oferta" value="12/10/2023" style="width: 98%; float: right; margin-right: 0px;">
 										</td>
 									</tr>
 								</table>
@@ -1848,12 +1913,14 @@
 									<tr class="tr_lote_articulo">
 										<td>
 											<div>
-												<input type="text" id="input_nombre_lote_articulo_1" name="input_nombre_lote" oninput="editarNombreLote()" style="width: 275px; margin-right: 10px;" value="" />
+												<input type="text" id="input_nombre_lote_articulo_1" name="input_nombre_lote" disabled style="width: 275px; margin-right: 10px;" value="" />
 											</div>
 											<div class="div_otros_datos" style="float: right; padding-top: 8px;">Abrev.</div>
 										</td>
 										<td style="width: 35%;">
-											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_nombre_abrev_lote_articulo" oninput="editarNombreLote()" style="width: 100%; margin-right: 10px;" value="" />
+											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_nombre_abrev_lote_articulo" oninput="mostrarLoteArticulos(true)" style="width: 100%; margin-right: 10px;" value="" />
+											<input type="hidden" id="input_precio_art_lote_1" class="input_precio_art_lote" value="" />
+                                			<input type="hidden" id="input_adescr_art_lote_1" class="input_adescr_art_lote" value="" />
 										</td>
 										<td style="width: 17%">
 											<div style="display: none; justify-content: space-between; padding: 10px; padding: 0px 0px 0px 10px;">
@@ -1877,7 +1944,7 @@
 							<td>
 								<div>
 									<button id="button_generar_imagen" class="button_generar_cartel" onclick="renderizarImagen()">
-										<i class="fa fa-download"></i>
+										<i class="fa fa-download" style="margin-top: 4px;"></i>
 										Generar cartel
 									</button>
 								</div>
