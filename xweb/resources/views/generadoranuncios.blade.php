@@ -1863,7 +1863,7 @@
 											</div>
 										</td>
 										<td colspan="2" style="width: 25%">
-											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta()" name="input_dato_oferta" value="12/10/2023" style="width: 98%; float: right; margin-right: 0px;">
+											<input type="date" id="input_fecha_oferta" oninput="escribirTextOferta()" name="input_dato_oferta" value="2023-10-12" style="width: 98%; float: right; margin-right: 0px;">
 										</td>
 									</tr>
 								</table>
@@ -1919,8 +1919,8 @@
 										</td>
 										<td style="width: 35%;">
 											<input type="text" id="input_nombre_abrev_lote_articulo_1" name="input_nombre_abrev_lote_articulo" oninput="mostrarLoteArticulos(true)" style="width: 100%; margin-right: 10px;" value="" />
-											<input type="hidden" id="input_precio_art_lote_1" class="input_precio_art_lote" value="" />
-                                			<input type="hidden" id="input_adescr_art_lote_1" class="input_adescr_art_lote" value="" />
+											<input type="hidden" id="input_precio_art_lote_1" name="input_precio_art_lote" class="input_precio_art_lote" value="" />
+                                			<input type="hidden" id="input_adescr_art_lote_1" name="input_adescr_art_lote" class="input_adescr_art_lote" value="" />
 										</td>
 										<td style="width: 17%">
 											<div style="display: none; justify-content: space-between; padding: 10px; padding: 0px 0px 0px 10px;">
