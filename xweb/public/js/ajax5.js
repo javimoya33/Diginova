@@ -2064,6 +2064,7 @@ function pulsarArticuloParaAnuncio(nombreArticulo, precio, imagen)
     {
         mostrarCaracteristicasArtAnuncio(nombreArticulo);
         cambiarCaractPrincipalAnuncio('#input_text_pantalla');
+        mostrarTextoPantalla(true);
     }, 1500);
 
     if (checkBrowser() == 'Firefox')
@@ -2175,6 +2176,10 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
     }
 
     if (arrCaractArticulo[0].indexOf('Portátil') !== -1) 
+    {
+        esPortatil = true;
+    }
+    else if (arrCaractArticulo[0].indexOf('Portatil') !== -1) 
     {
         esPortatil = true;
     }
@@ -2523,8 +2528,9 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
 
             cambiarDVDAnuncio();
         }
-        else if ((arrCaractArticulo4.indexOf('W7') > -1) || (arrCaractArticulo4.indexOf('W8') > -1) || (arrCaractArticulo4.indexOf('W9') > -1) || (arrCaractArticulo4.indexOf('W10') > -1) || (arrCaractArticulo4.indexOf('CHROME') > -1))
+        else if ((arrCaractArticulo4.indexOf('W7') > -1) || (arrCaractArticulo4.indexOf('W8') > -1) || (arrCaractArticulo4.indexOf('W9') > -1) || (arrCaractArticulo4.indexOf('W10') > -1) || (arrCaractArticulo4.indexOf('W11') > -1) || (arrCaractArticulo4.indexOf('CHROME') > -1))
         {
+            console.log('arrCaractArticulo4 ' + arrCaractArticulo4);
             nombreCaract = 'Sistema Operativo';
 
             $("#img_caract_so").css('display', 'block');
@@ -2555,18 +2561,23 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 nombreImagen3 = 'windows-10-';
                 versionSO = 10;
             }
+            else if (valCaract.indexOf('W11') > -1)
+            {
+                nombreImagen3 = 'windows-11-';
+                versionSO = 11;
+            }
             else if (valCaract.indexOf('CHROME') > -1)
             {
                 nombreImagen3 = 'chrome-os';
                 versionSO = 10;
             }
 
-            if ((valCaract.indexOf('W7P') > -1) || (valCaract.indexOf('W8P') > -1) || (valCaract.indexOf('W9P') > -1) || (valCaract.indexOf('W10P') > -1))
+            if ((valCaract.indexOf('W7P') > -1) || (valCaract.indexOf('W8P') > -1) || (valCaract.indexOf('W9P') > -1) || (valCaract.indexOf('W10P') > -1) || (valCaract.indexOf('W11P') > -1))
             {
                 nombreImagen3 += 'pro.png';
                 tipoSO = 'pro';
             }
-            else if ((valCaract.indexOf('W7HP') > -1) || (valCaract.indexOf('W8HP') > -1) || (valCaract.indexOf('W9HP') > -1) || (valCaract.indexOf('W10HP') > -1))
+            else if ((valCaract.indexOf('W7HP') > -1) || (valCaract.indexOf('W8HP') > -1) || (valCaract.indexOf('W9HP') > -1) || (valCaract.indexOf('W10HP') > -1) || (valCaract.indexOf('W11HP') > -1))
             {
                 nombreImagen3 += 'hp.png';
                 tipoSO = 'hp';
@@ -2592,6 +2603,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                             '<option value="8">Windows 8</option>' + 
                             '<option value="9">Windows 9</option>' + 
                             '<option value="10">Windows 10</option>' + 
+                            '<option value="11">Windows 11</option>' + 
                             '<option value="Chrome">Chrome OS</option>' + 
                         '</select>' + 
                     '</td>' + 
@@ -2631,10 +2643,10 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                         '</div>' + 
                     '</td>' + 
                     '<td style="width: 29%">' + 
-                        '<input type="text" id="input_text_pantalla" name="input_text_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_text_pantalla\'' + ', ' + '\'span_texto_pantalla\'' + ', ' + '\'div_texto_pantalla\'' + ')" style="width: 225px; margin-right: 8px;" value="' + arrCaractArticulo3[i] + '">' + 
+                        '<input type="text" id="input_text_pantalla" name="input_text_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_text_pantalla\'' + ', ' + '\'span_texto_pantalla\'' + ', ' + '\'div_texto_pantalla\'' +  ', ' + false + ')" style="width: 225px; margin-right: 8px;" value="' + arrCaractArticulo3[i] + '">' + 
                     '</td>' + 
                     '<td colspan="2" style="width: 50%">' + 
-                        '<input type="text" id="input_caract_pantalla" name="input_caract_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_caract_pantalla\'' + ', ' + '\'span_texto_tactil\'' + ', ' + '\'div_texto_tactil\'' + ')" style="width: 350px;" value="' + esTactil + '">' + 
+                        '<input type="text" id="input_caract_pantalla" name="input_caract_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_caract_pantalla\'' + ', ' + '\'span_texto_tactil\'' + ', ' + '\'div_texto_tactil\'' +  ', ' + false + ')" style="width: 350px;" value="' + esTactil + '">' + 
                     '</td>' + 
                 '</tr>');
         }
@@ -2682,8 +2694,6 @@ function mostrarCaractAnuncio(caract, tipo)
 
 function cambiarCaractPrincipalAnuncio(elemento)
 {
-    mostrarTextoPantalla();
-
     var caract = $(elemento).val();
 
     setTimeout(function()
@@ -3768,14 +3778,14 @@ function escribirTextPorUnidad()
     }, 2000);
 }
 
-function mostrarTextoPantalla()
+function mostrarTextoPantalla(alPulsarArticulo = false)
 {
     if ($('#check_caract_pantalla').is(":checked"))
     {
         $('#div_texto_pantalla').css('display', 'block');
-        $('#div_texto_tactil').css('display', 'block');
-        escribirTextPantalla('check_caract_pantalla', 'input_text_pantalla', 'span_texto_pantalla', 'div_texto_pantalla');
-        escribirTextPantalla('check_caract_pantalla', 'input_caract_pantalla', 'span_texto_tactil', 'div_texto_tactil');
+        $('#div_texto_tactil').css('display', 'grid');
+        escribirTextPantalla('check_caract_pantalla', 'input_text_pantalla', 'span_texto_pantalla', 'div_texto_pantalla', alPulsarArticulo);
+        escribirTextPantalla('check_caract_pantalla', 'input_caract_pantalla', 'span_texto_tactil', 'div_texto_tactil', alPulsarArticulo);
     }
     else
     {
@@ -3784,7 +3794,7 @@ function mostrarTextoPantalla()
     }
 }
 
-function escribirTextPantalla(check, input, span, div)
+function escribirTextPantalla(check, input, span, div, alPulsarArticulo)
 {
     $('#' + check).prop('checked', true);
 
@@ -3794,6 +3804,17 @@ function escribirTextPantalla(check, input, span, div)
     {
         if (txtInputPantalla == $('#' + input).val())
         {
+            if (txtInputPantalla.indexOf('"') == -1)
+            {
+                var parteNumerica = txtInputPantalla.match(/[\d.]+/); // Encuentra la parte numérica del texto
+            
+                if (parteNumerica) 
+                {
+                    var restoPantalla = txtInputPantalla.replace(parteNumerica, '');
+                    txtInputPantalla = parteNumerica + '"' + restoPantalla; 
+                }
+            }
+
             var fontSize = $("#" + span).css("font-size");
             var colorB = $('#input_colorb_fuente_anuncio').val();
 
@@ -3802,7 +3823,36 @@ function escribirTextPantalla(check, input, span, div)
                 fontSize = '11pt';
             }
 
+            console.log("Entra 0 " + alPulsarArticulo);
+
+            if (alPulsarArticulo)
+            {
+                if (/^\d+\.\d+"HD$/.test(txtInputPantalla)) 
+                {
+                    txtInputPantalla = txtInputPantalla.replace('HD', '');
+                }
+                else if (/^\d+\.\d+HD$/.test(txtInputPantalla))
+                {
+                    txtInputPantalla = txtInputPantalla.replace('HD', '');
+                }
+                else if (/^\d+"HD$/.test(txtInputPantalla))
+                {
+                    txtInputPantalla = txtInputPantalla.replace('HD', '');
+                }
+                else if (/^\d+HD$/.test(txtInputPantalla))
+                {
+                    txtInputPantalla = txtInputPantalla.replace('HD', '');
+                }
+            }
+
             $('#' + span).remove();
+
+            if (div == 'div_texto_tactil')
+            {
+                $('#img_icono_tactil').remove();
+                $('#' + div).append('<img id="img_icono_tactil" src="/xweb/public/images/icono_tactil.png" style="width: 50px" />');
+            }
+
             $('#' + div).append('<span id="' + span + '" class="span_texto_pantalla" style="font-size: ' + fontSize + '; color: ' + colorB + '">' + txtInputPantalla + '</span>');
         }
     }, 2000);
@@ -4416,6 +4466,8 @@ function mostrarPrecio(mostrar)
 
 function mostrarPrecio2(numPrecios)
 {
+    console.log('Div Precios ' + numPrecios);
+
     if (numPrecios == 3)
     {
         $('#div_precio_articulo_seleccionado').css('display', 'table');
@@ -4431,8 +4483,12 @@ function mostrarPrecio2(numPrecios)
         $('#tr_precio3_anuncio').css('display', 'table-row');
 
         var precio3 = $('#input_precio_anuncio').val();
-        var precio2 = parseInt(precio3 * 0.95);
-        var precio1 = parseInt(precio3 * 0.85);
+        var precio2 = parseInt(parseFloat(precio3) * 0.95);
+        var precio1 = parseInt(parseFloat(precio3) * 0.85);
+
+        precio3 = anadirEuro(precio3);
+        precio2 = anadirEuro(precio2);
+        precio1 = anadirEuro(precio1);
 
         $('#input_precio_anuncio').val(precio1);
         $('#input_precio2_anuncio').val(precio2);
@@ -4457,9 +4513,14 @@ function mostrarPrecio2(numPrecios)
         $('#tr_precio3_anuncio').css('display', 'none');
 
         var precio2 = $('#input_precio_anuncio').val();
-        var precio1 = parseInt(precio2 * 0.95);
+        var precio1 = parseInt(parseFloat(precio2) * 0.95);
 
-        console.log('Mostrar precios -> ' + precio1 + ' - ' + precio2);
+        console.log('Entra0 ' + precio1 + ' *** ' + precio2);
+
+        precio2 = anadirEuro(precio2);
+        precio1 = anadirEuro(precio1);
+
+        console.log('Entra3 ' + precio1 + ' *** ' + precio2);
 
         $('#input_precio_anuncio').val(precio1);
         $('#input_precio2_anuncio').val(precio2);
@@ -4483,10 +4544,27 @@ function mostrarPrecio2(numPrecios)
 
         var precio1 = $('#input_precio_anuncio').val();
 
+        precio1 = anadirEuro(precio1);
+
         $('#input_precio_anuncio').val(precio1);
 
         $('#input_precio_anuncio').trigger('input');
     }
+}
+
+function anadirEuro(precio)
+{
+    precio = precio.toString();
+
+    console.log('Entra1 ' + precio);
+
+    if (precio.indexOf('€') == -1)
+    {
+        precio += '€';
+        console.log('Entra2 ' + precio);
+    }
+
+    return precio;
 }
 
 function buscarArticulosAnuncio()
@@ -4531,7 +4609,7 @@ function codeBuscarArticulosAnuncio()
                             (function(i) 
                             {
                                 var acodar = arrArtEncontrados[i].ACODAR.toLowerCase();
-                                console.log('ACODAR: ' + '#table_list_articulo_' + acodar);
+
                                 $('#table_list_articulo_' + acodar).css('display', 'table');
                             }(i));
                         }
@@ -4648,16 +4726,16 @@ function pulsarPlantillaAnuncio1()
 {
     //pulsarArticuloParaAnuncio('Ordenador Lenovo M93P SFF GRADO B (Intel Core i3 4130T 2.9GHz/8GB/120SSD/DVDRW/W8P) Preinstalado', 99, '/xweb/public/fotobanners/art_6910lenm93p3gb_1 copia.png');
 
-    $('#titulo_articulo_seleccionado').css('top', '28px');
-    $('#titulo_articulo_seleccionado').css('left', '45px');
+    $('#titulo_articulo_seleccionado').css('top', '2px');
+    $('#titulo_articulo_seleccionado').css('left', '10px');
     $('#titulo_articulo_seleccionado').css('right', 'auto');
 
-    $(".div_nombre_articulo:first-child").css('margin-bottom', '4px');
-    $(".div_nombre_articulo:first-child").css('font-size', '18pt');
+    $(".div_nombre_articulo:first-child").css('margin-top', '3px');
+    $(".div_nombre_articulo:first-child").css('font-size', '20pt');
     $(".div_nombre_articulo:last-child").css('font-size', '23pt');
 
-    $('#div_carac_text_articulo_seleccionado').css('top', '60px');
-    $('#div_carac_text_articulo_seleccionado').css('left', '46px');
+    $('#div_carac_text_articulo_seleccionado').css('top', '45px');
+    $('#div_carac_text_articulo_seleccionado').css('left', '15px');
     $('#div_carac_text_articulo_seleccionado').css('right', 'auto');
 
     $('#panel_articulo_seleccionado').css('top', '242px');
@@ -4670,25 +4748,24 @@ function pulsarPlantillaAnuncio1()
     $('.valor_caract').css('color', '#5fa4e4');
     $('.valor_caract').css('font-size', '15pt');
 
-    $('#div_carac2_icon_articulo_seleccionado').css('top', '89px');
-    $('#div_carac2_icon_articulo_seleccionado').css('left', '40px');
+    $('#div_carac2_icon_articulo_seleccionado').css('top', '76px');
+    $('#div_carac2_icon_articulo_seleccionado').css('left', '5px');
     $('#div_carac2_icon_articulo_seleccionado').css('right', 'auto');
 
     $('#div_carac2_icon_articulo_seleccionado img').css('max-width', '60px');
     $('#div_carac2_icon_articulo_seleccionado img').css('max-height', '60px');
 
     $('#panel_articulo_seleccionado').css('top', '228px');
-    $('#panel_articulo_seleccionado').css('left', '405px');
+    $('#panel_articulo_seleccionado').css('left', '510px');
     $('#panel_articulo_seleccionado').css('right', 'auto');
 
-    $('#button_anadir_precio').trigger('click');
     mostrarPrecio2(1);
 
     $('#input_text_precio_anuncio').val('');
     escribirTextoPrecio('#input_text_precio_anuncio', 1)
 
-    $('#div_precio_articulo_seleccionado').css('top', '140px');
-    $('#div_precio_articulo_seleccionado').css('left', '40px');
+    $('#div_precio_articulo_seleccionado').css('top', '108px');
+    $('#div_precio_articulo_seleccionado').css('left', '8px');
     $('#div_precio_articulo_seleccionado').css('right', 'auto');
 
     $('#tachado_articulo_seleccionado').css('z-index', '9999');
@@ -4696,8 +4773,8 @@ function pulsarPlantillaAnuncio1()
     $('#precio_articulo_seleccionado').css('font-size', '109pt');
     $('#euro_articulo_seleccionado').css('font-size', '65.8pt');
 
-    $('#img_foto_articulo_seleccionado').css('top', '75px');
-    $('#img_foto_articulo_seleccionado').css('left', '385px');
+    $('#img_foto_articulo_seleccionado').css('top', '25px');
+    $('#img_foto_articulo_seleccionado').css('left', '440px');
     $('#img_foto_articulo_seleccionado').css('right', 'auto');
     $('#img_foto_articulo_seleccionado').css('max-width', '330px');
     $('#img_foto_articulo_seleccionado').css('max-height', '275px');

@@ -4753,7 +4753,7 @@ input[name="direccion_envio"] {
 }
 
 #div_precio_articulo_seleccionado {
-    top: 135px;
+    top: 160px;
     left: 10px;
 }
 
@@ -4824,6 +4824,7 @@ input[name="direccion_envio"] {
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
+    line-height: 1em;
 }
 
 #precio3_articulo_seleccionado {
@@ -4832,6 +4833,7 @@ input[name="direccion_envio"] {
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
+    line-height: 1em;
 }
 
 #euro_articulo_seleccionado {
@@ -4868,18 +4870,6 @@ input[name="direccion_envio"] {
     font-size: 28pt;
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
-}
-
-#div_precio2_articulo_seleccionado {
-    left: 251px;
-    top: 254px;
-    display: none;
-}
-
-#div_precio3_articulo_seleccionado {
-    left: 421px;
-    top: 273px;
-    display: none;
 }
 
 #div_carac_text_articulo_seleccionado div {
@@ -6762,14 +6752,14 @@ input:checked + .slider:before {
 }
 
 #div_precio2_articulo_seleccionado {
-    left: 251px;
-    top: 254px;
+    top: 192px;
+    left: 307px;
     display: none;
 }
 
 #div_precio3_articulo_seleccionado {
-    left: 421px;
-    top: 273px;
+    top: 212px;
+    left: 525px;
     display: none;
 }
 
@@ -6836,6 +6826,7 @@ input:checked + .slider:before {
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
+    line-height: 1em;
 }
 
 #euro_articulo_seleccionado {

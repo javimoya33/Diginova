@@ -139,6 +139,7 @@
 								<span id="span_texto_pantalla" class="span_texto_pantalla"></span>
 							</div>
 							<div id="div_texto_tactil" class="div_texto_pantalla">
+								<img id="img_icono_tactil" src="/xweb/public/images/icono_tactil.png" style="width: 50px" />
 								<span id="span_texto_tactil" class="span_texto_pantalla"></span>
 							</div>
 							<div id="div_lote_articulos" style="display: none">
@@ -709,15 +710,15 @@
 
 							<td class="td_generador_formulario_celda"></td>
 
-							<td class="td_generador_formulario_celda">
-								<div class="div_generador_formulario_celda">Pulgadas: </div>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Oferta: </div>
 							</td>
 							<td class="td_generador_formulario_celda">
 								<table class="table_dir_foto_seleccionado" style="float: left">
 									<tr>
 										<td></td>
 										<td>
-											<button id="button_arriba_pulgadas" onmousedown="moverElementoAnuncio('#div_carac3_text_articulo_seleccionado', true, false)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_arriba_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', true, false)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
 											</button>
 										</td>
@@ -725,15 +726,15 @@
 									</tr>
 									<tr>
 										<td>
-											<button id="button_izq_pulgadas" onmousedown="moverElementoAnuncio('#div_carac3_text_articulo_seleccionado', false, false)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_izq_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', false, false)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
 											</button>
 										</td>
 										<td>
-											<i class="fa fa-desktop" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
+											<i class="fa fa-star" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
 										</td>
 										<td>
-											<button id="button_der_pulgadas" onmousedown="moverElementoAnuncio('#div_carac3_text_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_der_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', false, true)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
 											</button>
 										</td>
@@ -741,7 +742,7 @@
 									<tr>
 										<td></td>
 										<td>
-											<button id="button_abajo_pulgadas" onmousedown="moverElementoAnuncio('#div_carac3_text_articulo_seleccionado', true, true)" onmouseup="soltarElementoAnuncio()">
+											<button id="button_abajo_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', true, true)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
 											</button>
 										</td>
@@ -828,13 +829,13 @@
 							<td class="td_generador_formulario_celda"></td>
 
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Pulgadas: </div>
+								<div class="div_generador_formulario_celda">Oferta: </div>
 							</td>
 							<td class="td_generador_formulario_celda">
 								<table class="table_dir_foto_seleccionado" style="float: left">
 									<tr>
 										<td>
-											<button id="button_menos_pulgadas" onclick="cambiarTamanioFuente('#div_carac3_text_articulo_seleccionado div', false, 1)">
+											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_oferta_valida', false, 1)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
 											</button>
 										</td>
@@ -842,7 +843,7 @@
 											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
 										</td>
 										<td>
-											<button id="button_mas_pulgadas" onclick="cambiarTamanioFuente('#div_carac3_text_articulo_seleccionado div', true, 1)">
+											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_oferta_valida', true, 1)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
 											</button>
 										</td>
@@ -851,48 +852,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Oferta: </div>
-							</td>
-							<td class="td_generador_formulario_celda">
-								<table class="table_dir_foto_seleccionado" style="float: left">
-									<tr>
-										<td></td>
-										<td>
-											<button id="button_arriba_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', true, false)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
-											</button>
-										</td>
-										<td></td>
-									</tr>
-									<tr>
-										<td>
-											<button id="button_izq_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', false, false)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
-											</button>
-										</td>
-										<td>
-											<i class="fa fa-star" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
-										</td>
-										<td>
-											<button id="button_der_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', false, true)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
-											</button>
-										</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td>
-											<button id="button_abajo_pulgadas" onmousedown="moverElementoAnuncio('#div_oferta_valida', true, true)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
-											</button>
-										</td>
-										<td></td>
-									</tr>
-								</table>
-							</td>
-
-							<td class="td_generador_formulario_celda"></td>
 
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
 								<div class="div_generador_formulario_celda">Por unidad: </div>
@@ -938,7 +897,7 @@
 							<td class="td_generador_formulario_celda"></td>
 
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Pantalla: </div>
+								<div class="div_generador_formulario_celda">Pulgadas: </div>
 							</td>
 							<td class="td_generador_formulario_celda">
 								<table class="table_dir_foto_seleccionado" style="float: left">
@@ -1020,107 +979,9 @@
 									</tr>
 								</table>
 							</td>
-						</tr>
-						<tr>
-							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Oferta: </div>
-							</td>
-							<td class="td_generador_formulario_celda">
-								<table class="table_dir_foto_seleccionado" style="float: left">
-									<tr>
-										<td>
-											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_oferta_valida', false, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-										<td>
-											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
-										</td>
-										<td>
-											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_oferta_valida', true, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-									</tr>
-								</table>
-							</td>
 
 							<td class="td_generador_formulario_celda"></td>
 
-							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Por Unidad: </div>
-							</td>
-							<td class="td_generador_formulario_celda">
-								<table class="table_dir_foto_seleccionado" style="float: left">
-									<tr>
-										<td>
-											<button id="button_menos_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', false, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-										<td>
-											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
-										</td>
-										<td>
-											<button id="button_mas_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', true, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-									</tr>
-								</table>
-							</td>
-
-							<td class="td_generador_formulario_celda"></td>
-
-							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Pantalla: </div>
-							</td>
-							<td class="td_generador_formulario_celda">
-								<table class="table_dir_foto_seleccionado" style="float: left">
-									<tr>
-										<td>
-											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_texto_pantalla', false, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-										<td>
-											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
-										</td>
-										<td>
-											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_texto_pantalla', true, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-									</tr>
-								</table>
-							</td>
-
-							<td class="td_generador_formulario_celda"></td>
-
-							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
-								<div class="div_generador_formulario_celda">Táctil: </div>
-							</td>
-							<td class="td_generador_formulario_celda">
-								<table class="table_dir_foto_seleccionado" style="float: left">
-									<tr>
-										<td>
-											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_texto_tactil', false, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-										<td>
-											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
-										</td>
-										<td>
-											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_texto_tactil', true, 1)" onmouseup="soltarElementoAnuncio()">
-												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
-											</button>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
 								<div class="div_generador_formulario_celda">Lote de Artículos: </div>
 							</td>
@@ -1163,6 +1024,81 @@
 							</td>
 						</tr>
 						<tr>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Por Unidad: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', false, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_porunidad" onmousedown="cambiarTamanioFuente('#span_por_unidad', true, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Pulgadas: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_texto_pantalla', false, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_texto_pantalla', true, 1)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="div_generador_formulario_celda">Táctil: </div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_teclado" onmousedown="cambiarTamanioFuente('#span_texto_tactil', false, 1); cambiarTamanioImagenAnuncio('#img_icono_tactil', false, 1, 0.55);" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_teclado" onmousedown="cambiarTamanioFuente('#span_texto_tactil', true, 1); cambiarTamanioImagenAnuncio('#img_icono_tactil', true, 1, 0.55);" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
 							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
 								<div class="div_generador_formulario_celda">Lote de Artículos: </div>
 							</td>
