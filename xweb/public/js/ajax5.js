@@ -2195,6 +2195,8 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
         var nombreCaract = '';
         var arrCaractArticulo4 = arrCaractArticulo3[i].toUpperCase();
 
+        console.log('arrCaractArticulo4 ' + arrCaractArticulo4);
+
         if (i == 0 && !esOrdenador)
         {
             arrCaractArticulo3[i] = arrCaractArticulo3[i].substr(1);
@@ -2286,7 +2288,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '</tr>');
             }
         }
-        else if (((arrCaractArticulo4.indexOf('1GB') > -1) || (arrCaractArticulo4.indexOf('2GB') > -1) || (arrCaractArticulo4.indexOf('4GB') > -1) || (arrCaractArticulo4.indexOf('8GB') > -1) || (arrCaractArticulo4.indexOf('12GB') > -1) || (arrCaractArticulo4.indexOf('16GB') > -1) || (arrCaractArticulo4.indexOf('32GB') > -1)) && (!yaTieneRAM))
+        else if (((arrCaractArticulo4.indexOf('1GB') > -1) || (arrCaractArticulo4.indexOf('2GB') > -1) || (arrCaractArticulo4.indexOf('4GB') > -1) || (arrCaractArticulo4.indexOf('8GB') > -1) || (arrCaractArticulo4.indexOf('12GB') > -1) || (arrCaractArticulo4.indexOf('16GB') > -1) || (arrCaractArticulo4.indexOf('32GB') > -1) || (arrCaractArticulo4.indexOf('64GB') > -1)) && (!yaTieneRAM))
         {
             $("#img_caract_ram").css('display', 'block');
 
@@ -2344,6 +2346,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                             '<option value="12">12GB</option>' + 
                             '<option value="16">16GB</option>' + 
                             '<option value="32">32GB</option>' + 
+                            '<option value="64">64GB</option>' + 
                         '</select>' + 
                     '</td>' + 
                     '<td colspan="3">' + 
@@ -2374,6 +2377,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
             var tipoDiscoDuro = '';
             var valCaract = arrCaractArticulo4.replace("GB", "");
             valCaract = valCaract.replace("TB", "");
+            valCaract = valCaract.replace("SS", "");
             valCaract = valCaract.replace("-SSD", "");
             valCaract = valCaract.replace(" SSD", "");
             valCaract = valCaract.replace("SSD", "");
@@ -2393,6 +2397,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
             valCaract = valCaract.replace("NVMe", "");
             valCaract = valCaract.replace("NVME", "");
             valCaract = valCaract.replace("-M.2", "");
+            valCaract = valCaract.replace("-M-2", "");
             valCaract = valCaract.replace("M.2", "");
             console.log('ValCaract ' + valCaract);
 
@@ -2881,19 +2886,18 @@ function cambiarNombreArtAnuncio(nombreArt)
             {
                 if (numDiv == 0)
                 {
+                    $(this).empty();
+
                     if (nombreArt.indexOf('Ordenador') > -1)
                     {
-                        $(this).empty();
                         $(this).text('Ordenador');
                     }
                     else if (nombreArt.indexOf('Portátil') > -1)
                     {
-                        $(this).empty();
                         $(this).text('Portátil');
                     }
                     else if (nombreArt.indexOf('Monitor') > -1)
                     {
-                        $(this).empty();
                         $(this).text('Monitor');
                     }
                 }
@@ -3055,8 +3059,8 @@ function escribirTextoPrecio(elemento, itPrecio)
     {
         if (txtPrecioArticulo == $(elemento).val())
         {
-            var fontsizePrecio = $('#fontsize_precio' + itPrecio).val();
-            var fontsizeTxtPrecio = fontsizePrecio * 0.15;
+            var fontsizeTxtPrecio = $('#txt_precio' + itPrecio + '_articulo_seleccionado span').css('font-size');
+            fontsizeTxtPrecio = parseFloat(fontsizeTxtPrecio) * 0.75;
 
             var colorD = $('#input_colord_fuente_anuncio').val();
             $('#txt_precio' + itPrecio + '_articulo_seleccionado span').remove();
@@ -4377,14 +4381,21 @@ function cambiarTamanioFuente(elemento, sumar, valor) {
     $(elemento).css('font-size', fontSize + 'pt');
 }
 
+function cambiarTxtTamanioPrecioAnuncio(precio, sumar)
+{
+    int01 = setInterval(function() 
+    {
+        cambiarTamanioFuente('#txt_precio' + precio + '_articulo_seleccionado span', sumar, 0.2);
+    }, 15);
+}
+
 function cambiarTamanioPrecioAnuncio(precio, sumar)
 {
     int01 = setInterval(function() 
     {
         cambiarTamanioFuente('#tachado' + precio + '_articulo_seleccionado', sumar, 0.1);
         cambiarTamanioFuente('#precio' + precio + '_articulo_seleccionado', sumar, 0.1);
-        cambiarTamanioFuente('#euro' + precio + '_articulo_seleccionado', sumar, 0.06); 
-        cambiarTamanioFuente('#txt_precio' + precio + '_articulo_seleccionado span', sumar, 0.015); 
+        cambiarTamanioFuente('#euro' + precio + '_articulo_seleccionado', sumar, 0.06);
     }, 15);
 }
 

@@ -41,10 +41,10 @@
 							</div>
 							<div id="div_precio_articulo_seleccionado" class="div_precio_articulo_seleccionado">
 								<table>
-									<tr>
-										<td colspan="2">
+									<tr style="padding-bottom: 10px; display: block;">
+										<td id="div_txt_precio_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 12.9pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 12pt;"></span>
 											</div>
 										</td>
 									</tr>
@@ -61,10 +61,10 @@
 							</div>
 							<div id="div_precio2_articulo_seleccionado" class="div_precio_articulo_seleccionado">
 								<table>
-									<tr>
-										<td colspan="2">
+									<tr style="padding-bottom: 10px; display: block;">
+										<td id="div_txt_precio2_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio2_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="color: #dadada; font-size: 10.65pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 11pt;"></span>
 											</div>
 										</td>
 									</tr>
@@ -81,10 +81,10 @@
 							</div>
 							<div id="div_precio3_articulo_seleccionado" class="div_precio_articulo_seleccionado">
 								<table>
-									<tr>
-										<td colspan="2">
+									<tr style="padding-bottom: 10px; display: block;">
+										<td id="div_txt_precio3_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio3_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="color: #dadada; font-size: 10.65pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 10pt;"></span>
 											</div>
 										</td>
 									</tr>
@@ -1354,6 +1354,228 @@
 										</td>
 										<td>
 											<button id="button_mas_precio3" onmousedown="cambiarTamanioPrecioAnuncio('3', true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;"></td>
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio_control">
+									<div class="div_generador_formulario_celda">Txt Precio: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio_control" style="float: left">
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_arriba_txt_precio" onmousedown="moverElementoAnuncio('#div_txt_precio_articulo_seleccionado', true, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button_izq_txt_precio" onmousedown="moverElementoAnuncio('#div_txt_precio_articulo_seleccionado', false, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-tag i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_der_txt_precio" onmousedown="moverElementoAnuncio('#div_txt_precio_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_abajo_txt_precio" onmousedown="moverElementoAnuncio('#div_txt_precio_articulo_seleccionado', true, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio2_control" style="display: none;">
+									<div class="div_generador_formulario_celda">Txt Precio2: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio2_control" style="float: left; display: none;">
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_arriba_txt_precio2" onmousedown="moverElementoAnuncio('#div_txt_precio2_articulo_seleccionado', true, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button_izq_txt_precio2" onmousedown="moverElementoAnuncio('#div_txt_precio2_articulo_seleccionado', false, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-tag i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_der_txt_precio2" onmousedown="moverElementoAnuncio('#div_txt_precio2_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_abajo_txt_precio2" onmousedown="moverElementoAnuncio('#div_txt_precio2_articulo_seleccionado', true, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio3_control" style="display: none;">
+									<div class="div_generador_formulario_celda">Precio3: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio3_control" style="float: left; display: none;">
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_arriba_txt_precio3" onmousedown="moverElementoAnuncio('#div_txt_precio3_articulo_seleccionado', true, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-up" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>
+											<button id="button_izq_txt_precio3" onmousedown="moverElementoAnuncio('#div_txt_precio3_articulo_seleccionado', false, false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-left" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-tag i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_der_txt_precio3" onmousedown="moverElementoAnuncio('#div_txt_precio3_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-right" style="margin-right: 0px"></i>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>
+											<button id="button_abajo_txt_precio3" onmousedown="moverElementoAnuncio('#div_txt_precio3_articulo_seleccionado', true, true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-caret-down" style="margin-right: 0px"></i>
+											</button>
+										</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 9%; padding-left: 4px;"></td>
+							<td style="width: 9%"></td>
+							<td style="width: 9%"></td>
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio_control">
+									<div class="div_generador_formulario_celda">Txt Precio: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio_control" style="float: left">
+									<tr>
+										<td>
+											<button id="button_menos_precio" onmousedown="cambiarTxtTamanioPrecioAnuncio('', false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_precio" onmousedown="cambiarTxtTamanioPrecioAnuncio('', true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio2_control" style="display: none;">
+									<div class="div_generador_formulario_celda">Txt Precio2: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio2_control" style="float: left; display: none;">
+									<tr>
+										<td>
+											<button id="button_menos_precio2" onmousedown="cambiarTxtTamanioPrecioAnuncio('2', false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_precio2" onmousedown="cambiarTxtTamanioPrecioAnuncio('2', true)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-plus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+
+							<td class="td_generador_formulario_celda"></td>
+
+							<td class="td_generador_formulario_celda" style="padding-left: 4px;">
+								<div class="precio3_control" style="display: none;">
+									<div class="div_generador_formulario_celda">Txt Precio3: </div>
+								</div>
+							</td>
+							<td class="td_generador_formulario_celda">
+								<table class="table_dir_foto_seleccionado precio3_control" style="float: left; display: none;">
+									<tr>
+										<td>
+											<button id="button_menos_precio3" onmousedown="cambiarTxtTamanioPrecioAnuncio('3', false)" onmouseup="soltarElementoAnuncio()">
+												<i class="fa fa-minus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
+											</button>
+										</td>
+										<td>
+											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13pt; padding: 0px 5px;"></i>
+										</td>
+										<td>
+											<button id="button_mas_precio3" onmousedown="cambiarTxtTamanioPrecioAnuncio('3', true)" onmouseup="soltarElementoAnuncio()">
 												<i class="fa fa-plus i_btn_suma_resta" style="margin-right: 0px; font-size: 10pt; padding: 2px 0px;"></i>
 											</button>
 										</td>

@@ -4752,6 +4752,13 @@ input[name="direccion_envio"] {
     display: none;
 }
 
+.div_txt_precio_articulo_seleccionado {
+    position: absolute;
+    display: table;
+    width: 100%;
+    top: -5px;
+}
+
 #div_precio_articulo_seleccionado {
     top: 160px;
     left: 10px;
@@ -6449,6 +6456,11 @@ a.devolRmaEnvioTD4A:active { color: #0b2e48; }
     font-weight: bold;
 }
 
+.azul2bold {
+    color: #5d7ea4;
+    font-weight: bold;
+}
+
 .tpvTexto {
     font-size: 12pt;
 }
@@ -7314,3 +7326,61 @@ input:checked + .slider:before {
     color: white;
     -webkit-text-stroke: 1px black;
 }
+
+
+
+/* ============= Sección  "formulario" ============== */
+    .content-wrapper { min-height: 550px !important; }
+
+    .secFormBuscarTR { display: table; vertical-align: middle; width: 966px; margin: 0 auto; text-align: left; }
+    .secFormBuscarTD { display: table-cell; vertical-align: middle; text-align: left; }
+    .secForm { width: 100%; margin: 0 auto; text-align: left;  } 
+    .secFormCont { width: 1200px; margin: 0 auto; text-align: left; background-color: white;  }
+
+    /* = Resultados de búsqueda = */
+        .secFormTarts { width: 900px; margin: 0 auto; font-size: 9pt; overflow-y: auto; height: 400px; border: 1px solid lightgray; }
+        .secFormTR { display: table; vertical-align: top; width: 100%; border-top: 1px solid transparent; border-bottom: 1px solid transparent; padding: 5px 10px 2px 10px; }
+        .secFormTR:hover { border-color: #5d7ea4;  }
+        .secFormTD { display: table-cell; vertical-align: top; padding: 5px 5px; background-color: white;  }
+
+        .secFormTD1 { width: 560px; }
+        .secFormTD1_T1 { display: table; vertical-align: middle; }
+        .secFormTD1_TD1 { display: table-cell; vertical-align: middle; width: 210px; text-align: left; }
+        .secFormTD1_TD2 { display: table-cell; vertical-align: middle; text-align: left; }
+
+        .secFormTD2 { width: 255px; }
+        .secFormTD3 { text-align: center; }
+        .secFormA { visibility: hidden; cursor: pointer; }
+        .secFormTR:hover .secFormA { visibility: visible; }
+
+
+    /* = Artículo seleccionado = */
+        .secFormArticulo { margin: 0 auto; width: 900px; }
+        .secFormBtnT { display:table; vertical-align:middle; width: 800px; padding: 30px 0; text-align:center; margin: 0 auto; }
+        .secFormBtnTD { display:table-cell; vertical-align:middle; text-align: center; }
+        .formSecBtn {     display: block;
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 11pt;
+                color: #5d7ea4;
+                background-color: #f8f8f8;
+                text-align: center;
+                border: 1px solid lightgray;
+                width: 315px;
+                padding: 10px 0;
+                font-size: 12pt;
+        }
+        .formSecBtn:hover { background-color: #5d7ea4; color: white; }
+
+
+    /* = Formulario de consulta = */
+        .secFormConsulta { margin: 30px 0 0 118px; }
+        .secFormConsultaT { display: table; vertical-align: top; margin: 0 auto; width: 100%; }
+        .secFormConsultaTD { display: table-cell; vertical-align: top;  }
+        .secFormConsultaTD1 { text-align: left; width: 300px; }
+        .secFormConsulta select { width: 275px; box-shadow: none; border-radius: 0; padding: 5px; cursor: pointer; border: 1px solid lightgray; }
+        .selFormTexto { resize: none; border: 1px solid lightgray; width: 275px; padding: 5px; font-size: 9pt; }
+        .secFormConsultaTD3 { padding-top: 11px; }
+
+/* ============= Fin de Sección  "formulario" ============== */
+
