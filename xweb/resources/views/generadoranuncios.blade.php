@@ -25,13 +25,7 @@
 						<div id="div_anuncio_generado">
 							<img src="/xweb/public/fotobanners/fondos/bannerf23.png" id="img_fondo_articulo_seleccionado" style="width: 750px; height: 300px;" />
 							<img src="/xweb/public/fotobanners/art_6910do3901gb_1 copia.png" id="img_foto_articulo_seleccionado" />
-							<div id="lista_imgs_lote_articulos">
-								<!-- <img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto">
-								<div>+</div>
-								<img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto">
-								<div>+</div>
-								<img src="https://diginova.es/xweb/public/articulost/Porttil-Lenovo-ThinkPad-Yoga-11E-Tctil-GRADO-B-Intel-Pentium-4405u-21Ghz4GB128SSD116NO-DVDW8P-Preinstalado.png" style="width: 150px; height: auto"> -->
-							</div>		
+							<div id="lista_imgs_lote_articulos"></div>		
 							<img src="/xweb/public/images/teclado_castellano.png" id="img_teclado_castellano" style="display: none">
 							<div id="titulo_articulo_seleccionado">
 								<div id="nombre_articulo_seleccionado">
@@ -44,17 +38,16 @@
 									<tr style="padding-bottom: 10px; display: block;">
 										<td id="div_txt_precio_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 12pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-size: 12pt;"></span>
 											</div>
 										</td>
 									</tr>
+								</table>
+								<table>
 									<tr>
 										<td>
 											<div id="tachado_articulo_seleccionado" class="tachado_articulo_seleccionado" style="display: none; z-index: 9999;">____</div>
-											<div id="precio_articulo_seleccionado">0</div>
-										</td>
-										<td>
-											<div id="euro_articulo_seleccionado">€</div>
+											<div id="precio_articulo_seleccionado">0<div id="euro_articulo_seleccionado">€</div></div>
 										</td>
 									</tr>
 								</table>
@@ -64,10 +57,12 @@
 									<tr style="padding-bottom: 10px; display: block;">
 										<td id="div_txt_precio2_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio2_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 11pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-size: 11pt;"></span>
 											</div>
 										</td>
 									</tr>
+								</table>
+								<table>
 									<tr>
 										<td>
 											<div id="tachado2_articulo_seleccionado" class="tachado_articulo_seleccionado" style="display: none; z-index: 9999;">____</div>
@@ -84,10 +79,12 @@
 									<tr style="padding-bottom: 10px; display: block;">
 										<td id="div_txt_precio3_articulo_seleccionado" class="div_txt_precio_articulo_seleccionado" style="width: 100%;">
 											<div id="txt_precio3_articulo_seleccionado" style="margin-bottom: -5px;">
-												<span class="span_txt_precio_articulo" style="font-weight: bold; color: #dadada; font-size: 10pt;"></span>
+												<span class="span_txt_precio_articulo" style="font-size: 10pt;"></span>
 											</div>
 										</td>
 									</tr>
+								</table>
+								<table>
 									<tr>
 										<td>
 											<div id="tachado3_articulo_seleccionado" class="tachado_articulo_seleccionado" style="display: none; z-index: 9999;">____</div>
@@ -151,6 +148,14 @@
 						</div>
 						<div id="msj_aviso_resolucion" style="background: #ffe2c9; color: rgb(183 137 0); font-size: 12pt; display: none; margin: 10px 21px; padding: 10px; line-height: 21px; text-align: left;">
 							La resolución de la imagen del artículo es demasiado baja. Es recomendable que sustituya la imagen por otra de mayor resolución (Mínimo 500px de ancho o 500px de alto).			
+						</div>
+						<div style="margin-top: 20px">
+							<span>
+								<a href="/xweb/public/files/Guia-PDF-GENERADOR-DE-ANUNCIOS.pdf" target="_blank" style="font-weight: bold">
+									<img src="/xweb/public/images/documentos.png" style="width: 25px; margin-top: -7px;" />
+									Manual del Generador de anuncios
+								</a>
+							</span>
 						</div>
 					</div>
 				</td>
@@ -1168,7 +1173,7 @@
 											</button>
 										</td>
 										<td>
-											<input type="text" id="input_dir_precio_anuncio" name="input_dir_precio_anuncio" disabled="disabled" class="input_dir_precio_anuncio" style="border: none; padding-left: 0px" value="">
+											<i class="fa fa-euro" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
 										</td>
 										<td>
 											<button id="button_der_precio" onmousedown="moverElementoAnuncio('#div_precio_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
@@ -1213,7 +1218,7 @@
 											</button>
 										</td>
 										<td>
-											<input type="text" id="input_dir_precio2_anuncio" name="input_dir_precio2_anuncio" disabled="disabled" class="input_dir_precio_anuncio" style="padding-left: 0px" value="">
+											<i class="fa fa-euro" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
 										</td>
 										<td>
 											<button id="button_der_precio2" onmousedown="moverElementoAnuncio('#div_precio2_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">
@@ -1258,7 +1263,7 @@
 											</button>
 										</td>
 										<td>
-											<input type="text" id="input_dir_precio3_anuncio" name="input_dir_precio3_anuncio" disabled="disabled" class="input_dir_precio_anuncio" style="padding-left: 0px" value="">
+											<i class="fa fa-euro" style="width: 30px; font-weight: bold; font-size: 14pt !important; padding: 1px 3px; margin-right: 0px;"></i>
 										</td>
 										<td>
 											<button id="button_der_precio3" onmousedown="moverElementoAnuncio('#div_precio3_articulo_seleccionado', false, true)" onmouseup="soltarElementoAnuncio()">

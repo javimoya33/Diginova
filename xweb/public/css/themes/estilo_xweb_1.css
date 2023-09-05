@@ -3374,6 +3374,47 @@ a.catOrdDesac {
     margin: 5px 0px;
 }
 
+
+.faqT {     display: table;
+    vertical-align: middle;
+    width: 1163px;
+    text-align: center;
+    margin: 30px auto 40px auto;
+    font-size: 17pt; }
+
+.faqTD {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12pt;
+    padding: 20px 0;
+}
+
+.faqTD a.faqLink {
+    padding: 8px 20px;
+    font-size: 15pt;
+    box-shadow: inset 0px -3px 7px 0px #c49b43;
+    background: linear-gradient(to bottom, #e6b03c 5%, #d6a02c 100%);
+    background-color: #e6b03c;
+    border-radius: 3px;
+    border: 1px solid #a77f28;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #4c3e20;
+}
+
+.faqTD a.faqLink:hover {
+    background: linear-gradient(to bottom, #d6a02c 5%, #e6b03c 100%);
+    background-color: #d6a02c;
+}
+
+
+
+
+
+
 .faqMsgT {
     display: table;
     vertical-align: middle;
@@ -4757,6 +4798,7 @@ input[name="direccion_envio"] {
     display: table;
     width: 100%;
     top: -5px;
+    white-space: nowrap;
 }
 
 #div_precio_articulo_seleccionado {
@@ -4827,7 +4869,7 @@ input[name="direccion_envio"] {
 
 #precio2_articulo_seleccionado {
     font-size: 65pt;
-    display: table-cell;
+    display: flex;
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
@@ -4836,7 +4878,7 @@ input[name="direccion_envio"] {
 
 #precio3_articulo_seleccionado {
     font-size: 50pt;
-    display: table-cell;
+    display: flex;
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
@@ -4845,8 +4887,8 @@ input[name="direccion_envio"] {
 
 #euro_articulo_seleccionado {
     display: table-cell;
-    margin-left: 7px;
-    margin-top: 37px;
+    margin-left: 0px;
+    margin-top: 7px;
     font-style: italic !important;
     font-family: 'Verdana';
     font-weight: bold;
@@ -6797,12 +6839,14 @@ input:checked + .slider:before {
 }
 
 .span_txt_precio_articulo {
-    color: #d8d6d9;
+    font-weight: bold; 
+    color: #dadada;
+    /*color: #d8d6d9;*/
     letter-spacing: 0px;
     font-style: normal;
     text-transform: uppercase;
     text-shadow: none;
-    font-weight: 100;
+    /*font-weight: 100;*/
     font-size: 9pt;
     font-family: 'montserratlight';
 }
@@ -6833,8 +6877,8 @@ input:checked + .slider:before {
 }
 
 #precio_articulo_seleccionado {
+    display: flex;
     font-size: 92pt;
-    display: table-cell;
     font-family: 'montserratextrabolditalic';
     color: #DADADA;
     text-shadow: 1px -2px 0px rgb(255 255 255), #000000 2px 2px 6px;
@@ -6843,8 +6887,8 @@ input:checked + .slider:before {
 
 #euro_articulo_seleccionado {
     display: table-cell;
-    margin-left: 7px;
-    margin-top: 37px;
+    margin-left: 0px;
+    margin-top: 7px;
     font-style: italic !important;
     font-family: 'Verdana';
     font-weight: bold;
@@ -7351,7 +7395,9 @@ input:checked + .slider:before {
         .secFormTD2 { width: 255px; }
         .secFormTD3 { text-align: center; }
         .secFormA { visibility: hidden; cursor: pointer; }
+        /*.secFormSpan { visibility: hidden; cursor: pointer; font-size: 8pt; }*/
         .secFormTR:hover .secFormA { visibility: visible; }
+        /*.secFormTR:hover .secFormSpan { visibility: visible; }*/
 
 
     /* = Artículo seleccionado = */
@@ -7379,8 +7425,13 @@ input:checked + .slider:before {
         .secFormConsultaTD { display: table-cell; vertical-align: top;  }
         .secFormConsultaTD1 { text-align: left; width: 300px; }
         .secFormConsulta select { width: 275px; box-shadow: none; border-radius: 0; padding: 5px; cursor: pointer; border: 1px solid lightgray; }
-        .selFormTexto { resize: none; border: 1px solid lightgray; width: 275px; padding: 5px; font-size: 9pt; }
+        .secFormTexto { resize: none; border: 1px solid lightgray; width: 275px; padding: 5px; font-size: 9pt; }
         .secFormConsultaTD3 { padding-top: 11px; }
+
+
+    /* = Formulario enviado = */
+        .secFormResultadoOk { text-align: center; width: 600px; background-color: lightgreen; padding: 10px 20px; margin: 0 auto; font-size: 13pt; }
+        .secFormResultadoError { text-align: center; width: 600px; background-color: red; padding: 10px 20px; margin: 0 auto; font-size: 13pt; }
 
 /* ============= Fin de Sección  "formulario" ============== */
 

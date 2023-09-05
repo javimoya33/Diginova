@@ -2377,10 +2377,10 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
             var tipoDiscoDuro = '';
             var valCaract = arrCaractArticulo4.replace("GB", "");
             valCaract = valCaract.replace("TB", "");
-            valCaract = valCaract.replace("SS", "");
             valCaract = valCaract.replace("-SSD", "");
             valCaract = valCaract.replace(" SSD", "");
             valCaract = valCaract.replace("SSD", "");
+            valCaract = valCaract.replace("SS", "");
             valCaract = valCaract.replace("-HDD", "");
             valCaract = valCaract.replace(" HDD", "");
             valCaract = valCaract.replace("HDD", "");
@@ -2990,7 +2990,7 @@ function cambiarPrecioAnuncio(itPrecio, precio, pulsado)
     {
         if (precioArticulo == $('#input_precio' + itPrecio + '_anuncio').val())
         {
-            precioArticulo = precioArticulo.replace('€', '');
+            precioArticulo = precioArticulo.replace('€', '<div id="euro_articulo_seleccionado">€</div>');
 
             $('#precio' + itPrecio + '_articulo_seleccionado').text('');
             $('#precio' + itPrecio + '_articulo_seleccionado span').remove();
@@ -3016,14 +3016,7 @@ function cambiarPrecioAnuncio(itPrecio, precio, pulsado)
             }
             else
             {
-                $('#precio' + itPrecio + '_articulo_seleccionado').text(precioArticulo);
-            }
-
-            $('#input_dir_precio' + itPrecio + '_anuncio').val(precioArticulo + '€');
-
-            if ($('#input_precio' + itPrecio + '_anuncio').val().trim().indexOf('€') > -1)
-            {
-                $('#euro' + itPrecio + '_articulo_seleccionado').css('display', 'table-cell');
+                $('#precio' + itPrecio + '_articulo_seleccionado').html(precioArticulo);
             }
 
             if (checkBrowser() == 'Firefox')
@@ -3032,6 +3025,22 @@ function cambiarPrecioAnuncio(itPrecio, precio, pulsado)
             }
         }
     }, 2000);
+}
+
+function regenerarPrecioConEuro(divPrecio, spanTxtPrecio, inputPrecio)
+{
+    var txtPrecio = $(spanTxtPrecio).text();
+    $(divPrecio + ' table:last').remove();
+
+    const arrTxtPrecio = inputPrecio.split("€");
+
+
+
+    $(divPrecio).append(
+        '<table>' + 
+            '<tr>' + 
+            '</tr>' + 
+        '</table>');
 }
 
 function tacharPrecio(elemento, num)
@@ -4305,17 +4314,8 @@ function editarPrecioLote()
 
 function cambiarPrecioLote(precioLote)
 {
-    if ($('#input_precio_lote').val().trim().indexOf('€') > -1)
-    {
-        $('#euro_articulo_seleccionado').css('display', 'table-cell');
-    }
-    else
-    {
-        $('#euro_articulo_seleccionado').css('display', 'none');
-    }
-
-    precioLote = precioLote.replace('€', '');
-    $('#precio_articulo_seleccionado').text(precioLote);
+    precioLote = precioLote.replace('€', '<div id="euro_articulo_seleccionado">€</div>');
+    $('#precio_articulo_seleccionado').html(precioLote);
 }
 
 function moverElementoAnuncio(elemento, vertical, sumar)
