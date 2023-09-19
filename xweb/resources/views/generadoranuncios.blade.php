@@ -517,7 +517,7 @@
 								<table class="table_dir_foto_seleccionado" style="float: left">
 									<tr>
 										<td>
-											<button id="button_menos_titulo" onclick="cambiarTamanioFuente('#nombre_articulo_seleccionado div', false, 1)">
+											<button id="button_menos_titulo" onclick="cambiarTamanioFuente('#nombre_articulo_seleccionado div:first-child', false, 1); cambiarTamanioFuente('#nombre_articulo_seleccionado div:last-child', false, 1);">
 												<i class="fa fa-minus i_btn_generador_formulario i_btn_suma_resta"></i>
 											</button>
 										</td>
@@ -525,7 +525,7 @@
 											<i class="fa fa-text-height i_icon_central_formulario_celda" style="font-size: 13px; padding: 0px 5px;"></i>
 										</td>
 										<td>
-											<button id="button_mas_titulo" onclick="cambiarTamanioFuente('#nombre_articulo_seleccionado div', true, 1)">
+											<button id="button_mas_titulo" onclick="cambiarTamanioFuente('#nombre_articulo_seleccionado div:first-child', true, 1); cambiarTamanioFuente('#nombre_articulo_seleccionado div:last-child', true, 1);">
 												<i class="fa fa-plus i_btn_generador_formulario i_btn_suma_resta"></i>
 											</button>
 										</td>
@@ -1603,7 +1603,7 @@
 											<div style="font-weight: 100; font-size: 11pt;">Sube tu propia imagen de artículo</div>
 										</td>
 										<td>
-											<input type="file" id="input_articulo_anuncio" name="input_articulo_anuncio" onchange="cambiarImagenAnuncio(this)" value="">
+											<input type="file" id="input_articulo_anuncio" name="input_articulo_anuncio" onchange="cambiarImagenAnuncio(this)" accept="image/*" value="">
 										</td>
 									</tr>
 								</table>
@@ -1725,7 +1725,7 @@
 								</button>
 							</td>
 							<td style="width: 45%; vertical-align: top" colspan="2">
-								<input type="file" id="input_fondo_anuncio" name="input_fondo_anuncio" onchange="cambiarFondoAnuncio(this)"
+								<input type="file" id="input_fondo_anuncio" name="input_fondo_anuncio" onchange="cambiarFondoAnuncio(this)" accept="image/*"
 									style="margin-top: 10px;" value="">
 							</td>
 						</tr>

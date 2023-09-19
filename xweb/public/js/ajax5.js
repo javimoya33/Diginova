@@ -2332,7 +2332,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_ram" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'ram\'' + ', ' + 2 + ')" style="height: 50px; width: 16px;">' + 
+                            '<input type="checkbox" id="check_caract_ram" name="check_caract" checked onchange="cambiarMemoriaRAMAnuncio()" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2436,7 +2436,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_discoduro" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'discoduro\'' + ', ' + '\'\'' + ')" style="height: 50px; width: 16px;">' + 
+                            '<input type="checkbox" id="check_caract_discoduro" name="check_caract" checked onchange="cambiarDiscoDuroAnuncio()" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2506,7 +2506,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_dvd" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'dvd\'' + ', ' + 4 + ')" style="height: 50px; width: 16px;">' + 
+                            '<input type="checkbox" id="check_caract_dvd" name="check_caract" checked onchange="cambiarDVDAnuncio()" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 2px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2597,7 +2597,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                 '<tr>' + 
                     '<td style="width: 100%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
-                            '<input type="checkbox" id="check_caract_so" name="check_caract" checked onchange="mostrarCaractAnuncio(' + '\'so\'' + ', ' + 3 + ')" style="height: 50px; width: 16px;">' + 
+                            '<input type="checkbox" id="check_caract_so" name="check_caract" checked onchange="cambiarSistemaOperativoAnuncio()" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 2px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2643,7 +2643,7 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                     '<td style="width: 21%">' + 
                         '<div class="div_caract_generador_anuncios">' + 
                             '<input type="checkbox" id="check_caract_pantalla" name="check_caract" checked ' + 
-                            'onchange="mostrarTextoPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'div_texto_pantalla\'' + ')" style="height: 50px; width: 16px;">' + 
+                            'onchange="mostrarTextoPantalla(false)" style="height: 50px; width: 16px;">' + 
                             '<div style="float: left;padding: 18px 8px 0px 9px;">' + nombreCaract + '</div>' + 
                         '</div>' + 
                     '</td>' + 
@@ -2651,7 +2651,9 @@ function mostrarCaracteristicasArtAnuncio(nombreArticulo)
                         '<input type="text" id="input_text_pantalla" name="input_text_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_text_pantalla\'' + ', ' + '\'span_texto_pantalla\'' + ', ' + '\'div_texto_pantalla\'' +  ', ' + false + ')" style="width: 225px; margin-right: 8px;" value="' + arrCaractArticulo3[i] + '">' + 
                     '</td>' + 
                     '<td colspan="2" style="width: 50%">' + 
-                        '<input type="text" id="input_caract_pantalla" name="input_caract_pantalla" oninput="escribirTextPantalla(' + '\'check_caract_pantalla\'' + ', ' + '\'input_caract_pantalla\'' + ', ' + '\'span_texto_tactil\'' + ', ' + '\'div_texto_tactil\'' +  ', ' + false + ')" style="width: 350px;" value="' + esTactil + '">' + 
+                        '<input type="checkbox" id="check_tactil_pantalla" name="check_caract" checked ' + 
+                            'onchange="mostrarTextoPantalla(false)">' +
+                        '<input type="text" id="input_caract_pantalla" name="input_caract_pantalla" oninput="escribirTextPantalla(' + '\'check_tactil_pantalla\'' + ', ' + '\'input_caract_pantalla\'' + ', ' + '\'span_texto_tactil\'' + ', ' + '\'div_texto_tactil\'' +  ', ' + false + ')" style="width: 298px;" value="' + esTactil + '">' + 
                     '</td>' + 
                 '</tr>');
         }
@@ -2672,6 +2674,8 @@ function mostrarCaractProcesadorAnuncio(elemento, elemento2)
 
 function mostrarCaractAnuncio(caract, tipo)
 {
+    console.log('Adioos ' + nombreImagen2);
+
     if ($('#check_caract_' + caract).is(":checked"))
     {
         if (tipo == 1)
@@ -3796,20 +3800,27 @@ function mostrarTextoPantalla(alPulsarArticulo = false)
     if ($('#check_caract_pantalla').is(":checked"))
     {
         $('#div_texto_pantalla').css('display', 'block');
-        $('#div_texto_tactil').css('display', 'grid');
         escribirTextPantalla('check_caract_pantalla', 'input_text_pantalla', 'span_texto_pantalla', 'div_texto_pantalla', alPulsarArticulo);
-        escribirTextPantalla('check_caract_pantalla', 'input_caract_pantalla', 'span_texto_tactil', 'div_texto_tactil', alPulsarArticulo);
     }
     else
     {
         $('#div_texto_pantalla').css('display', 'none');
+    }
+
+    if ($('#check_tactil_pantalla').is(":checked"))
+    {
+        $('#div_texto_tactil').css('display', 'grid');
+        escribirTextPantalla('check_tactil_pantalla', 'input_caract_pantalla', 'span_texto_tactil', 'div_texto_tactil', alPulsarArticulo);
+    }
+    else
+    {
         $('#div_texto_tactil').css('display', 'none');
     }
 }
 
 function escribirTextPantalla(check, input, span, div, alPulsarArticulo)
 {
-    $('#' + check).prop('checked', true);
+    //$('#' + check).prop('checked', true);
 
     var txtInputPantalla = $('#' + input).val();
 
@@ -3817,14 +3828,17 @@ function escribirTextPantalla(check, input, span, div, alPulsarArticulo)
     {
         if (txtInputPantalla == $('#' + input).val())
         {
-            if (txtInputPantalla.indexOf('"') == -1)
+            if (input == 'input_text_pantalla')
             {
-                var parteNumerica = txtInputPantalla.match(/[\d.]+/); // Encuentra la parte numérica del texto
-            
-                if (parteNumerica) 
+                if (txtInputPantalla.indexOf('"') == -1)
                 {
-                    var restoPantalla = txtInputPantalla.replace(parteNumerica, '');
-                    txtInputPantalla = parteNumerica + '"' + restoPantalla; 
+                    var parteNumerica = txtInputPantalla.match(/[\d.]+/); // Encuentra la parte numérica del texto
+                
+                    if (parteNumerica) 
+                    {
+                        var restoPantalla = txtInputPantalla.replace(parteNumerica, '');
+                        txtInputPantalla = parteNumerica + '"' + restoPantalla; 
+                    }
                 }
             }
 
@@ -3835,8 +3849,6 @@ function escribirTextPantalla(check, input, span, div, alPulsarArticulo)
             {
                 fontSize = '11pt';
             }
-
-            console.log("Entra 0 " + alPulsarArticulo);
 
             if (alPulsarArticulo)
             {
@@ -3863,7 +3875,11 @@ function escribirTextPantalla(check, input, span, div, alPulsarArticulo)
             if (div == 'div_texto_tactil')
             {
                 $('#img_icono_tactil').remove();
-                $('#' + div).append('<img id="img_icono_tactil" src="/xweb/public/images/icono_tactil.png" style="width: 50px" />');
+
+                if ($('#' + input).val() != '')
+                {
+                    $('#' + div).append('<img id="img_icono_tactil" src="/xweb/public/images/icono_tactil.png" style="width: 50px; justify-self: center;" />');
+                }
             }
 
             $('#' + div).append('<span id="' + span + '" class="span_texto_pantalla" style="font-size: ' + fontSize + '; color: ' + colorB + '">' + txtInputPantalla + '</span>');
@@ -4775,7 +4791,7 @@ function pulsarPlantillaAnuncio1()
     $('#input_text_precio_anuncio').val('');
     escribirTextoPrecio('#input_text_precio_anuncio', 1)
 
-    $('#div_precio_articulo_seleccionado').css('top', '108px');
+    $('#div_precio_articulo_seleccionado').css('top', '150px');
     $('#div_precio_articulo_seleccionado').css('left', '8px');
     $('#div_precio_articulo_seleccionado').css('right', 'auto');
 
@@ -6587,12 +6603,30 @@ function cambiarMemoriaRAMAnuncio()
     var enlace = '/xweb/public/fotobanners/iconos/ram-' + $('#radio_caract_gb_ram').val() + '-ddr' + $('#radio_caract_ddr_ram').val() + '.png';
     enlace.replace("-EMMC", "");
     $("#img_caract_ram").attr("src", enlace);
+
+    if ($('#check_caract_ram').is(":checked"))
+    {
+        $('#img_caract_ram').css('display', 'block');
+    }
+    else
+    {
+        $('#img_caract_ram').css('display', 'none');
+    }
 }
 
 function cambiarDiscoDuroAnuncio()
 {
     var enlace = '/xweb/public/fotobanners/iconos/discoduro-' + $('#radio_caract_gb_dd').val() + '-' + $('#radio_caract_tipo_dd').val() + '.png';
     $("#img_caract_discoduro").attr("src", enlace);
+
+    if ($('#check_caract_discoduro').is(":checked"))
+    {
+        $('#img_caract_discoduro').css('display', 'block');
+    }
+    else
+    {
+        $('#img_caract_discoduro').css('display', 'none');
+    }
 }
 
 function cambiarSistemaOperativoAnuncio()
@@ -6605,6 +6639,15 @@ function cambiarSistemaOperativoAnuncio()
     }
 
     $("#img_caract_so").attr("src", enlace);
+
+    if ($('#check_caract_so').is(":checked"))
+    {
+        $('#img_caract_so').css('display', 'block');
+    }
+    else
+    {
+        $('#img_caract_so').css('display', 'none');
+    }
 }
 
 function cambiarDVDAnuncio()
@@ -6612,6 +6655,15 @@ function cambiarDVDAnuncio()
     var enlace = '/xweb/public/fotobanners/iconos/' + $('#radio_caract_version_dvd').val() + '.png';
 
     $("#img_caract_dvd").attr("src", enlace);
+
+    if ($('#check_caract_dvd').is(":checked"))
+    {
+        $('#img_caract_dvd').css('display', 'block');
+    }
+    else
+    {
+        $('#img_caract_dvd').css('display', 'none');
+    }
 }
 
 
